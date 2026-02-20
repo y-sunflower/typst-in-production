@@ -1,12 +1,3 @@
----
-title: Typst crash course
-icon: lucide/rocket
----
-
-```typ
-#set text(blue, size: 14pt)
-```
-
 ## Commands
 
 - [`zensical new`][new] - Create a new project

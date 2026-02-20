@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Intro
 icon: simple/markdown
 ---
 
@@ -17,4 +17,10 @@ Putting Typst in production means building deterministic PDF pipelines where the
 
 ## Next step
 
-Buy access to **Typst in Production** and build a real production-ready Typst stack. The course focuses on practical automation, deployment, and long-term maintainability, so you can move from ad-hoc document generation to robust, repeatable delivery. You will leave with patterns, templates, and workflows you can apply immediately in your own projects.
+This website focuses on practical automation, deployment, and long-term maintainability, so you can move from ad-hoc document generation to robust, repeatable delivery. You will leave with patterns, templates, and workflows you can apply immediately in your own projects.
+
+Depending on where you are on your Typst journey, the next step might be one of them:
+
+- Learn Typst basics with our [crash course](./typst-crash-course.md)
+- Discover how to use Typst [from another programming language](./from-languages/index.md) (Python, R, JavaScript or Rust)
+- Implement [CI/CD practices](./continuous/index.md) in Typst workflows
