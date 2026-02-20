@@ -3,7 +3,7 @@ site_name = "Typst in Production"
 site_description = "Master delivering PDF with Typst, in production environments."
 site_author = "Joseph Barbier"
 copyright = """
-Copyright &copy; 2026 Joseph Barbier
+Copyright &copy; 2026 Yellow Sunflower
 """
 
 [project.theme]
