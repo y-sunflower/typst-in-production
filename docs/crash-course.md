@@ -57,7 +57,7 @@ This is a paragraph, where text can be *bold*, _italic_ or `code-like`
 
 ![](./examples/crash-course-2.png)
 
-## functions
+## Functions
 
 Typst offers tons of functions that we can use to customize the output of our PDF. The syntax is very simple, and often, very intuitive.
 
@@ -93,6 +93,18 @@ What if I want them to be vertically aligned? I just call the `align()` function
 
 ![](./examples/crash-course-4.png)
 
-## set rules
+## Set rules
 
-A set rule is a way to tell to Typst how a given function should behave
+A set rule is a way to tell to Typst how a given function should behave. For example, by default the `text()` function uses `fill: black` for its color, but if we do:
+
+```typst
+#set text(fill: blue)
+```
+
+Then **all** text will now be blue. You might realize that this is what we used in the examples before with:
+
+```typst
+#set page(width: 12cm, height: 5cm)
+```
+
+This says that the `page()` function (what is used to create every page under the hood!) has a 12cm width and a 5cm height.
