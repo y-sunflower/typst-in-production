@@ -15,6 +15,7 @@ nav = [
     "from-languages/javascript.md",
     "from-languages/rust.md",
   ] },
+  { "Quarto" = ["quarto/index.md"] },
   { "CI/CD" = [
     "continuous/index.md",
     "continuous/integration.md",

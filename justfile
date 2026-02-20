@@ -2,4 +2,4 @@ preview:
     uv run zensical serve
 
 typst:
-    typst compile ./docs/examples/crash-course-1.typ --format png
+    for f in docs/examples/*.typ; do typst compile "$f" --format png; done
