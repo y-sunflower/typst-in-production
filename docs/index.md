@@ -1,5 +1,5 @@
 ---
-title: Typst in production
+title: Home
 icon: simple/markdown
 ---
 

@@ -1,3 +1,3 @@
 ---
-title: Using Typst from R
+title: from R
 ---

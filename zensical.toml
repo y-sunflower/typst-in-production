@@ -21,10 +21,12 @@ features = [
   "navigation.instant",
   "navigation.instant.prefetch",
   "navigation.path",
+  "navigation.tabs",
   "navigation.sections",
   "navigation.top",
   "navigation.tracking",
   "search.highlight",
+  "navigation.prune",
 ]
 
 [[project.theme.palette]]

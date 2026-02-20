@@ -1,3 +1,3 @@
 ---
-title: Using Typst from Rust
+title: from Rust
 ---

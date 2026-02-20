@@ -1,3 +1,3 @@
 ---
-title: Using Typst from JavaScript
+title: from JavaScript
 ---

@@ -1,3 +1,3 @@
 ---
-title: Using Typst from Python
+title: from Python
 ---

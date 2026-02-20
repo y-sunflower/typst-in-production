@@ -1,10 +1,11 @@
 ---
+title: Typst crash course
 icon: lucide/rocket
 ---
 
-# Get started
-
-For full documentation visit [zensical.org](https://zensical.org/docs/).
+```typ
+#set text(blue, size: 14pt)
+```
 
 ## Commands
 
