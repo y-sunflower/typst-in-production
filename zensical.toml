@@ -5,6 +5,22 @@ site_author = "Joseph Barbier"
 copyright = """
 Copyright &copy; 2026 Yellow Sunflower
 """
+nav = [
+  { "Home" = "index.md" },
+  { "Typst crash course" = "typst-crash-course.md" },
+  { "From languages" = [
+    "from-languages/index.md",
+    "from-languages/python.md",
+    "from-languages/R.md",
+    "from-languages/javascript.md",
+    "from-languages/rust.md",
+  ] },
+  { "CI/CD" = [
+    "continuous/index.md",
+    "continuous/integration.md",
+    "continuous/delivery.md",
+  ] }
+]
 
 [project.theme]
 language = "en"
