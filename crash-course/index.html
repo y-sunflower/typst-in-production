@@ -458,7 +458,7 @@
   <a href="#functions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        functions
+        Functions
       
     </span>
   </a>
@@ -469,7 +469,7 @@
   <a href="#set-rules" class="md-nav__link">
     <span class="md-ellipsis">
       
-        set rules
+        Set rules
       
     </span>
   </a>
@@ -762,7 +762,7 @@
   <a href="#functions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        functions
+        Functions
       
     </span>
   </a>
@@ -773,7 +773,7 @@
   <a href="#set-rules" class="md-nav__link">
     <span class="md-ellipsis">
       
-        set rules
+        Set rules
       
     </span>
   </a>
@@ -842,7 +842,7 @@
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>This<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>paragraph,<span class="w"> </span>where<span class="w"> </span>text<span class="w"> </span>can<span class="w"> </span>be<span class="w"> </span><span class="gs">*bold*</span>,<span class="w"> </span><span class="ge">_italic_</span><span class="w"> </span>or<span class="w"> </span><span class="sb">`code-like`</span>
 </span></code></pre></div>
 <p><img alt="" src=".././examples/crash-course-2.png" /></p>
-<h2 id="functions">functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
+<h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
 <p>Typst offers tons of functions that we can use to customize the output of our PDF. The syntax is very simple, and often, very intuitive.</p>
 <p>For example, I want to put a blue circle, next to a green rectangle, next to a red text. How can I do that?</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#f2e9e4&quot;</span><span class="p">),</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">cm</span><span class="p">)</span>
@@ -868,8 +868,14 @@
 </span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="p">))</span>
 </span></code></pre></div>
 <p><img alt="" src=".././examples/crash-course-4.png" /></p>
-<h2 id="set-rules">set rules<a class="headerlink" href="#set-rules" title="Permanent link">&para;</a></h2>
-<p>A set rule is a way to tell to Typst how a given function should behave</p>
+<h2 id="set-rules">Set rules<a class="headerlink" href="#set-rules" title="Permanent link">&para;</a></h2>
+<p>A set rule is a way to tell to Typst how a given function should behave. For example, by default the <code>text()</code> function uses <code>fill: black</code> for its color, but if we do:</p>
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Then <strong>all</strong> text will now be blue. You might realize that this is what we used in the examples before with:</p>
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">cm</span><span class="p">)</span>
+</span></code></pre></div>
+<p>This says that the <code>page()</code> function (what is used to create every page under the hood!) has a 12cm width and a 5cm height.</p>
 
 
 
