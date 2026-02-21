@@ -17,7 +17,7 @@ What we call "Typst" is usually one of the following:
 - the Typst **typesetting system** :octicons-arrow-right-24: the language in itself
 - the Typst **compiler** :octicons-arrow-right-24: the (CLI) program that actually creates the PDF
 
-The compiler will take a `.typ` file and create a [PDF file][example] with it. For example, a Typst file might look like this:
+The compiler will take a `.typ` file and create a [PDF file][footnote-1] with it. For example, a Typst file might look like this:
 
 ```typst
 #set page(fill: red, width: 10cm, height: 3cm)
@@ -31,7 +31,7 @@ Then we run `typst compile file.typ`, and we get:
 
 ![A red page with a level 2 title "Here goes the title..." and the text "Hey folks, how that crash course going so far?"](./examples/crash-course-1.png)
 
-[example]: https://typst.app/docs/reference/html/ "Note that you can also generate other files such as HTML"
+[footnote-1]: https://typst.app/docs/reference/html/ "Note that you can also generate other files such as HTML"
 
 ## Typst, in practice
 
@@ -130,3 +130,111 @@ We can define variables, like in any programming language, in order to reuse the
 ![](./examples/crash-course-5.png)
 
 ## Create your own functions
+
+Even though Typst is a markup language (!= programming language), it embeds a scripting language that let us add **logic** (`if`/`else` statements, `for` loops, etc) and create reusable components.
+
+Let's look at an example:
+
+```typst
+#set page(fill: aqua, width: 12cm, height: 5cm)
+
+#let say-hello(s)= {
+  // s is the argument name
+  [Hello my friend #s, how are you?]
+}
+
+#say-hello("Joseph")
+
+#say-hello("Justine")
+```
+
+![](./examples/crash-course-6.png)
+
+Once again we use the `let` keyword, and then we wrap the output of the function inside curly braces.
+
+## When or when not to use the `#` symbol
+
+A thing that might be confusing in the previous code snippets is that sometimes we use the `#` symbol, and sometimes we don't.
+
+=== "With the `#`"
+
+    ```typst
+    #circle(fill: blue, width: 3cm)
+    ```
+
+    ![](./examples/crash-course-7.png)
+
+=== "Without the `#`"
+
+    ```typst
+    circle(fill: blue, width: 3cm)
+    ```
+
+    ![](./examples/crash-course-8.png)
+
+In the first case, the output is just a simple circle, while in the second case, it's the actual text instead of a circle. Why is that?
+
+It's because Typst has [2 modes][footnote-2]:
+
+[footnote-2]: https://typst.app/docs/reference/syntax/ "There are actually 3 modes, where the 3rd one is the math mode, but it's not discussed here."
+
+- Markup mode
+- Code mode
+
+By default we're in Markup mode, and we need to add the `#` before a function name, a set rule or when defining a new variable. But we switch to code mode in many cases:
+
+=== "Inside function definition"
+
+    ```typst
+    #let yellow-circle() = {
+      let yellow = rgb("#FFC300")      // no `#` here
+      circle(fill: yellow, width: 3cm) // no `#` here
+    }
+    ```
+
+=== "Inside function calling (e.g., arguments)"
+
+    ```typst
+    #circle(
+      width: 3cm,
+      circle(fill: blue, width: 1cm) // no `#` here
+    )
+    ```
+
+Those are just common examples, but in practice you'll quickly find this intuitive as you start using Typst. A great way to make this simpler to you is to make you have ^^syntax highlighting^^ in your editor. If you have a second look [here](#when-or-when-not-to-use-the--symbol), you'll see that in the second case the text is all black, meaning that it will be rendered as is.
+
+<br>
+
+<br>
+
+## Exercises
+
+!!! note
+
+    - Make sure to either [install Typst](https://typst.app/open-source/) or use their [Web app](https://typst.app/play/)
+    - Always include `#set page(fill: rgb("#f9f6f4"), width: 12cm, height: 5cm)` at the top of the document to:
+        - ensure a fixed page size, because by default it will be A4, which is more than necessary
+        - have a distinct background (light grey)
+
+### 1 - Basics
+
+Reproduce the PDF below:
+
+=== "Exercise"
+
+    ![](./examples/crash-course-9.png)
+
+=== "Hint"
+
+    - Headings are made using the `=` symbol
+    - Paragraph can be written directly, like in markdown
+
+=== "Solution"
+
+    ```typst
+    #set page(fill: rgb("#f9f6f4"), width: 12cm, height: 5cm)
+
+    == My first Typst document
+
+    My name is Joseph, and I love cookies
+    ```
