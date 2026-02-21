@@ -592,6 +592,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#next-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next step
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1012,6 +1023,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#next-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next step
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1181,8 +1203,7 @@
 </div>
 </div>
 <p>Those are just common examples, but in practice you'll quickly find this intuitive as you start using Typst. A great way to make this simpler to you is to make you have <ins>syntax highlighting</ins> in your editor. If you have a second look <a href="#when-or-when-not-to-use-the--symbol">here</a>, you'll see that in the second case the text is all black, meaning that it will be rendered as is.</p>
-<p><br></p>
-<p><br></p>
+<p><br><br></p>
 <h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1195,7 +1216,7 @@
 </li>
 </ul>
 </div>
-<h3 id="1-basics">1 - Basics<a class="headerlink" href="#1-basics" title="Permanent link">&para;</a></h3>
+<h4 id="1-basics">1 - Basics<a class="headerlink" href="#1-basics" title="Permanent link">&para;</a></h4>
 <p>Reproduce the PDF below:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Exercise</label><label for="__tabbed_3_2">Hint</label><label for="__tabbed_3_3">Solution</label></div>
 <div class="tabbed-content">
@@ -1218,7 +1239,7 @@
 </div>
 </div>
 </div>
-<h3 id="2-a-first-shape">2 - A first shape<a class="headerlink" href="#2-a-first-shape" title="Permanent link">&para;</a></h3>
+<h4 id="2-a-first-shape">2 - A first shape<a class="headerlink" href="#2-a-first-shape" title="Permanent link">&para;</a></h4>
 <p>Reproduce the PDF below:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Exercise</label><label for="__tabbed_4_2">Hint</label><label for="__tabbed_4_3">Solution</label></div>
 <div class="tabbed-content">
@@ -1239,7 +1260,7 @@
 </div>
 </div>
 </div>
-<h3 id="3-layout-with-stack">3 - Layout with <code>stack</code><a class="headerlink" href="#3-layout-with-stack" title="Permanent link">&para;</a></h3>
+<h4 id="3-layout-with-stack">3 - Layout with <code>stack</code><a class="headerlink" href="#3-layout-with-stack" title="Permanent link">&para;</a></h4>
 <p>Reproduce the PDF below:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Exercise</label><label for="__tabbed_5_2">Hint</label><label for="__tabbed_5_3">Solution</label></div>
 <div class="tabbed-content">
@@ -1268,7 +1289,7 @@
 </div>
 </div>
 </div>
-<h3 id="4-variables-and-set-rules">4 - Variables and set rules<a class="headerlink" href="#4-variables-and-set-rules" title="Permanent link">&para;</a></h3>
+<h4 id="4-variables-and-set-rules">4 - Variables and set rules<a class="headerlink" href="#4-variables-and-set-rules" title="Permanent link">&para;</a></h4>
 <p>Reproduce the PDF below:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Exercise</label><label for="__tabbed_6_2">Hint</label><label for="__tabbed_6_3">Solution</label></div>
 <div class="tabbed-content">
@@ -1277,29 +1298,26 @@
 </div>
 <div class="tabbed-block">
 <ul>
-<li>Define colors with <code>#let</code></li>
+<li>Define the main color (#e76f51) with <code>#let</code></li>
 <li>Use <code>#set text(...)</code> to style all text at once</li>
-<li>Add a heading, a paragraph, and a rectangle</li>
 </ul>
 </div>
 <div class="tabbed-block">
-<div class="language-typst highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nv">bg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#f9f6f4&quot;</span><span class="p">)</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="kd">#let</span><span class="w"> </span><span class="nv">brand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#264653&quot;</span><span class="p">)</span>
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="kd">#let</span><span class="w"> </span><span class="nv">accent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#e76f51&quot;</span><span class="p">)</span>
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
-</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">bg</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">cm</span><span class="p">)</span>
-</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">brand</span><span class="p">)</span>
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nv">main-color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#e76f51&quot;</span><span class="p">)</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#f9f6f4&quot;</span><span class="p">),</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">cm</span><span class="p">)</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">main-color</span><span class="p">)</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="gh">== Weekly report</span>
 </span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>
-</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="gh">== Weekly report</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>Everything<span class="w"> </span>uses<span class="w"> </span>the<span class="w"> </span>same<span class="w"> </span>text<span class="w"> </span>color.
 </span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>
-</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>Everything<span class="w"> </span>below<span class="w"> </span>this<span class="w"> </span>line<span class="w"> </span>uses<span class="w"> </span>the<span class="w"> </span>same<span class="w"> </span>text<span class="w"> </span>color.
-</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>
-</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="nf">#rect</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">accent</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">4.5</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">0.5</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">radius</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">pt</span><span class="p">)</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="nf">#rect</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">main-color</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">4.5</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">0.5</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">radius</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">pt</span><span class="p">)</span>
 </span></code></pre></div>
 </div>
 </div>
 </div>
-<h3 id="5-combining-align-and-stack">5 - Combining <code>align</code> and <code>stack</code><a class="headerlink" href="#5-combining-align-and-stack" title="Permanent link">&para;</a></h3>
+<h4 id="5-combining-align-and-stack">5 - Combining <code>align</code> and <code>stack</code><a class="headerlink" href="#5-combining-align-and-stack" title="Permanent link">&para;</a></h4>
 <p>Reproduce the PDF below:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><input id="__tabbed_7_3" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Exercise</label><label for="__tabbed_7_2">Hint</label><label for="__tabbed_7_3">Solution</label></div>
 <div class="tabbed-content">
@@ -1341,7 +1359,7 @@
 </div>
 </div>
 </div>
-<h3 id="6-create-a-function-with-parameters">6 - Create a function with parameters<a class="headerlink" href="#6-create-a-function-with-parameters" title="Permanent link">&para;</a></h3>
+<h4 id="6-create-a-function-with-parameters">6 - Create a function with parameters<a class="headerlink" href="#6-create-a-function-with-parameters" title="Permanent link">&para;</a></h4>
 <p>Reproduce the PDF below:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="8:3"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Exercise</label><label for="__tabbed_8_2">Hint</label><label for="__tabbed_8_3">Solution</label></div>
 <div class="tabbed-content">
@@ -1379,6 +1397,10 @@
 </div>
 </div>
 </div>
+<p><br><br></p>
+<h2 id="next-step">Next step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h2>
+<p>You now have some good Typst foundations! If you want to learn more, you can have a look at this <em>unofficial</em> <a href="https://sitandr.github.io/typst-examples-book/book/about.html">Typst Examples Book</a>.</p>
+<p>Otherwise you're ready to start using Typst from a programming language!</p>
 
 
 
