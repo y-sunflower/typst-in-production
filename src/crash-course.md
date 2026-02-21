@@ -5,7 +5,7 @@ icon: lucide/rocket
 
 !!! note
 
-    The official Typst documentation website has [its own tutorial](https://typst.app/docs/tutorial/), that goes in **much more depth** that the crash course you're actually reading. Here, we'll focus on giving you the **big picture** rather than technical details.
+    The official Typst documentation website has [its own tutorial](https://typst.app/docs/tutorial/), which goes into **much more depth** than the crash course you're actually reading. Here, we'll focus on giving you the **big picture** rather than technical details.
 
 <br>
 
@@ -14,7 +14,7 @@ icon: lucide/rocket
 What we call "Typst" is usually one of the following:
 
 - the Typst **company** :octicons-arrow-right-24: the legal organization and people developing Typst
-- the Typst **typesetting system** :octicons-arrow-right-24: the language in itself
+- the Typst **typesetting system** :octicons-arrow-right-24: the language itself
 - the Typst **compiler** :octicons-arrow-right-24: the (CLI) program that actually creates the PDF
 
 The compiler will take a `.typ` file and create a [PDF file][footnote-1] with it. For example, a Typst file might look like this:
@@ -24,12 +24,12 @@ The compiler will take a `.typ` file and create a [PDF file][footnote-1] with it
 
 == Here goes the title...
 
-Hey folks, how that crash course going so far?
+Hey folks, how's that crash course going so far?
 ```
 
 Then we run `typst compile file.typ`, and we get:
 
-![A red page with a level 2 title "Here goes the title..." and the text "Hey folks, how that crash course going so far?"](./examples/crash-course-1.png)
+![A red page with a level 2 title "Here goes the title..." and the text "Hey folks, how's that crash course going so far?"](./examples/crash-course-1.png)
 
 [footnote-1]: https://typst.app/docs/reference/html/ "Note that you can also generate other files such as HTML"
 
@@ -41,7 +41,7 @@ But when you're trying to use Typst in more complex environments, like a ^^web s
 
 ## Basic syntax
 
-If you ever used markdown before, getting started with Typst will be easy. For example, the following Typst file:
+If you've ever used Markdown before, getting started with Typst will be easy. For example, the following Typst file:
 
 ```typst
 #set page(fill: rgb("#f2e9e4"), width: 12cm, height: 5cm)
@@ -50,9 +50,9 @@ If you ever used markdown before, getting started with Typst will be easy. For e
 
 == Smaller heading
 
-=== But still an heading
+=== But still a heading
 
-This is a paragraph, where text can be *bold*, _italic_ or `code-like`
+This is a paragraph, where text can be *bold*, _italic_, or `code-like`.
 ```
 
 ![](./examples/crash-course-2.png)
@@ -61,7 +61,7 @@ This is a paragraph, where text can be *bold*, _italic_ or `code-like`
 
 Typst offers tons of functions that we can use to customize the output of our PDF. The syntax is very simple, and often, very intuitive.
 
-For example, I want to put a blue circle, next to a green rectangle, next to a red text. How can I do that?
+For example, I want to put a blue circle next to a green rectangle, next to red text. How can I do that?
 
 ```typst
 #set page(fill: rgb("#f2e9e4"), width: 12cm, height: 5cm)
@@ -95,19 +95,19 @@ What if I want them to be vertically aligned? I just call the `align()` function
 
 ## Set rules
 
-A set rule is a way to tell to Typst how a given function should behave. For example, by default the `text()` function uses `fill: black` for its color, but if we do:
+A set rule is a way to tell Typst how a given function should behave. For example, by default the `text()` function uses `fill: black` for its color, but if we do:
 
 ```typst
 #set text(fill: blue)
 ```
 
-Then **all** text will now be blue. You might realize that this is what we used in the examples before with:
+Then **all** text will be blue. You might realize that this is what we used in the examples before with:
 
 ```typst
 #set page(width: 12cm, height: 5cm)
 ```
 
-This says that the `page()` function (what is used to create every page under the hood!) has a 12cm width and a 5cm height.
+This says that the `page()` function (which is used to create every page under the hood!) has a width of 12cm and a height of 5cm.
 
 ## Variables
 
@@ -131,7 +131,7 @@ We can define variables, like in any programming language, in order to reuse the
 
 ## Create your own functions
 
-Even though Typst is a markup language (!= programming language), it embeds a scripting language that let us add **logic** (`if`/`else` statements, `for` loops, etc) and create reusable components.
+Even though Typst is a markup language (!= programming language), it embeds a scripting language that lets us add **logic** (`if`/`else` statements, `for` loops, etc.) and create reusable components.
 
 Let's look at an example:
 
@@ -192,7 +192,7 @@ By default we're in Markup mode, and we need to add the `#` before a function na
     }
     ```
 
-=== "Inside function calling (e.g., arguments)"
+=== "Inside function calls (e.g., arguments)"
 
     ```typst
     #circle(
@@ -201,7 +201,7 @@ By default we're in Markup mode, and we need to add the `#` before a function na
     )
     ```
 
-Those are just common examples, but in practice you'll quickly find this intuitive as you start using Typst. A great way to make this simpler to you is to make you have ^^syntax highlighting^^ in your editor. If you have a second look [here](#when-or-when-not-to-use-the--symbol), you'll see that in the second case the text is all black, meaning that it will be rendered as is.
+Those are just common examples, but in practice you'll quickly find this intuitive as you start using Typst. A great way to make this simpler for you is to enable ^^syntax highlighting^^ in your editor. If you have a second look [here](#when-or-when-not-to-use-the--symbol), you'll see that in the second case the text is all black, meaning that it will be rendered as is.
 
 <br><br>
 
@@ -225,7 +225,7 @@ Reproduce the PDF below:
 === "Hint"
 
     - Headings are made using the `=` symbol
-    - Paragraph can be written directly, like in markdown
+    - Paragraphs can be written directly, like in Markdown
 
 === "Solution"
 
