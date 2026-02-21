@@ -19,7 +19,7 @@ What we call "Typst" is usually one of the following:
 
 The compiler will take a `.typ` file and create a [PDF file][footnote-1] with it. For example, a Typst file might look like this:
 
-```typst
+```typst title="file.typ"
 #set page(fill: red, width: 10cm, height: 3cm)
 
 == Here goes the title...
@@ -237,4 +237,165 @@ Reproduce the PDF below:
     == My first Typst document
 
     My name is Joseph, and I love cookies
+    ```
+
+### 2 - A first shape
+
+Reproduce the PDF below:
+
+=== "Exercise"
+
+    ![](./examples/crash-course-10.png)
+
+=== "Hint"
+
+    - Call the `circle()` function with a `#`
+    - Use `fill` and `width` arguments
+
+=== "Solution"
+
+    ```typst
+    #set page(fill: rgb("#f9f6f4"), width: 12cm, height: 5cm)
+
+    #circle(fill: rgb("#3a86ff"), width: 2.5cm)
+    ```
+
+### 3 - Layout with `stack`
+
+Reproduce the PDF below:
+
+=== "Exercise"
+
+    ![](./examples/crash-course-11.png)
+
+=== "Hint"
+
+    - Use `stack()` with `dir: ltr`
+    - Add `spacing` between elements
+    - Put a `circle()`, a `rect()`, and a `text()` inside
+    - Look at the `radius` argument in `stack()` and the `size` argument in `text()`
+
+=== "Solution"
+
+    ```typst
+    #set page(fill: rgb("#f9f6f4"), width: 12cm, height: 5cm)
+
+    #stack(
+      dir: ltr,
+      spacing: 0.5cm,
+      circle(fill: rgb("#4361ee"), width: 1.2cm),
+      rect(fill: rgb("#4cc9f0"), width: 2.4cm, height: 1.2cm, radius: 4pt),
+      text(fill: rgb("#3a0ca3"), size: 16pt, "Typst"),
+    )
+    ```
+
+### 4 - Variables and set rules
+
+Reproduce the PDF below:
+
+=== "Exercise"
+
+    ![](./examples/crash-course-12.png)
+
+=== "Hint"
+
+    - Define colors with `#let`
+    - Use `#set text(...)` to style all text at once
+    - Add a heading, a paragraph, and a rectangle
+
+=== "Solution"
+
+    ```typst
+    #let bg = rgb("#f9f6f4")
+    #let brand = rgb("#264653")
+    #let accent = rgb("#e76f51")
+
+    #set page(fill: bg, width: 12cm, height: 5cm)
+    #set text(fill: brand)
+
+    == Weekly report
+
+    Everything below this line uses the same text color.
+
+    #rect(fill: accent, width: 4.5cm, height: 0.5cm, radius: 3pt)
+    ```
+
+### 5 - Combining `align` and `stack`
+
+Reproduce the PDF below:
+
+=== "Exercise"
+
+    ![](./examples/crash-course-13.png)
+
+=== "Hint"
+
+    - Wrap your content in `align(horizon, ...)`
+    - Build one vertical stack and small horizontal stacks inside it
+    - Reuse the same pattern for 3 status lines
+
+=== "Solution"
+
+    ```typst
+    #set page(fill: rgb("#f9f6f4"), width: 12cm, height: 5cm)
+
+    #align(horizon, stack(
+      spacing: 0.2cm,
+      stack(
+        dir: ltr,
+        spacing: 0.3cm,
+        circle(fill: rgb("#2a9d8f"), width: 0.7cm),
+        text(fill: rgb("#2a9d8f"), "Ready"),
+      ),
+      stack(
+        dir: ltr,
+        spacing: 0.3cm,
+        circle(fill: rgb("#e9c46a"), width: 0.7cm),
+        text(fill: rgb("#e9c46a"), "Pending"),
+      ),
+      stack(
+        dir: ltr,
+        spacing: 0.3cm,
+        circle(fill: rgb("#e76f51"), width: 0.7cm),
+        text(fill: rgb("#e76f51"), "Blocked"),
+      ),
+    ))
+    ```
+
+### 6 - Create a function with parameters
+
+Reproduce the PDF below:
+
+=== "Exercise"
+
+    ![](./examples/crash-course-14.png)
+
+=== "Hint"
+
+    - Define `badge(...)` with `#let`
+    - Give it at least 2 parameters (`label`, `color`)
+    - Add one optional parameter with a default value
+    - Call the function multiple times with different arguments
+
+=== "Solution"
+
+    ```typst
+    #set page(fill: rgb("#f9f6f4"), width: 12cm, height: 5cm)
+
+    #let badge(label, color, icon: "*") = {
+      rect(
+        fill: color,
+        radius: 5pt,
+        inset: (x: 10pt, y: 6pt),
+        text(fill: white, [#icon #label]),
+      )
+    }
+
+    #stack(
+      dir: ltr,
+      spacing: 0.35cm,
+      badge("Draft", rgb("#6c757d")),
+      badge("Review", rgb("#f77f00"), icon: "!"),
+      badge("Done", rgb("#2a9d8f"), icon: "+"),
+    )
     ```
