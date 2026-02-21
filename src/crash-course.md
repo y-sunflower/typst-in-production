@@ -203,9 +203,7 @@ By default we're in Markup mode, and we need to add the `#` before a function na
 
 Those are just common examples, but in practice you'll quickly find this intuitive as you start using Typst. A great way to make this simpler to you is to make you have ^^syntax highlighting^^ in your editor. If you have a second look [here](#when-or-when-not-to-use-the--symbol), you'll see that in the second case the text is all black, meaning that it will be rendered as is.
 
-<br>
-
-<br>
+<br><br>
 
 ## Exercises
 
@@ -216,7 +214,7 @@ Those are just common examples, but in practice you'll quickly find this intuiti
         - ensure a fixed page size, because by default it will be A4, which is more than necessary
         - have a distinct background (light grey)
 
-### 1 - Basics
+#### 1 - Basics
 
 Reproduce the PDF below:
 
@@ -239,7 +237,7 @@ Reproduce the PDF below:
     My name is Joseph, and I love cookies
     ```
 
-### 2 - A first shape
+#### 2 - A first shape
 
 Reproduce the PDF below:
 
@@ -260,7 +258,7 @@ Reproduce the PDF below:
     #circle(fill: rgb("#3a86ff"), width: 2.5cm)
     ```
 
-### 3 - Layout with `stack`
+#### 3 - Layout with `stack`
 
 Reproduce the PDF below:
 
@@ -289,7 +287,7 @@ Reproduce the PDF below:
     )
     ```
 
-### 4 - Variables and set rules
+#### 4 - Variables and set rules
 
 Reproduce the PDF below:
 
@@ -299,28 +297,25 @@ Reproduce the PDF below:
 
 === "Hint"
 
-    - Define colors with `#let`
+    - Define the main color (#e76f51) with `#let`
     - Use `#set text(...)` to style all text at once
-    - Add a heading, a paragraph, and a rectangle
 
 === "Solution"
 
     ```typst
-    #let bg = rgb("#f9f6f4")
-    #let brand = rgb("#264653")
-    #let accent = rgb("#e76f51")
+    #let main-color = rgb("#e76f51")
 
-    #set page(fill: bg, width: 12cm, height: 5cm)
-    #set text(fill: brand)
+    #set page(fill: rgb("#f9f6f4"), width: 12cm, height: 5cm)
+    #set text(fill: main-color)
 
     == Weekly report
 
-    Everything below this line uses the same text color.
+    Everything uses the same text color.
 
-    #rect(fill: accent, width: 4.5cm, height: 0.5cm, radius: 3pt)
+    #rect(fill: main-color, width: 4.5cm, height: 0.5cm, radius: 3pt)
     ```
 
-### 5 - Combining `align` and `stack`
+#### 5 - Combining `align` and `stack`
 
 Reproduce the PDF below:
 
@@ -362,7 +357,7 @@ Reproduce the PDF below:
     ))
     ```
 
-### 6 - Create a function with parameters
+#### 6 - Create a function with parameters
 
 Reproduce the PDF below:
 
@@ -399,3 +394,11 @@ Reproduce the PDF below:
       badge("Done", rgb("#2a9d8f"), icon: "+"),
     )
     ```
+
+<br><br>
+
+## Next step
+
+You now have some good Typst foundations! If you want to learn more, you can have a look at this _unofficial_ [Typst Examples Book](https://sitandr.github.io/typst-examples-book/book/about.html).
+
+Otherwise you're ready to start using Typst from a programming language!
