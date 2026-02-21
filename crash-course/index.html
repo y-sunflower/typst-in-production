@@ -476,6 +476,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-your-own-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create your own functions
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -780,6 +802,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-your-own-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create your own functions
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -876,6 +920,22 @@
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">cm</span><span class="p">)</span>
 </span></code></pre></div>
 <p>This says that the <code>page()</code> function (what is used to create every page under the hood!) has a 12cm width and a 5cm height.</p>
+<h2 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h2>
+<p>We can define variables, like in any programming language, in order to reuse them thanks to the <code>let</code> keyword. A common use case is to define branding colors:</p>
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nv">yellow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#FFC300&quot;</span><span class="p">)</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kd">#let</span><span class="w"> </span><span class="nv">purple</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#421173&quot;</span><span class="p">)</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">yellow</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">cm</span><span class="p">)</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nf">#align</span><span class="p">(</span><span class="nv">horizon</span><span class="p">,</span><span class="w"> </span><span class="nf">stack</span><span class="p">(</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">  </span><span class="nv">dir</span><span class="p">:</span><span class="w"> </span><span class="nv">ltr</span><span class="p">,</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">  </span><span class="nv">spacing</span><span class="p">:</span><span class="w"> </span><span class="m">0.5</span><span class="kr">cm</span><span class="p">,</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">  </span><span class="nf">circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">purple</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="kr">cm</span><span class="p">),</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">  </span><span class="nf">rect</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">purple</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nf">circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">yellow</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="kr">cm</span><span class="p">)),</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="p">))</span>
+</span></code></pre></div>
+<p><img alt="" src=".././examples/crash-course-5.png" /></p>
+<h2 id="create-your-own-functions">Create your own functions<a class="headerlink" href="#create-your-own-functions" title="Permanent link">&para;</a></h2>
 
 
 
