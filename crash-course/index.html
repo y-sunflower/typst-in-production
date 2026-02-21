@@ -498,6 +498,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#when-or-when-not-to-use-the-symbol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When or when not to use the # symbol
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 - Basics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -824,6 +863,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#when-or-when-not-to-use-the-symbol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When or when not to use the # symbol
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 - Basics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -936,6 +1014,100 @@
 </span></code></pre></div>
 <p><img alt="" src=".././examples/crash-course-5.png" /></p>
 <h2 id="create-your-own-functions">Create your own functions<a class="headerlink" href="#create-your-own-functions" title="Permanent link">&para;</a></h2>
+<p>Even though Typst is a markup language (!= programming language), it embeds a scripting language that let us add <strong>logic</strong> (<code>if</code>/<code>else</code> statements, <code>for</code> loops, etc) and create reusable components.</p>
+<p>Let's look at an example:</p>
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">aqua</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">cm</span><span class="p">)</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kd">#let</span><span class="w"> </span><span class="nf">say-hello</span><span class="p">(</span><span class="nv">s</span><span class="p">)</span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="c1">// s is the argument name</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="p">[</span>Hello<span class="w"> </span>my<span class="w"> </span>friend<span class="w"> </span><span class="nv">#s</span>,<span class="w"> </span>how<span class="w"> </span>are<span class="w"> </span>you?<span class="p">]</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="p">}</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="nf">#say-hello</span><span class="p">(</span><span class="s2">&quot;Joseph&quot;</span><span class="p">)</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="nf">#say-hello</span><span class="p">(</span><span class="s2">&quot;Justine&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p><img alt="" src=".././examples/crash-course-6.png" /></p>
+<p>Once again we use the <code>let</code> keyword, and then we wrap the output of the function inside curly braces.</p>
+<h2 id="when-or-when-not-to-use-the-symbol">When or when not to use the <code>#</code> symbol<a class="headerlink" href="#when-or-when-not-to-use-the-symbol" title="Permanent link">&para;</a></h2>
+<p>A thing that might be confusing in the previous code snippets is that sometimes we use the <code>#</code> symbol, and sometimes we don't.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">With the <code>#</code></label><label for="__tabbed_1_2">Without the <code>#</code></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nf">#circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">)</span>
+</span></code></pre></div>
+<p><img alt="" src=".././examples/crash-course-7.png" /></p>
+</div>
+<div class="tabbed-block">
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>circle(fill:<span class="w"> </span>blue,<span class="w"> </span>width:<span class="w"> </span>3cm)
+</span></code></pre></div>
+<p><img alt="" src=".././examples/crash-course-8.png" /></p>
+</div>
+</div>
+</div>
+<p>In the first case, the output is just a simple circle, while in the second case, it's the actual text instead of a circle. Why is that?</p>
+<p>It's because Typst has <a href="https://typst.app/docs/reference/syntax/" title="There are actually 3 modes, where the 3rd one is the math mode, but it's not discussed here.">2 modes</a>:</p>
+<ul>
+<li>Markup mode</li>
+<li>Code mode</li>
+</ul>
+<p>By default we're in Markup mode, and we need to add the <code>#</code> before a function name, a set rule or when defining a new variable. But we switch to code mode in many cases:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Inside function definition</label><label for="__tabbed_2_2">Inside function calling (e.g., arguments)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nf">yellow-circle</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nv">yellow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#FFC300&quot;</span><span class="p">)</span><span class="w">      </span><span class="c1">// no `#` here</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="nf">circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">yellow</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">)</span><span class="w"> </span><span class="c1">// no `#` here</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nf">#circle</span><span class="p">(</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">,</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="nf">circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="kr">cm</span><span class="p">)</span><span class="w"> </span><span class="c1">// no `#` here</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">)</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>Those are just common examples, but in practice you'll quickly find this intuitive as you start using Typst. A great way to make this simpler to you is to make you have <ins>syntax highlighting</ins> in your editor. If you have a second look <a href="#when-or-when-not-to-use-the--symbol">here</a>, you'll see that in the second case the text is all black, meaning that it will be rendered as is.</p>
+<p><br></p>
+<p><br></p>
+<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>Make sure to either <a href="https://typst.app/open-source/">install Typst</a> or use their <a href="https://typst.app/play/">Web app</a></li>
+<li>Always include <code>#set page(fill: rgb("#f9f6f4"), width: 12cm, height: 5cm)</code> at the top of the document to:<ul>
+<li>ensure a fixed page size, because by default it will be A4, which is more than necessary</li>
+<li>have a distinct background (light grey)</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="1-basics">1 - Basics<a class="headerlink" href="#1-basics" title="Permanent link">&para;</a></h3>
+<p>Reproduce the PDF below:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Exercise</label><label for="__tabbed_3_2">Hint</label><label for="__tabbed_3_3">Solution</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="" src=".././examples/crash-course-9.png" /></p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Headings are made using the <code>=</code> symbol</li>
+<li>Paragraph can be written directly, like in markdown</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#f9f6f4&quot;</span><span class="p">),</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">cm</span><span class="p">)</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="gh">== My first Typst document</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>My<span class="w"> </span>name<span class="w"> </span>is<span class="w"> </span>Joseph,<span class="w"> </span>and<span class="w"> </span>I<span class="w"> </span>love<span class="w"> </span>cookies
+</span></code></pre></div>
+</div>
+</div>
+</div>
 
 
 
