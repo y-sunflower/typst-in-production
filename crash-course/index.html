@@ -1061,14 +1061,14 @@
 
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The official Typst documentation website has <a href="https://typst.app/docs/tutorial/">its own tutorial</a>, that goes in <strong>much more depth</strong> that the crash course you're actually reading. Here, we'll focus on giving you the <strong>big picture</strong> rather than technical details.</p>
+<p>The official Typst documentation website has <a href="https://typst.app/docs/tutorial/">its own tutorial</a>, which goes into <strong>much more depth</strong> than the crash course you're actually reading. Here, we'll focus on giving you the <strong>big picture</strong> rather than technical details.</p>
 </div>
 <p><br></p>
 <h2 id="typst-text-a-compiler">Typst = text + a compiler<a class="headerlink" href="#typst-text-a-compiler" title="Permanent link">&para;</a></h2>
 <p>What we call "Typst" is usually one of the following:</p>
 <ul>
 <li>the Typst <strong>company</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> the legal organization and people developing Typst</li>
-<li>the Typst <strong>typesetting system</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> the language in itself</li>
+<li>the Typst <strong>typesetting system</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> the language itself</li>
 <li>the Typst <strong>compiler</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> the (CLI) program that actually creates the PDF</li>
 </ul>
 <p>The compiler will take a <code>.typ</code> file and create a <a href="https://typst.app/docs/reference/html/" title="Note that you can also generate other files such as HTML">PDF file</a> with it. For example, a Typst file might look like this:</p>
@@ -1076,29 +1076,29 @@
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gh">== Here goes the title...</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Hey<span class="w"> </span>folks,<span class="w"> </span>how<span class="w"> </span>that<span class="w"> </span>crash<span class="w"> </span>course<span class="w"> </span>going<span class="w"> </span>so<span class="w"> </span>far?
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Hey<span class="w"> </span>folks,<span class="w"> </span>how&#39;s<span class="w"> </span>that<span class="w"> </span>crash<span class="w"> </span>course<span class="w"> </span>going<span class="w"> </span>so<span class="w"> </span>far?
 </span></code></pre></div>
 <p>Then we run <code>typst compile file.typ</code>, and we get:</p>
-<p><img alt="A red page with a level 2 title &quot;Here goes the title...&quot; and the text &quot;Hey folks, how that crash course going so far?&quot;" src=".././examples/crash-course-1.png" /></p>
+<p><img alt="A red page with a level 2 title &quot;Here goes the title...&quot; and the text &quot;Hey folks, how's that crash course going so far?&quot;" src=".././examples/crash-course-1.png" /></p>
 <h2 id="typst-in-practice">Typst, in practice<a class="headerlink" href="#typst-in-practice" title="Permanent link">&para;</a></h2>
 <p>The compiler is a CLI (Command Line Interface), which means it needs to run from the terminal.</p>
 <p>But when you're trying to use Typst in more complex environments, like a <ins>web server</ins> or <ins>data pipeline</ins>, you're often interested in generating a PDF from a programming language, not from the terminal.</p>
 <h2 id="basic-syntax">Basic syntax<a class="headerlink" href="#basic-syntax" title="Permanent link">&para;</a></h2>
-<p>If you ever used markdown before, getting started with Typst will be easy. For example, the following Typst file:</p>
+<p>If you've ever used Markdown before, getting started with Typst will be easy. For example, the following Typst file:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#f2e9e4&quot;</span><span class="p">),</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">cm</span><span class="p">)</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="gh">= My first Typst document</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="gh">== Smaller heading</span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="gh">=== But still an heading</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="gh">=== But still a heading</span>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>This<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>paragraph,<span class="w"> </span>where<span class="w"> </span>text<span class="w"> </span>can<span class="w"> </span>be<span class="w"> </span><span class="gs">*bold*</span>,<span class="w"> </span><span class="ge">_italic_</span><span class="w"> </span>or<span class="w"> </span><span class="sb">`code-like`</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>This<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>paragraph,<span class="w"> </span>where<span class="w"> </span>text<span class="w"> </span>can<span class="w"> </span>be<span class="w"> </span><span class="gs">*bold*</span>,<span class="w"> </span><span class="ge">_italic_</span>,<span class="w"> </span>or<span class="w"> </span><span class="sb">`code-like`</span>.
 </span></code></pre></div>
 <p><img alt="" src=".././examples/crash-course-2.png" /></p>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
 <p>Typst offers tons of functions that we can use to customize the output of our PDF. The syntax is very simple, and often, very intuitive.</p>
-<p>For example, I want to put a blue circle, next to a green rectangle, next to a red text. How can I do that?</p>
+<p>For example, I want to put a blue circle next to a green rectangle, next to red text. How can I do that?</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#f2e9e4&quot;</span><span class="p">),</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">cm</span><span class="p">)</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nf">#stack</span><span class="p">(</span>
@@ -1123,13 +1123,13 @@
 </span></code></pre></div>
 <p><img alt="" src=".././examples/crash-course-4.png" /></p>
 <h2 id="set-rules">Set rules<a class="headerlink" href="#set-rules" title="Permanent link">&para;</a></h2>
-<p>A set rule is a way to tell to Typst how a given function should behave. For example, by default the <code>text()</code> function uses <code>fill: black</code> for its color, but if we do:</p>
+<p>A set rule is a way to tell Typst how a given function should behave. For example, by default the <code>text()</code> function uses <code>fill: black</code> for its color, but if we do:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">)</span>
 </span></code></pre></div>
-<p>Then <strong>all</strong> text will now be blue. You might realize that this is what we used in the examples before with:</p>
+<p>Then <strong>all</strong> text will be blue. You might realize that this is what we used in the examples before with:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">cm</span><span class="p">)</span>
 </span></code></pre></div>
-<p>This says that the <code>page()</code> function (what is used to create every page under the hood!) has a 12cm width and a 5cm height.</p>
+<p>This says that the <code>page()</code> function (which is used to create every page under the hood!) has a width of 12cm and a height of 5cm.</p>
 <h2 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h2>
 <p>We can define variables, like in any programming language, in order to reuse them thanks to the <code>let</code> keyword. A common use case is to define branding colors:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nv">yellow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#FFC300&quot;</span><span class="p">)</span>
@@ -1146,7 +1146,7 @@
 </span></code></pre></div>
 <p><img alt="" src=".././examples/crash-course-5.png" /></p>
 <h2 id="create-your-own-functions">Create your own functions<a class="headerlink" href="#create-your-own-functions" title="Permanent link">&para;</a></h2>
-<p>Even though Typst is a markup language (!= programming language), it embeds a scripting language that let us add <strong>logic</strong> (<code>if</code>/<code>else</code> statements, <code>for</code> loops, etc) and create reusable components.</p>
+<p>Even though Typst is a markup language (!= programming language), it embeds a scripting language that lets us add <strong>logic</strong> (<code>if</code>/<code>else</code> statements, <code>for</code> loops, etc.) and create reusable components.</p>
 <p>Let's look at an example:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">aqua</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">cm</span><span class="p">)</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
@@ -1184,7 +1184,7 @@
 <li>Code mode</li>
 </ul>
 <p>By default we're in Markup mode, and we need to add the <code>#</code> before a function name, a set rule or when defining a new variable. But we switch to code mode in many cases:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Inside function definition</label><label for="__tabbed_2_2">Inside function calling (e.g., arguments)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Inside function definition</label><label for="__tabbed_2_2">Inside function calls (e.g., arguments)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nf">yellow-circle</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -1202,7 +1202,7 @@
 </div>
 </div>
 </div>
-<p>Those are just common examples, but in practice you'll quickly find this intuitive as you start using Typst. A great way to make this simpler to you is to make you have <ins>syntax highlighting</ins> in your editor. If you have a second look <a href="#when-or-when-not-to-use-the--symbol">here</a>, you'll see that in the second case the text is all black, meaning that it will be rendered as is.</p>
+<p>Those are just common examples, but in practice you'll quickly find this intuitive as you start using Typst. A great way to make this simpler for you is to enable <ins>syntax highlighting</ins> in your editor. If you have a second look <a href="#when-or-when-not-to-use-the--symbol">here</a>, you'll see that in the second case the text is all black, meaning that it will be rendered as is.</p>
 <p><br><br></p>
 <h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
@@ -1226,7 +1226,7 @@
 <div class="tabbed-block">
 <ul>
 <li>Headings are made using the <code>=</code> symbol</li>
-<li>Paragraph can be written directly, like in markdown</li>
+<li>Paragraphs can be written directly, like in Markdown</li>
 </ul>
 </div>
 <div class="tabbed-block">
