@@ -5,6 +5,7 @@ site_author = "Joseph Barbier"
 copyright = """
 Copyright &copy; 2026 Yellow Sunflower
 """
+docs_dir = "src"
 nav = [
   { "Intro" = "index.md" },
   { "Crash course" = "crash-course.md" },

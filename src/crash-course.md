@@ -108,3 +108,25 @@ Then **all** text will now be blue. You might realize that this is what we used 
 ```
 
 This says that the `page()` function (what is used to create every page under the hood!) has a 12cm width and a 5cm height.
+
+## Variables
+
+We can define variables, like in any programming language, in order to reuse them thanks to the `let` keyword. A common use case is to define branding colors:
+
+```typst
+#let yellow = rgb("#FFC300")
+#let purple = rgb("#421173")
+
+#set page(fill: yellow, width: 12cm, height: 5cm)
+
+#align(horizon, stack(
+  dir: ltr,
+  spacing: 0.5cm,
+  circle(fill: purple, width: 2cm),
+  rect(fill: purple, width: 3cm, circle(fill: yellow, width: 1cm)),
+))
+```
+
+![](./examples/crash-course-5.png)
+
+## Create your own functions
