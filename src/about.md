@@ -13,6 +13,6 @@ Typst in Production is a work in progress guide on how to use Typst in "real wor
 
 ## Authors
 
-It's a project created by [yellow sunflower](https://www.ysunflower.com/), a data consulting and open source company. We offer consulting services around data, from design reports to deployment.
+It's a project created by [yellow sunflower](https://www.ysunflower.com/), a data consulting and open source company. We offer consulting services around data, from designing reports to deployment.
 
 You can contact us [here](https://www.ysunflower.com/#contact).
