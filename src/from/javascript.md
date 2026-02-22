@@ -1,3 +1,3 @@
 ---
-title: from JavaScript
+title: Typst from JavaScript
 ---

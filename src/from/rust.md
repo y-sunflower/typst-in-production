@@ -1,3 +1,3 @@
 ---
-title: from Rust
+title: Typst from Rust
 ---

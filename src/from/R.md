@@ -1,3 +1,3 @@
 ---
-title: from R
+title: Typst from R
 ---

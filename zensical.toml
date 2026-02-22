@@ -17,7 +17,7 @@ nav = [
     "from/javascript.md",
     "from/rust.md",
   ] },
-  { "Quarto" = ["quarto/index.md"] },
+  { "Quarto" = ["quarto/index.md", "quarto/R.md", "quarto/python.md"] },
   { "CI/CD" = [
     "continuous/index.md",
     "continuous/integration.md",

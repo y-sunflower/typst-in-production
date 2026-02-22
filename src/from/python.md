@@ -8,6 +8,8 @@ title: Typst from Python
 
 In Python, the recommended binding to use is [typst-py](https://github.com/messense/typst-py), maintained by [messense](https://github.com/messense), a [Maturin](https://www.maturin.rs/) developer (the software that allows Python and Rust to communicate), which is a very good thing.
 
+Also note that Python integrates well with [Quarto](https://quarto.org/), which offers a nice, highly customizable way to create reports with Typst. There is a dedicated tutorial [here](../quarto/index.md).
+
 ## Installation
 
 === "uv"
