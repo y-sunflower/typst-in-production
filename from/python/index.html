@@ -987,7 +987,7 @@
 </div>
 </div>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<p>Basically, it mainly offers a <code>compile()</code> function that we can use like this:</p>
+<p>It mainly offers a <code>compile()</code> function that we can use like this:</p>
 <div class="language-python highlight"><span class="filename">main.py</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">typst</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">typst</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;file.typ&quot;</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="s2">&quot;file.pdf&quot;</span><span class="p">)</span>
@@ -1010,7 +1010,7 @@
 </span></code></pre></div>
 <p>By being able to pass variables from Python to Typst, it enables us to connect our Python logic directly to the PDF output that will be rendered to the user.</p>
 <h2 id="example-with-fastapi">Example with FastAPI<a class="headerlink" href="#example-with-fastapi" title="Permanent link">&para;</a></h2>
-<p>Here is an example that creates a FastAPI <code>/report</code> endpoint with a <code>color</code> argument that returns a PDF report, made with Typst relying on that parameter for the style.</p>
+<p>Here is an example that creates a FastAPI <code>/report</code> endpoint with a <code>color</code> argument that returns a PDF report made with Typst, relying on that parameter for styling.</p>
 <p>First, we create a basic Typst file:</p>
 <div class="language-typst highlight"><span class="filename">file.typ</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nv">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">json</span><span class="p">(</span><span class="nf">bytes</span><span class="p">(</span><span class="nv">sys</span><span class="p">.</span><span class="nv">inputs</span><span class="p">.</span><span class="nv">color</span><span class="p">))</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="nv">col</span><span class="p">),</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">cm</span><span class="p">)</span>

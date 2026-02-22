@@ -503,10 +503,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#when-or-when-not-to-use-the-symbol" class="md-nav__link">
+  <a href="#when-and-when-not-to-use-the-symbol" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When or when not to use the # symbol
+        When and when not to use the # symbol
       
     </span>
   </a>
@@ -938,10 +938,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#when-or-when-not-to-use-the-symbol" class="md-nav__link">
+  <a href="#when-and-when-not-to-use-the-symbol" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When or when not to use the # symbol
+        When and when not to use the # symbol
       
     </span>
   </a>
@@ -1091,7 +1091,7 @@
 <h2 id="typst-in-practice">Typst, in practice<a class="headerlink" href="#typst-in-practice" title="Permanent link">&para;</a></h2>
 <p>The compiler is a CLI (Command Line Interface), which means it needs to run from the terminal.</p>
 <p>But when you're trying to use Typst in more complex environments, like a <ins>web server</ins> or <ins>data pipeline</ins>, you're often interested in generating a PDF from a programming language, not from the terminal.</p>
-<p>Once you'll understand the basics of Typst, you'll learn how to use <a href="..//from/">Typst from a programming language</a>.</p>
+<p>Once you understand the basics of Typst, you'll learn how to use <a href="..//from/">Typst from a programming language</a>.</p>
 <h2 id="basic-syntax">Basic syntax<a class="headerlink" href="#basic-syntax" title="Permanent link">&para;</a></h2>
 <p>If you've ever used Markdown before, getting started with Typst will be easy. For example, the following Typst file:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#f2e9e4&quot;</span><span class="p">),</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">cm</span><span class="p">)</span>
@@ -1155,7 +1155,7 @@
 </span></code></pre></div>
 <p><img alt="" src="..//examples/crash-course-5.png" /></p>
 <h2 id="create-your-own-functions">Create your own functions<a class="headerlink" href="#create-your-own-functions" title="Permanent link">&para;</a></h2>
-<p>Even though Typst is a markup language (!= programming language), it embeds a scripting language that lets us add <strong>logic</strong> (<code>if</code>/<code>else</code> statements, <code>for</code> loops, etc.) and create reusable components.</p>
+<p>Even though Typst is a markup language (!= a programming language), it embeds a scripting language that lets us add <strong>logic</strong> (<code>if</code>/<code>else</code> statements, <code>for</code> loops, etc.) and create reusable components.</p>
 <p>Let's look at an example:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">aqua</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">cm</span><span class="p">)</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
@@ -1170,7 +1170,7 @@
 </span></code></pre></div>
 <p><img alt="" src="..//examples/crash-course-6.png" /></p>
 <p>Once again we use the <code>let</code> keyword, and then we wrap the output of the function inside curly braces.</p>
-<h2 id="when-or-when-not-to-use-the-symbol">When or when not to use the <code>#</code> symbol<a class="headerlink" href="#when-or-when-not-to-use-the-symbol" title="Permanent link">&para;</a></h2>
+<h2 id="when-and-when-not-to-use-the-symbol">When and when not to use the <code>#</code> symbol<a class="headerlink" href="#when-and-when-not-to-use-the-symbol" title="Permanent link">&para;</a></h2>
 <p>A thing that might be confusing in the previous code snippets is that sometimes we use the <code>#</code> symbol, and sometimes we don't.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">With the <code>#</code></label><label for="__tabbed_1_2">Without the <code>#</code></label></div>
 <div class="tabbed-content">
