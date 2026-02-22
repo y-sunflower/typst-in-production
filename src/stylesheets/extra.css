@@ -2,3 +2,8 @@ h2,
 h3 {
   margin-top: 2em !important;
 }
+
+.md-typeset ol li,
+.md-typeset ul li {
+  margin-bottom: 0em;
+}

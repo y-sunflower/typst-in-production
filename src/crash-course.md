@@ -39,6 +39,8 @@ The compiler is a CLI (Command Line Interface), which means it needs to run from
 
 But when you're trying to use Typst in more complex environments, like a ^^web server^^ or ^^data pipeline^^, you're often interested in generating a PDF from a programming language, not from the terminal.
 
+Once you'll understand the basics of Typst, you'll learn how to use [Typst from a programming language](./from/index.md).
+
 ## Basic syntax
 
 If you've ever used Markdown before, getting started with Typst will be easy. For example, the following Typst file:
@@ -401,4 +403,4 @@ Reproduce the PDF below:
 
 You now have some good Typst foundations! If you want to learn more, you can have a look at this _unofficial_ [Typst Examples Book](https://sitandr.github.io/typst-examples-book/book/about.html).
 
-Otherwise you're ready to start using [Typst from a programming language](./from-languages/index.md)!
+Otherwise you're ready to start using [Typst from a programming language](./from/index.md)!
