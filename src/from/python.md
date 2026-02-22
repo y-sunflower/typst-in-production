@@ -32,7 +32,7 @@ Please also note that Python integrates well with [Quarto](https://quarto.org/),
 
 ## Usage
 
-Basically, it mainly offers a `compile()` function that we can use like this:
+It mainly offers a `compile()` function that we can use like this:
 
 ```python title="main.py"
 import typst
@@ -66,7 +66,7 @@ By being able to pass variables from Python to Typst, it enables us to connect o
 
 ## Example with FastAPI
 
-Here is an example that creates a FastAPI `/report` endpoint with a `color` argument that returns a PDF report, made with Typst relying on that parameter for the style.
+Here is an example that creates a FastAPI `/report` endpoint with a `color` argument that returns a PDF report made with Typst, relying on that parameter for styling.
 
 First, we create a basic Typst file:
 

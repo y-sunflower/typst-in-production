@@ -39,7 +39,7 @@ The compiler is a CLI (Command Line Interface), which means it needs to run from
 
 But when you're trying to use Typst in more complex environments, like a ^^web server^^ or ^^data pipeline^^, you're often interested in generating a PDF from a programming language, not from the terminal.
 
-Once you'll understand the basics of Typst, you'll learn how to use [Typst from a programming language](/from/index.md).
+Once you understand the basics of Typst, you'll learn how to use [Typst from a programming language](/from/index.md).
 
 ## Basic syntax
 
@@ -133,7 +133,7 @@ We can define variables, like in any programming language, in order to reuse the
 
 ## Create your own functions
 
-Even though Typst is a markup language (!= programming language), it embeds a scripting language that lets us add **logic** (`if`/`else` statements, `for` loops, etc.) and create reusable components.
+Even though Typst is a markup language (!= a programming language), it embeds a scripting language that lets us add **logic** (`if`/`else` statements, `for` loops, etc.) and create reusable components.
 
 Let's look at an example:
 
@@ -154,7 +154,7 @@ Let's look at an example:
 
 Once again we use the `let` keyword, and then we wrap the output of the function inside curly braces.
 
-## When or when not to use the `#` symbol
+## When and when not to use the `#` symbol
 
 A thing that might be confusing in the previous code snippets is that sometimes we use the `#` symbol, and sometimes we don't.
 

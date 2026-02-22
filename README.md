@@ -7,7 +7,7 @@ It will teach you everything you need to know, such as:
 - Typst in other programming languages
 - Run Typst in CI/CD
 - Create parametrized templates
-- and many more!
+- and much more!
 
 <br><br>
 
@@ -27,10 +27,4 @@ uv sync
 
 ```bash
 just preview
-```
-
-- Render all examples:
-
-```bash
-just examples
 ```
