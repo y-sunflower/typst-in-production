@@ -16,7 +16,7 @@
         <link rel="prev" href="./..">
       
       
-        <link rel="next" href="../from-languages/">
+        <link rel="next" href="../from/">
       
       
         
@@ -57,6 +57,8 @@
         <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,a=__md_scope)=>JSON.parse(t.getItem(a.pathname+"."+e)),__md_set=(e,t,a=localStorage,_=__md_scope)=>{try{a.setItem(_.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
@@ -227,7 +229,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../from-languages/" class="md-tabs__link">
+        <a href="../from/" class="md-tabs__link">
           
   
   From languages
@@ -652,7 +654,7 @@
   
   
   
-    <a href="../from-languages/" class="md-nav__link">
+    <a href="../from/" class="md-nav__link">
       
   
   
@@ -1208,7 +1210,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul>
-<li>Make sure to either <a href="https://typst.app/open-source/">install Typst</a> or use their <a href="https://typst.app/play/">Web app</a></li>
+<li>Make sure to either <a href="https://typst.app/open-source/">install Typst</a> or use their <a href="https://typst.app/play/">web app</a></li>
 <li>Always include <code>#set page(fill: rgb("#f9f6f4"), width: 12cm, height: 5cm)</code> at the top of the document to:<ul>
 <li>ensure a fixed page size, because by default it will be A4, which is more than necessary</li>
 <li>have a distinct background (light grey)</li>
@@ -1216,7 +1218,7 @@
 </li>
 </ul>
 </div>
-<h4 id="1-basics">1 - Basics<a class="headerlink" href="#1-basics" title="Permanent link">&para;</a></h4>
+<h3 id="1-basics">1 - Basics<a class="headerlink" href="#1-basics" title="Permanent link">&para;</a></h3>
 <p>Reproduce the PDF below:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Exercise</label><label for="__tabbed_3_2">Hint</label><label for="__tabbed_3_3">Solution</label></div>
 <div class="tabbed-content">
@@ -1239,7 +1241,7 @@
 </div>
 </div>
 </div>
-<h4 id="2-a-first-shape">2 - A first shape<a class="headerlink" href="#2-a-first-shape" title="Permanent link">&para;</a></h4>
+<h3 id="2-a-first-shape">2 - A first shape<a class="headerlink" href="#2-a-first-shape" title="Permanent link">&para;</a></h3>
 <p>Reproduce the PDF below:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Exercise</label><label for="__tabbed_4_2">Hint</label><label for="__tabbed_4_3">Solution</label></div>
 <div class="tabbed-content">
@@ -1260,7 +1262,7 @@
 </div>
 </div>
 </div>
-<h4 id="3-layout-with-stack">3 - Layout with <code>stack</code><a class="headerlink" href="#3-layout-with-stack" title="Permanent link">&para;</a></h4>
+<h3 id="3-layout-with-stack">3 - Layout with <code>stack</code><a class="headerlink" href="#3-layout-with-stack" title="Permanent link">&para;</a></h3>
 <p>Reproduce the PDF below:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Exercise</label><label for="__tabbed_5_2">Hint</label><label for="__tabbed_5_3">Solution</label></div>
 <div class="tabbed-content">
@@ -1289,7 +1291,7 @@
 </div>
 </div>
 </div>
-<h4 id="4-variables-and-set-rules">4 - Variables and set rules<a class="headerlink" href="#4-variables-and-set-rules" title="Permanent link">&para;</a></h4>
+<h3 id="4-variables-and-set-rules">4 - Variables and set rules<a class="headerlink" href="#4-variables-and-set-rules" title="Permanent link">&para;</a></h3>
 <p>Reproduce the PDF below:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="6:3"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Exercise</label><label for="__tabbed_6_2">Hint</label><label for="__tabbed_6_3">Solution</label></div>
 <div class="tabbed-content">
@@ -1317,7 +1319,7 @@
 </div>
 </div>
 </div>
-<h4 id="5-combining-align-and-stack">5 - Combining <code>align</code> and <code>stack</code><a class="headerlink" href="#5-combining-align-and-stack" title="Permanent link">&para;</a></h4>
+<h3 id="5-combining-align-and-stack">5 - Combining <code>align</code> and <code>stack</code><a class="headerlink" href="#5-combining-align-and-stack" title="Permanent link">&para;</a></h3>
 <p>Reproduce the PDF below:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="7:3"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><input id="__tabbed_7_3" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Exercise</label><label for="__tabbed_7_2">Hint</label><label for="__tabbed_7_3">Solution</label></div>
 <div class="tabbed-content">
@@ -1359,7 +1361,7 @@
 </div>
 </div>
 </div>
-<h4 id="6-create-a-function-with-parameters">6 - Create a function with parameters<a class="headerlink" href="#6-create-a-function-with-parameters" title="Permanent link">&para;</a></h4>
+<h3 id="6-create-a-function-with-parameters">6 - Create a function with parameters<a class="headerlink" href="#6-create-a-function-with-parameters" title="Permanent link">&para;</a></h3>
 <p>Reproduce the PDF below:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="8:3"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Exercise</label><label for="__tabbed_8_2">Hint</label><label for="__tabbed_8_3">Solution</label></div>
 <div class="tabbed-content">
@@ -1400,7 +1402,7 @@
 <p><br><br></p>
 <h2 id="next-step">Next step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h2>
 <p>You now have some good Typst foundations! If you want to learn more, you can have a look at this <em>unofficial</em> <a href="https://sitandr.github.io/typst-examples-book/book/about.html">Typst Examples Book</a>.</p>
-<p>Otherwise you're ready to start using Typst from a programming language!</p>
+<p>Otherwise you're ready to start using <a href=".././from-languages/">Typst from a programming language</a>!</p>
 
 
 
@@ -1458,7 +1460,7 @@
         
         
           
-          <a href="../from-languages/" class="md-footer__link md-footer__link--next" aria-label="Next: Using Typst from other languages">
+          <a href="../from/" class="md-footer__link md-footer__link--next" aria-label="Next: Using Typst from other languages">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
