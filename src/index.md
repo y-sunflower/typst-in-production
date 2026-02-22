@@ -1,7 +1,11 @@
 ---
-title: Intro
 icon: simple/markdown
 ---
+
+<div class="hero">
+   <h1 class="hero-title">Typst in Production</h1>
+   <p class="hero-description">A practical guide to building, automating, and deploying PDFs with Typst</p>
+</div>
 
 ## PDF everywhere...
 

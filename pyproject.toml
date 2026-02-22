@@ -1,9 +1,9 @@
 [project]
 name = "typst-in-production"
 version = "0.1.0"
-description = "Add your description here"
+description = "Typst in Production is a practical guide to building, automating, and deploying PDFs with Typst."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "zensical>=0.0.23",
+  "zensical>=0.0.23",
 ]

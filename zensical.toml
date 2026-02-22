@@ -2,7 +2,7 @@
 site_name = "Typst in Production"
 # repo_url = "https://github.com/y-sunflower/typst-in-production"
 site_url = "https://typst-in-production.com/"
-site_description = "Master delivering PDF with Typst, in production environments."
+site_description = "Typst in Production is a practical guide to building, automating, and deploying PDFs with Typst."
 site_author = "Joseph Barbier"
 copyright = """
 Copyright &copy; 2026 Yellow Sunflower
