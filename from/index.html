@@ -773,6 +773,56 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Bindings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-rust-python-with-maturin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example: Rust + Python with maturin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-conceptual-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Simple Conceptual Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-bindings-exist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why bindings exist
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typst-bindings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Typst bindings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -842,6 +892,73 @@
 
 <p>In many cases, you'll want to use Typst in a specific workflow, which often means using a programming language. Whether it's <a href="./python/">Python</a>, <a href="./rust/">Rust</a>, <a href="./javascript/">JavaScript</a> or <a href="./R/">R</a>, Typst <strong>will</strong> work seamlessly.</p>
 <h2 id="bindings">Bindings<a class="headerlink" href="#bindings" title="Permanent link">&para;</a></h2>
+<p>In software, <strong>bindings</strong> are the "glue" that let code written in one programming language be used from another language.</p>
+<p>They expose functions, classes, or libraries from one language/runtime to another by handling things like:</p>
+<ul>
+<li>Type conversion (e.g., Rust types ↔ Python objects)</li>
+<li>Memory management</li>
+<li>Calling conventions</li>
+<li>Error handling translation</li>
+</ul>
+<h3 id="example-rust-python-with-maturin">Example: Rust + Python with <code>maturin</code><a class="headerlink" href="#example-rust-python-with-maturin" title="Permanent link">&para;</a></h3>
+<p><code>maturin</code> helps you create <strong>Python bindings for Rust code</strong>.</p>
+<p>What happens conceptually:</p>
+<ol>
+<li>You write performance-critical logic in <strong>Rust</strong>.</li>
+<li>You <strong>expose</strong> selected Rust functions using a binding layer (commonly via <code>pyo3</code>).</li>
+<li><code>maturin</code> builds a Python <strong>extension module</strong> from that Rust code.</li>
+<li>Python can then import and use it like a normal module.</li>
+</ol>
+<p>So instead of rewriting performance-sensitive code in Python, you:</p>
+<ul>
+<li>Keep speed in Rust</li>
+<li>Access it from Python via bindings</li>
+</ul>
+<h3 id="simple-conceptual-example">Simple Conceptual Example<a class="headerlink" href="#simple-conceptual-example" title="Permanent link">&para;</a></h3>
+<p>Rust:</p>
+<div class="language-rust highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#[pyfunction]</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">fn</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="w"> </span><span class="kt">i32</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">:</span><span class="w"> </span><span class="kt">i32</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="kt">i32</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>After building with <code>maturin</code>, Python can do:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">mymodule</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">mymodule</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Here, the binding layer:</p>
+<ul>
+<li>Converts Python integers <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Rust <code>i32</code></li>
+<li>Calls the Rust function</li>
+<li>Converts the result back <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> Python integer</li>
+</ul>
+<h3 id="why-bindings-exist">Why bindings exist<a class="headerlink" href="#why-bindings-exist" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Performance (C/C++/Rust libraries used in Python, Ruby, etc.)</li>
+<li>Reusing existing libraries</li>
+<li>Accessing system-level APIs</li>
+<li>Interoperability between ecosystems</li>
+</ul>
+<h3 id="typst-bindings">Typst bindings<a class="headerlink" href="#typst-bindings" title="Permanent link">&para;</a></h3>
+<p>In the context of Typst, this is very useful because it lets us use our current logic to define the output report.</p>
+<p>Since Typst is built using Rust, we can easily find bindings for many programming languages. In particular, since Typst can be used as a Rust library, people can use that library and build on top of it. Right now, the simplest way to use Typst in Rust is via the <a href="https://crates.io/crates/typst-as-lib"><code>typst-as-lib</code></a> library, which is a community-made tool.</p>
+<p>This means that <strong>all</strong> bindings rely on the Typst library (e.g., Rust) to use Typst, no matter the programming language.</p>
+<pre class="mermaid"><code>graph LR
+  A[Typst compiler] --&gt; B{Typst Rust library};
+  B --&gt;|Python| C[Python to Rust bindings];
+  C --&gt; G{Python};
+  B --&gt;|R| D[R to Rust bindings];
+  D --&gt; H{R};
+  B --&gt;|JavaScript| E[JS to Rust bindings];
+  E --&gt; I{JavaScript};
+  B --&gt;|Rust| F{Rust};
+</code></pre>
+<p>This also means that using Typst from Rust is <strong>more "native"</strong> than in other programming languages since it does not require bindings. You can learn about that in the <a href="./rust/">Typst from Rust post</a>, or choose your favorite programming language:</p>
+<ul>
+<li><a href="./python/">Typst from Python</a></li>
+<li><a href="./R/">Typst from R</a></li>
+<li><a href="./javascript/">Typst from JavaScript</a></li>
+<li><a href="./rust/">Typst from Rust</a></li>
+</ul>
 
 
 
