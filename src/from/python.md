@@ -4,11 +4,11 @@ title: Typst from Python
 
 !!! tip
 
-      Make sure to check the overview of [how and why Typst can be used from programming languages](./index.md) to fully understand it.
+      Make sure to check the overview of [how and why Typst can be used from programming languages](/index.md) to fully understand it.
 
 In Python, the recommended binding to use is [typst-py](https://github.com/messense/typst-py), maintained by [messense](https://github.com/messense), a [Maturin](https://www.maturin.rs/) developer (the software that allows Python and Rust to communicate), which is a very good thing.
 
-Please also note that Python integrates well with [Quarto](https://quarto.org/), which offers a convenient and highly customizable way to create reports with Typst. You can find a dedicated tutorial [here](../quarto/index.md).
+Please also note that Python integrates well with [Quarto](https://quarto.org/), which offers a convenient and highly customizable way to create reports with Typst. You can find a dedicated tutorial [here](./quarto/index.md).
 
 ## Installation
 

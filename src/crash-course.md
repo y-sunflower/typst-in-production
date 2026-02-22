@@ -29,7 +29,7 @@ Hey folks, how's that crash course going so far?
 
 Then we run `typst compile file.typ`, and we get:
 
-![A red page with a level 2 title "Here goes the title..." and the text "Hey folks, how's that crash course going so far?"](./examples/crash-course-1.png)
+![A red page with a level 2 title "Here goes the title..." and the text "Hey folks, how's that crash course going so far?"](/examples/crash-course-1.png)
 
 [footnote-1]: https://typst.app/docs/reference/html/ "Note that you can also generate other files such as HTML"
 
@@ -39,7 +39,7 @@ The compiler is a CLI (Command Line Interface), which means it needs to run from
 
 But when you're trying to use Typst in more complex environments, like a ^^web server^^ or ^^data pipeline^^, you're often interested in generating a PDF from a programming language, not from the terminal.
 
-Once you'll understand the basics of Typst, you'll learn how to use [Typst from a programming language](./from/index.md).
+Once you'll understand the basics of Typst, you'll learn how to use [Typst from a programming language](/from/index.md).
 
 ## Basic syntax
 
@@ -57,7 +57,7 @@ If you've ever used Markdown before, getting started with Typst will be easy. Fo
 This is a paragraph, where text can be *bold*, _italic_, or `code-like`.
 ```
 
-![](./examples/crash-course-2.png)
+![](/examples/crash-course-2.png)
 
 ## Functions
 
@@ -77,7 +77,7 @@ For example, I want to put a blue circle next to a green rectangle, next to red 
 )
 ```
 
-![](./examples/crash-course-3.png)
+![](/examples/crash-course-3.png)
 
 What if I want them to be vertically aligned? I just call the `align()` function:
 
@@ -93,7 +93,7 @@ What if I want them to be vertically aligned? I just call the `align()` function
 ))
 ```
 
-![](./examples/crash-course-4.png)
+![](/examples/crash-course-4.png)
 
 ## Set rules
 
@@ -129,7 +129,7 @@ We can define variables, like in any programming language, in order to reuse the
 ))
 ```
 
-![](./examples/crash-course-5.png)
+![](/examples/crash-course-5.png)
 
 ## Create your own functions
 
@@ -150,7 +150,7 @@ Let's look at an example:
 #say-hello("Justine")
 ```
 
-![](./examples/crash-course-6.png)
+![](/examples/crash-course-6.png)
 
 Once again we use the `let` keyword, and then we wrap the output of the function inside curly braces.
 
@@ -164,7 +164,7 @@ A thing that might be confusing in the previous code snippets is that sometimes 
     #circle(fill: blue, width: 3cm)
     ```
 
-    ![](./examples/crash-course-7.png)
+    ![](/examples/crash-course-7.png)
 
 === "Without the `#`"
 
@@ -172,7 +172,7 @@ A thing that might be confusing in the previous code snippets is that sometimes 
     circle(fill: blue, width: 3cm)
     ```
 
-    ![](./examples/crash-course-8.png)
+    ![](/examples/crash-course-8.png)
 
 In the first case, the output is just a simple circle, while in the second case, it's the actual text instead of a circle. Why is that?
 
@@ -222,7 +222,7 @@ Reproduce the PDF below:
 
 === "Exercise"
 
-    ![](./examples/crash-course-9.png)
+    ![](/examples/crash-course-9.png)
 
 === "Hint"
 
@@ -245,7 +245,7 @@ Reproduce the PDF below:
 
 === "Exercise"
 
-    ![](./examples/crash-course-10.png)
+    ![](/examples/crash-course-10.png)
 
 === "Hint"
 
@@ -266,7 +266,7 @@ Reproduce the PDF below:
 
 === "Exercise"
 
-    ![](./examples/crash-course-11.png)
+    ![](/examples/crash-course-11.png)
 
 === "Hint"
 
@@ -295,7 +295,7 @@ Reproduce the PDF below:
 
 === "Exercise"
 
-    ![](./examples/crash-course-12.png)
+    ![](/examples/crash-course-12.png)
 
 === "Hint"
 
@@ -323,7 +323,7 @@ Reproduce the PDF below:
 
 === "Exercise"
 
-    ![](./examples/crash-course-13.png)
+    ![](/examples/crash-course-13.png)
 
 === "Hint"
 
@@ -365,7 +365,7 @@ Reproduce the PDF below:
 
 === "Exercise"
 
-    ![](./examples/crash-course-14.png)
+    ![](/examples/crash-course-14.png)
 
 === "Hint"
 
@@ -403,4 +403,4 @@ Reproduce the PDF below:
 
 You now have some good Typst foundations! If you want to learn more, you can have a look at this _unofficial_ [Typst Examples Book](https://sitandr.github.io/typst-examples-book/book/about.html).
 
-Otherwise you're ready to start using [Typst from a programming language](./from/index.md)!
+Otherwise you're ready to start using [Typst from a programming language](/from/index.md)!

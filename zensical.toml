@@ -1,6 +1,6 @@
 [project]
 site_name = "Typst in Production"
-repo_url = "https://github.com/y-sunflower/typst-in-production"
+# repo_url = "https://github.com/y-sunflower/typst-in-production"
 site_url = "https://typst-in-production.com/"
 site_description = "Master delivering PDF with Typst, in production environments."
 site_author = "Joseph Barbier"
@@ -59,3 +59,6 @@ toggle.name = "Switch to dark mode"
 scheme = "slate"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to light mode"
+
+[project.theme.icon]
+repo = "fontawesome/brands/github"
