@@ -7,3 +7,24 @@ h3 {
 .md-typeset ul li {
   margin-bottom: 0em;
 }
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  gap: 0.1rem;
+}
+
+.hero-title {
+  font-size: 3rem !important;
+  margin: 0.2em !important;
+}
+
+.hero-description {
+  color: grey;
+  font-style: italic;
+  font-size: 1.2em;
+  margin: 0;
+}
