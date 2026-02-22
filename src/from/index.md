@@ -3,7 +3,7 @@ title: Using Typst from other languages
 description: Nullam urna elit, malesuada eget finibus ut, ac tortor.
 ---
 
-In many cases, you'll want to use Typst in a specific workflow, which often means using a programming language. Whether it's [Python](/python.md), [Rust](/rust.md), [JavaScript](/javascript.md) or [R](/R.md), Typst **will** work seamlessly.
+In many cases, you'll want to use Typst in a specific workflow, which often means using a programming language. Whether it's [Python](/from/python.md), [Rust](/from/rust.md), [JavaScript](/from/javascript.md) or [R](/from/R.md), Typst **will** work seamlessly.
 
 ## Bindings
 
@@ -84,9 +84,9 @@ graph LR
 
 ```
 
-This also means that using Typst from Rust is **more "native"** than in other programming languages since it does not require bindings. You can learn about that in the [Typst from Rust post](/rust.md), or choose your favorite programming language:
+This also means that using Typst from Rust is **more "native"** than in other programming languages since it does not require bindings. You can learn about that in the [Typst from Rust post](/from/rust.md), or choose your favorite programming language:
 
-- [Typst from Python](/python.md)
-- [Typst from R](/R.md)
-- [Typst from JavaScript](/javascript.md)
-- [Typst from Rust](/rust.md)
+- [Typst from Python](/from/python.md)
+- [Typst from R](/from/R.md)
+- [Typst from JavaScript](/from/javascript.md)
+- [Typst from Rust](/from/rust.md)
