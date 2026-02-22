@@ -209,12 +209,12 @@ Those are just common examples, but in practice you'll quickly find this intuiti
 
 !!! note
 
-    - Make sure to either [install Typst](https://typst.app/open-source/) or use their [Web app](https://typst.app/play/)
+    - Make sure to either [install Typst](https://typst.app/open-source/) or use their [web app](https://typst.app/play/)
     - Always include `#set page(fill: rgb("#f9f6f4"), width: 12cm, height: 5cm)` at the top of the document to:
         - ensure a fixed page size, because by default it will be A4, which is more than necessary
         - have a distinct background (light grey)
 
-#### 1 - Basics
+### 1 - Basics
 
 Reproduce the PDF below:
 
@@ -237,7 +237,7 @@ Reproduce the PDF below:
     My name is Joseph, and I love cookies
     ```
 
-#### 2 - A first shape
+### 2 - A first shape
 
 Reproduce the PDF below:
 
@@ -258,7 +258,7 @@ Reproduce the PDF below:
     #circle(fill: rgb("#3a86ff"), width: 2.5cm)
     ```
 
-#### 3 - Layout with `stack`
+### 3 - Layout with `stack`
 
 Reproduce the PDF below:
 
@@ -287,7 +287,7 @@ Reproduce the PDF below:
     )
     ```
 
-#### 4 - Variables and set rules
+### 4 - Variables and set rules
 
 Reproduce the PDF below:
 
@@ -315,7 +315,7 @@ Reproduce the PDF below:
     #rect(fill: main-color, width: 4.5cm, height: 0.5cm, radius: 3pt)
     ```
 
-#### 5 - Combining `align` and `stack`
+### 5 - Combining `align` and `stack`
 
 Reproduce the PDF below:
 
@@ -357,7 +357,7 @@ Reproduce the PDF below:
     ))
     ```
 
-#### 6 - Create a function with parameters
+### 6 - Create a function with parameters
 
 Reproduce the PDF below:
 
@@ -401,4 +401,4 @@ Reproduce the PDF below:
 
 You now have some good Typst foundations! If you want to learn more, you can have a look at this _unofficial_ [Typst Examples Book](https://sitandr.github.io/typst-examples-book/book/about.html).
 
-Otherwise you're ready to start using Typst from a programming language!
+Otherwise you're ready to start using [Typst from a programming language](./from-languages/index.md)!

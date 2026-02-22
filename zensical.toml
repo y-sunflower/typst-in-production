@@ -6,15 +6,16 @@ copyright = """
 Copyright &copy; 2026 Yellow Sunflower
 """
 docs_dir = "src"
+extra_css = ["stylesheets/extra.css"]
 nav = [
   { "Intro" = "index.md" },
   { "Crash course" = "crash-course.md" },
   { "From languages" = [
-    "from-languages/index.md",
-    "from-languages/python.md",
-    "from-languages/R.md",
-    "from-languages/javascript.md",
-    "from-languages/rust.md",
+    "from/index.md",
+    "from/python.md",
+    "from/R.md",
+    "from/javascript.md",
+    "from/rust.md",
   ] },
   { "Quarto" = ["quarto/index.md"] },
   { "CI/CD" = [
