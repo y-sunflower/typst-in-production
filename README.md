@@ -9,7 +9,7 @@ It will teach you everything you need to know, such as:
 - Create parametrized templates
 - and many more!
 
-<br>
+<br><br>
 
 ## Contribution
 
