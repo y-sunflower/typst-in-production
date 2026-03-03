@@ -12,3 +12,4 @@ wheels/
 site/
 
 *cache*
+sandbox/
