@@ -1,6 +1,6 @@
 h2,
 h3 {
-  margin-top: 2em !important;
+  margin-top: 2.5em !important;
 }
 
 .md-typeset ol li,
@@ -27,4 +27,9 @@ h3 {
   font-style: italic;
   font-size: 1.2em;
   margin: 0;
+}
+
+.md-tabs__item {
+  padding-left: 0.8rem !important;
+  padding-right: 0.8rem !important;
 }
