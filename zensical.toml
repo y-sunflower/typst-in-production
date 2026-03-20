@@ -11,7 +11,11 @@ docs_dir = "src"
 extra_css = ["stylesheets/extra.css"]
 nav = [
   { "Intro" = "index.md" },
-  { "Crash course" = "crash-course.md" },
+  { "Crash course" = [
+    "crash-course/lesson.md",
+    "crash-course/how-to-use-typst.md",
+    "crash-course/exercises.md"
+  ] },
   { "From languages" = [
     "from/index.md",
     "from/python.md",
