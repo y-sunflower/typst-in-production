@@ -96,7 +96,7 @@ c(
 
 ## Other resources
 
-- [`typr`](https://github.com/christopherkenny/typr/): R package to render Typst documents from R. The same feature is present in `r2typ`, but it does use bindings to the Typst library and requires you to install either the Typst CLI or Quarto (which bundles Typst).
+- [`typr`](https://github.com/christopherkenny/typr/): R package to render Typst documents from R. The same feature is present in `tynding`, but it does **not** use bindings to the Typst library and requires you to install either the Typst CLI or Quarto (which bundles Typst).
 
 ```R
 library(typr)
