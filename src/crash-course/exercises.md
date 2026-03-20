@@ -7,6 +7,7 @@ title: Exercises
 !!! note
 
     - Make sure to either [install Typst](https://typst.app/open-source/) or use their [web app](https://typst.app/play/)
+    - Feel free to use the [official documentation](https://typst.app/docs/).
     - Always include `#set page(fill: rgb("#f9f6f4"), width: 12cm, height: 5cm)` at the top of the document to:
         - ensure a fixed page size, because by default it will be A4, which is more than necessary
         - have a distinct background (light grey)

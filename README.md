@@ -5,7 +5,6 @@ _Typst in Production_ is a practical guide to building, automating, and deployin
 It will teach you everything you need to know, such as:
 
 - Typst in other programming languages
-- Run Typst in CI/CD
 - Create parametrized templates
 - and much more!
 
@@ -27,4 +26,10 @@ uv sync
 
 ```bash
 just preview
+```
+
+If you want to add examples, add your Typst files in `src/examples/` and then compile them to png (important!) with:
+
+```
+typst compile src/examples/file.typ: --format png
 ```
