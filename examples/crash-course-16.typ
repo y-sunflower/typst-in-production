@@ -1,3 +1,3 @@
 #set page(fill: rgb("#f8f9fa"), width: 12cm, height: 5cm)
 
-#circle(fill: rgb("#3a86ff"), width: 2.5cm)
+#circle(fill: blue, width: 3cm, "Hello world")

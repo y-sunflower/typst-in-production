@@ -12,13 +12,13 @@
         <meta name="author" content="Joseph Barbier">
       
       
-        <link rel="canonical" href="https://typst-in-production.com/quarto/python/">
+        <link rel="canonical" href="https://typst-in-production.com/crash-course/lesson-2/">
       
       
-        <link rel="prev" href="../R/">
+        <link rel="prev" href="../exercises-1/">
       
       
-        <link rel="next" href="../julia/">
+        <link rel="next" href="../exercises-2/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Python - Typst in Production</title>
+        <title>Lesson - Scripting - Typst in Production</title>
       
     
     
@@ -86,7 +86,8 @@
     <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
-        <a href="#__skip" class="md-skip">
+        
+        <a href="#create-your-own-functions" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python
+              Lesson - Scripting
             
           </span>
         </div>
@@ -208,11 +209,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../crash-course/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   Crash course
@@ -246,13 +249,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../quarto/" class="md-tabs__link">
           
   
   Quarto
@@ -361,6 +362,8 @@
       
   
   
+    
+  
   
   
     
@@ -384,30 +387,32 @@
     
     
       
+        
+        
+      
       
         
       
     
     
       
-        
-        
-      
     
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
-  
-  
-  
-    <a href="../../crash-course/" class="md-nav__link">
-      
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   
   <span class="md-ellipsis">
     
   
-    Typst Crash Course
+    Crash course
   
 
     
@@ -415,12 +420,247 @@
   
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Crash course
   
 
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-use-typst/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How to use Typst
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lesson-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lesson - Foundations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exercises-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercises - Foundations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lesson - Scripting
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lesson - Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-your-own-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create your own functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions-with-default-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functions with default arguments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variadic-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variadic arguments
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exercises-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercises - Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -497,8 +737,6 @@
       
   
   
-    
-  
   
   
     
@@ -518,26 +756,24 @@
     
     
       
-        
-        
-      
       
         
       
     
     
       
+        
+        
+      
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
-              
+  
+  
+  
+    <a href="../../quarto/" class="md-nav__link">
+      
   
   
   <span class="md-ellipsis">
@@ -551,122 +787,12 @@
   
   
 
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Quarto
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../R/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    R
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+        <span class="md-nav__icon md-icon"></span>
       
-      
-      
-      <a href="././" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Python
+    </a>
   
 
-    
-  </span>
-  
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../julia/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Julia
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -745,6 +871,47 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-your-own-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create your own functions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions-with-default-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functions with default arguments
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variadic-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variadic arguments
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -789,7 +956,7 @@
         <a href="../" class="md-path__link">
           
   <span class="md-ellipsis">
-    Quarto
+    Crash course
   </span>
 
         </a>
@@ -806,9 +973,47 @@
                 
                   
 
-  <h1 id="__skip">Python</h1>
+  <h1 id="__skip">Lesson - Scripting</h1>
 
-
+<h2 id="create-your-own-functions">Create your own functions<a class="headerlink" href="#create-your-own-functions" title="Permanent link">&para;</a></h2>
+<p>Even though Typst is a markup language (!= a programming language), it embeds a scripting language that lets us add <strong>logic</strong> (<code>if</code>/<code>else</code> statements, <code>for</code> loops, etc.) and create reusable components/functions.</p>
+<p>Let's look at an example:</p>
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">aqua</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kd">#let</span><span class="w"> </span><span class="nf">say-hello</span><span class="p">(</span><span class="nv">s</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="p">[</span>Hello<span class="w"> </span>my<span class="w"> </span>friend<span class="w"> </span><span class="nv">#s</span>,<span class="w"> </span>how<span class="w"> </span>are<span class="w"> </span>you?<span class="p">]</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nf">#say-hello</span><span class="p">(</span><span class="s2">&quot;Joseph&quot;</span><span class="p">)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nf">#say-hello</span><span class="p">(</span><span class="s2">&quot;Justine&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p><img alt="" src="../../examples/crash-course-6.png" /></p>
+<p>Once again we use the <code>let</code> keyword, and then we wrap the output of the function inside curly braces.</p>
+<h2 id="functions-with-default-arguments">Functions with default arguments<a class="headerlink" href="#functions-with-default-arguments" title="Permanent link">&para;</a></h2>
+<p>Functions can have as many arguments as we want and let some of them have default value:</p>
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nf">custom-box</span><span class="p">(</span><span class="nv">label</span><span class="p">,</span><span class="w"> </span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">red</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">   </span><span class="nf">box</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">fill</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">4</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">inset</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">pt</span><span class="p">,</span><span class="w"> </span><span class="nf">text</span><span class="p">(</span><span class="nv">weight</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bold&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">label</span><span class="p">))</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">}</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nf">#custom-box</span><span class="p">(</span><span class="s2">&quot;Life is good&quot;</span><span class="p">)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nf">#custom-box</span><span class="p">(</span><span class="s2">&quot;Life is good&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">green</span><span class="p">)</span>
+</span></code></pre></div>
+<p><img alt="" src="../../examples/crash-course-19.png" /></p>
+<h2 id="variadic-arguments">Variadic arguments<a class="headerlink" href="#variadic-arguments" title="Permanent link">&para;</a></h2>
+<p>You can make your function to accept any kind of arguments using variadic arguments:</p>
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nf">custom-stack</span><span class="p">(..</span><span class="nv">args</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nf">box</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">red</span><span class="p">,</span><span class="w"> </span><span class="nv">inset</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">pt</span><span class="p">,</span><span class="w"> </span><span class="nf">stack</span><span class="p">(</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">      </span><span class="nv">dir</span><span class="p">:</span><span class="w"> </span><span class="nv">ttb</span><span class="p">,</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">      </span><span class="nv">spacing</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">pt</span><span class="p">,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">      </span><span class="p">..</span><span class="nv">args</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">   </span><span class="p">))</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="nf">#custom-stack</span><span class="p">(</span><span class="s2">&quot;hey&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;you&quot;</span><span class="p">)</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="nf">#custom-stack</span><span class="p">(</span><span class="s2">&quot;we can add a&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;circle&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p><img alt="" src="../../examples/crash-course-20.png" /></p>
 
 
 
@@ -849,7 +1054,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../R/" class="md-footer__link md-footer__link--prev" aria-label="Previous: R">
+          <a href="../exercises-1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Exercises - Foundations">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
@@ -859,20 +1064,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                R
+                Exercises - Foundations
               </div>
             </div>
           </a>
         
         
           
-          <a href="../julia/" class="md-footer__link md-footer__link--next" aria-label="Next: Julia">
+          <a href="../exercises-2/" class="md-footer__link md-footer__link--next" aria-label="Next: Exercises - Scripting">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Julia
+                Exercises - Scripting
               </div>
             </div>
             <div class="md-footer__button md-icon">

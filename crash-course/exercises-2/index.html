@@ -12,13 +12,13 @@
         <meta name="author" content="Joseph Barbier">
       
       
-        <link rel="canonical" href="https://typst-in-production.com/crash-course/how-to-use-typst/">
+        <link rel="canonical" href="https://typst-in-production.com/crash-course/exercises-2/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../lesson-2/">
       
       
-        <link rel="next" href="../lesson-1/">
+        <link rel="next" href="../../from/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>How to use Typst - Typst in Production</title>
+        <title>Exercises - Scripting - Typst in Production</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#web-app" class="md-skip">
+        <a href="#1-combining-align-and-stack" class="md-skip">
           Skip to content
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to use Typst
+              Exercises - Scripting
             
           </span>
         </div>
@@ -446,35 +446,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    How to use Typst
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="././" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../how-to-use-typst/" class="md-nav__link">
         
   
   
@@ -490,47 +465,6 @@
   
 
       </a>
-      
-        
-
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#web-app" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Web app
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#text-editor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Text editor
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -624,10 +558,35 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../exercises-2/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercises - Scripting
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="././" class="md-nav__link md-nav__link--active">
         
   
   
@@ -643,6 +602,58 @@
   
 
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-combining-align-and-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 - Combining align and stack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-create-a-function-with-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 - Create a function with parameters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next step
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -867,10 +878,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#web-app" class="md-nav__link">
+  <a href="#1-combining-align-and-stack" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Web app
+        1 - Combining align and stack
       
     </span>
   </a>
@@ -878,10 +889,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#text-editor" class="md-nav__link">
+  <a href="#2-create-a-function-with-parameters" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Text editor
+        2 - Create a function with parameters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next step
       
     </span>
   </a>
@@ -951,33 +973,92 @@
                 
                   
 
-  <h1 id="__skip">How to use Typst</h1>
+  <h1 id="__skip">Exercises - Scripting</h1>
 
-<p>To work with Typst, you have 2 options:</p>
+<h3 id="1-combining-align-and-stack">1 - Combining <code>align</code> and <code>stack</code><a class="headerlink" href="#1-combining-align-and-stack" title="Permanent link">&para;</a></h3>
+<p>Reproduce the PDF below:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Exercise</label><label for="__tabbed_1_2">Hint</label><label for="__tabbed_1_3">Solution</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="" src="../../examples/crash-course-13.png" /></p>
+</div>
+<div class="tabbed-block">
 <ul>
-<li>use the <a href="https://typst.app/play/">official web app</a></li>
-<li>use your own text editor (VS Code, Vim, etc)</li>
+<li>Wrap your content in <code>align(horizon, ...)</code></li>
+<li>Build one vertical stack and small horizontal stacks inside it</li>
+<li>Reuse the same pattern for 3 status lines</li>
 </ul>
-<h2 id="web-app">Web app<a class="headerlink" href="#web-app" title="Permanent link">&para;</a></h2>
-<p>The web app offers an <em>it just works</em> experience since everything happens in your browser:</p>
+</div>
+<div class="tabbed-block">
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#f8f9fa&quot;</span><span class="p">),</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">cm</span><span class="p">)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nf">#align</span><span class="p">(</span><span class="nv">horizon</span><span class="p">,</span><span class="w"> </span><span class="nf">stack</span><span class="p">(</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nv">spacing</span><span class="p">:</span><span class="w"> </span><span class="m">0.2</span><span class="kr">cm</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nf">stack</span><span class="p">(</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nv">dir</span><span class="p">:</span><span class="w"> </span><span class="nv">ltr</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nv">spacing</span><span class="p">:</span><span class="w"> </span><span class="m">0.3</span><span class="kr">cm</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nf">circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#2a9d8f&quot;</span><span class="p">),</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">0.7</span><span class="kr">cm</span><span class="p">),</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nf">text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#2a9d8f&quot;</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;Ready&quot;</span><span class="p">),</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="p">),</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="nf">stack</span><span class="p">(</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="nv">dir</span><span class="p">:</span><span class="w"> </span><span class="nv">ltr</span><span class="p">,</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="nv">spacing</span><span class="p">:</span><span class="w"> </span><span class="m">0.3</span><span class="kr">cm</span><span class="p">,</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="nf">circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#e9c46a&quot;</span><span class="p">),</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">0.7</span><span class="kr">cm</span><span class="p">),</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="nf">text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#e9c46a&quot;</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;Pending&quot;</span><span class="p">),</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="p">),</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="nf">stack</span><span class="p">(</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="nv">dir</span><span class="p">:</span><span class="w"> </span><span class="nv">ltr</span><span class="p">,</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="nv">spacing</span><span class="p">:</span><span class="w"> </span><span class="m">0.3</span><span class="kr">cm</span><span class="p">,</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="nf">circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#e76f51&quot;</span><span class="p">),</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">0.7</span><span class="kr">cm</span><span class="p">),</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="nf">text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#e76f51&quot;</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;Blocked&quot;</span><span class="p">),</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="p">),</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="p">))</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="2-create-a-function-with-parameters">2 - Create a function with parameters<a class="headerlink" href="#2-create-a-function-with-parameters" title="Permanent link">&para;</a></h3>
+<p>Reproduce the PDF below:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Exercise</label><label for="__tabbed_2_2">Hint</label><label for="__tabbed_2_3">Solution</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="" src="../../examples/crash-course-14.png" /></p>
+</div>
+<div class="tabbed-block">
 <ul>
-<li>no installation</li>
-<li>instant preview</li>
-<li>auto completion</li>
-<li>collaboration</li>
-<li>And other features!</li>
+<li>Define <code>badge(...)</code> with <code>#let</code></li>
+<li>Give it at least 2 parameters (<code>label</code>, <code>color</code>)</li>
+<li>Add one optional parameter with a default value</li>
+<li>Call the function multiple times with different arguments</li>
 </ul>
-<p>It's probably what you should use if you're just getting started with Typst!</p>
-<h2 id="text-editor">Text editor<a class="headerlink" href="#text-editor" title="Permanent link">&para;</a></h2>
-<p>The other option is to work locally inside a text editor. For this, you'll need to <a href="https://typst.app/open-source/">install the Typst compiler</a>.</p>
-<p>It's also recommended that you install <a href="https://myriad-dreamin.github.io/tinymist/frontend/main.html">Tinymist</a>, which is a language service for Typst. Basically, it will offer things such as:</p>
-<ul>
-<li>code formatting</li>
-<li>auto-completion</li>
-<li>function hovering to get documentation</li>
-<li>And many more!</li>
-</ul>
-<p>It works for most IDEs, and will create a similar experience to what you have on the official web app.</p>
+</div>
+<div class="tabbed-block">
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#f8f9fa&quot;</span><span class="p">),</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">cm</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kd">#let</span><span class="w"> </span><span class="nf">badge</span><span class="p">(</span><span class="nv">label</span><span class="p">,</span><span class="w"> </span><span class="nv">color</span><span class="p">,</span><span class="w"> </span><span class="nv">icon</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;*&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nf">rect</span><span class="p">(</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">color</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nv">radius</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">pt</span><span class="p">,</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="nv">inset</span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="nv">x</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="kr">pt</span><span class="p">,</span><span class="w"> </span><span class="nv">y</span><span class="p">:</span><span class="w"> </span><span class="m">6</span><span class="kr">pt</span><span class="p">),</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="nf">text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">white</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="nv">#icon</span><span class="w"> </span><span class="nv">#label</span><span class="p">]),</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="p">)</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">}</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="nf">#stack</span><span class="p">(</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">  </span><span class="nv">dir</span><span class="p">:</span><span class="w"> </span><span class="nv">ltr</span><span class="p">,</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">  </span><span class="nv">spacing</span><span class="p">:</span><span class="w"> </span><span class="m">0.35</span><span class="kr">cm</span><span class="p">,</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">  </span><span class="nf">badge</span><span class="p">(</span><span class="s2">&quot;Draft&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#6c757d&quot;</span><span class="p">)),</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">  </span><span class="nf">badge</span><span class="p">(</span><span class="s2">&quot;Review&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#f77f00&quot;</span><span class="p">),</span><span class="w"> </span><span class="nv">icon</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;!&quot;</span><span class="p">),</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">  </span><span class="nf">badge</span><span class="p">(</span><span class="s2">&quot;Done&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#2a9d8f&quot;</span><span class="p">),</span><span class="w"> </span><span class="nv">icon</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+&quot;</span><span class="p">),</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="p">)</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p><br><br></p>
+<h2 id="next-step">Next step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h2>
+<p>You now have some good Typst foundations! If you want to learn more, you can have a look at this <em>unofficial</em> <a href="https://sitandr.github.io/typst-examples-book/book/about.html">Typst Examples Book</a>.</p>
+<p>Otherwise you're ready to start using <a href="..//from/">Typst from a programming language</a>!</p>
 
 
 
@@ -1018,7 +1099,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Typst Crash Course">
+          <a href="../lesson-2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Lesson - Scripting">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
@@ -1028,20 +1109,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Typst Crash Course
+                Lesson - Scripting
               </div>
             </div>
           </a>
         
         
           
-          <a href="../lesson-1/" class="md-footer__link md-footer__link--next" aria-label="Next: Lesson - Foundations">
+          <a href="../../from/" class="md-footer__link md-footer__link--next" aria-label="Next: Using Typst from other languages">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Lesson - Foundations
+                Using Typst from other languages
               </div>
             </div>
             <div class="md-footer__button md-icon">

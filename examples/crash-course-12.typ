@@ -1,6 +1,6 @@
 #let main-color = rgb("#e76f51")
 
-#set page(fill: rgb("#f9f6f4"), width: 12cm, height: 5cm)
+#set page(fill: rgb("#f8f9fa"), width: 12cm, height: 5cm)
 #set text(fill: main-color)
 
 == Weekly report
