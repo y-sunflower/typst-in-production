@@ -25,7 +25,6 @@ nav = [
     "quarto/python.md",
     "quarto/julia.md"
   ] },
-  { "CI/CD" = "ci-cd.md" },
   { "PDF accessibility" = "pdf-accessibility.md" },
   { "About" = "about.md" }
 ]

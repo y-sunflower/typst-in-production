@@ -13,6 +13,4 @@ Typst in Production is a work-in-progress guide on how to use Typst in complex, 
 
 ## Authors
 
-It's a project created by [yellow sunflower](https://www.ysunflower.com/), a data consulting and open source company. We offer consulting services around data, from designing reports to deployment.
-
-You can contact us [here](https://www.ysunflower.com/#contact).
+It's a project created by [yellow sunflower](https://www.ysunflower.com/), a data consulting and open source company. We offer consulting services around data, from designing reports to deployment. You can contact us [here](https://www.ysunflower.com/#contact).

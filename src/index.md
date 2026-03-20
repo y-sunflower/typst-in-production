@@ -27,4 +27,4 @@ Depending on where you are on your Typst journey, the next step is one of the fo
 
 - Learn Typst basics with our [crash course](/typst-crash-course.md)
 - Discover how to use Typst [from another programming language](/from/index.md) (Python, R, JavaScript or Rust)
-- Implement [CI/CD practices](/continuous/index.md) in Typst workflows
+- Understand why and how to create [fully accessible PDFs](/pdf-accessibility.md)
