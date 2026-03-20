@@ -1,12 +1,6 @@
 ---
-title: Lesson
+title: Lesson - Foundations
 ---
-
-!!! note
-
-    The official Typst documentation website has [its own tutorial](https://typst.app/docs/tutorial/), which goes into **much more depth** than the crash course you're actually reading. Here, we'll focus on giving you the **big picture** rather than technical details.
-
-<br>
 
 ## Typst = text + a compiler
 
@@ -28,17 +22,9 @@ Hey folks, how's that crash course going so far?
 
 Then we run `typst compile file.typ`, and we get:
 
-![A red page with a level 2 title "Here goes the title..." and the text "Hey folks, how's that crash course going so far?"](/examples/crash-course-1.png)
+![A red page with a level 2 title "Here goes the title..." and the text "Hey folks, how's that crash course going so far?"](../examples/crash-course-1.png)
 
 [footnote-1]: https://typst.app/docs/reference/html/ "Note that you can also generate other files such as HTML"
-
-## Typst, in practice
-
-The compiler is a CLI (Command Line Interface), which means it needs to run from the terminal.
-
-But when you're trying to use Typst in more complex environments, like a ^^web server^^ or ^^data pipeline^^, you're often interested in generating a PDF from a programming language, not from the terminal.
-
-Once you understand the basics of Typst, you'll learn how to use [Typst from a programming language](/from/index.md).
 
 ## Basic syntax
 
@@ -56,17 +42,39 @@ If you've ever used Markdown before, getting started with Typst will be easy. Fo
 This is a paragraph, where text can be *bold*, _italic_, or `code-like`.
 ```
 
-![](/examples/crash-course-2.png)
+![](../examples/crash-course-2.png)
 
 ## Functions
 
-Typst offers tons of functions that we can use to customize the output of our PDF. The syntax is very simple, and often, very intuitive.
-
-For example, I want to put a blue circle next to a green rectangle, next to red text. How can I do that?
+Typst offers tons of functions that we can use to customize the output of our PDF. For example, there is a `circle()` function:
 
 ```typst
-#set page(fill: rgb("#f2e9e4"), width: 12cm, height: 5cm)
+#circle(fill: blue, width: 3cm)
+```
 
+![](../examples/crash-course-15.png)
+
+We can, for example, add some text **inside** the circle:
+
+```typst
+#circle(fill: blue, width: 3cm, "Hello world")
+```
+
+![](../examples/crash-course-16.png)
+
+Or another circle:
+
+```typst
+#circle(fill: blue, width: 3cm, circle(fill: red, width: 1cm))
+```
+
+![](../examples/crash-course-17.png)
+
+The `circle()` function is useful for creating **visual elements**, but many functions are here to control the **layout of our document**. For example, I want to put a blue circle next to a green rectangle, next to red text. How can I do that?
+
+The simplest way to do it is to use the `stack()` function: it will stack elements (as many as we want) on a given direction.
+
+```typst
 #stack(
   dir: ltr, // direction --> left to right
   spacing: 0.5cm, // space between elements
@@ -76,13 +84,11 @@ For example, I want to put a blue circle next to a green rectangle, next to red 
 )
 ```
 
-![](/examples/crash-course-3.png)
+![](../examples/crash-course-3.png)
 
-What if I want them to be vertically aligned? I just call the `align()` function:
+What if I want them to be vertically aligned? We wrap everything around the `align()` function and specify that we align to the the `horizon` (could also be `top` or `bottom`):
 
 ```typst
-#set page(fill: rgb("#f2e9e4"), width: 12cm, height: 5cm)
-
 #align(horizon, stack(
   dir: ltr,
   spacing: 0.5cm,
@@ -92,7 +98,7 @@ What if I want them to be vertically aligned? I just call the `align()` function
 ))
 ```
 
-![](/examples/crash-course-4.png)
+![](../examples/crash-course-4.png)
 
 ## Set rules
 
@@ -100,15 +106,13 @@ A set rule is a way to tell Typst how a given function should behave. For exampl
 
 ```typst
 #set text(fill: blue)
+
+= Title
+
+Content of the document
 ```
 
-Then **all** text will be blue. You might realize that this is what we used in the examples before with:
-
-```typst
-#set page(width: 12cm, height: 5cm)
-```
-
-This says that the `page()` function (which is used to create every page under the hood!) has a width of 12cm and a height of 5cm.
+![](../examples/crash-course-18.png)
 
 ## Variables
 
@@ -118,7 +122,7 @@ We can define variables, like in any programming language, in order to reuse the
 #let yellow = rgb("#FFC300")
 #let purple = rgb("#421173")
 
-#set page(fill: yellow, width: 12cm, height: 5cm)
+#set page(fill: yellow)
 
 #align(horizon, stack(
   dir: ltr,
@@ -128,30 +132,7 @@ We can define variables, like in any programming language, in order to reuse the
 ))
 ```
 
-![](/examples/crash-course-5.png)
-
-## Create your own functions
-
-Even though Typst is a markup language (!= a programming language), it embeds a scripting language that lets us add **logic** (`if`/`else` statements, `for` loops, etc.) and create reusable components.
-
-Let's look at an example:
-
-```typst
-#set page(fill: aqua, width: 12cm, height: 5cm)
-
-#let say-hello(s)= {
-  // s is the argument name
-  [Hello my friend #s, how are you?]
-}
-
-#say-hello("Joseph")
-
-#say-hello("Justine")
-```
-
-![](/examples/crash-course-6.png)
-
-Once again we use the `let` keyword, and then we wrap the output of the function inside curly braces.
+![](../examples/crash-course-5.png)
 
 ## When and when not to use the `#` symbol
 
@@ -163,7 +144,7 @@ A thing that might be confusing in the previous code snippets is that sometimes 
     #circle(fill: blue, width: 3cm)
     ```
 
-    ![](/examples/crash-course-7.png)
+    ![](../examples/crash-course-7.png)
 
 === "Without the `#`"
 
@@ -171,7 +152,7 @@ A thing that might be confusing in the previous code snippets is that sometimes 
     circle(fill: blue, width: 3cm)
     ```
 
-    ![](/examples/crash-course-8.png)
+    ![](../examples/crash-course-8.png)
 
 In the first case, the output is just a simple circle, while in the second case, it's the actual text instead of a circle. Why is that?
 

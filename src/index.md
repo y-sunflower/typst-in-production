@@ -25,6 +25,6 @@ This website focuses on practical automation, deployment, and long-term maintain
 
 Depending on where you are on your Typst journey, the next step is one of the following:
 
-- Learn Typst basics with our [crash course](/typst-crash-course.md)
+- Learn Typst basics with our [crash course](/crash-course/index.md)
 - Discover how to use Typst [from another programming language](/from/index.md) (Python, R, JavaScript or Rust)
 - Understand why and how to create [fully accessible PDFs](/pdf-accessibility.md)
