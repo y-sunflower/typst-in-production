@@ -1,5 +1,5 @@
 ---
-title: Exercises - Foundations
+title: Exercises 1 - Foundations
 ---
 
 ## Exercises
@@ -18,7 +18,7 @@ Reproduce the PDF below:
 
 === "Exercise"
 
-    ![](../examples/crash-course-9.png)
+    ![](../../images/crash-course-9.png)
 
 === "Hint"
 
@@ -41,7 +41,7 @@ Reproduce the PDF below:
 
 === "Exercise"
 
-    ![](../examples/crash-course-10.png)
+    ![](../../images/crash-course-10.png)
 
 === "Hint"
 
@@ -62,7 +62,7 @@ Reproduce the PDF below:
 
 === "Exercise"
 
-    ![](../examples/crash-course-11.png)
+    ![](../../images/crash-course-11.png)
 
 === "Hint"
 
@@ -91,7 +91,7 @@ Reproduce the PDF below:
 
 === "Exercise"
 
-    ![](../examples/crash-course-12.png)
+    ![](../../images/crash-course-12.png)
 
 === "Hint"
 

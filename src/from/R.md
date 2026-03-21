@@ -92,7 +92,7 @@ c(
   typst_compile(output = "example.pdf")
 ```
 
-![](../examples/from-R-1.png)
+![](../../images/from-R-1.png)
 
 ## Other resources
 

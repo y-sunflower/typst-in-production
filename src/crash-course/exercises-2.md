@@ -1,5 +1,5 @@
 ---
-title: Exercises - Scripting
+title: Exercises 2 - Scripting
 ---
 
 ### 1 - Combining `align` and `stack`
@@ -8,7 +8,7 @@ Reproduce the PDF below:
 
 === "Exercise"
 
-    ![](../examples/crash-course-13.png)
+    ![](../../images/crash-course-13.png)
 
 === "Hint"
 
@@ -50,7 +50,7 @@ Reproduce the PDF below:
 
 === "Exercise"
 
-    ![](../examples/crash-course-14.png)
+    ![](../../images/crash-course-14.png)
 
 === "Hint"
 

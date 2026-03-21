@@ -17,7 +17,9 @@ nav = [
     "crash-course/lesson-1.md",
     "crash-course/exercises-1.md",
     "crash-course/lesson-2.md",
-    "crash-course/exercises-2.md"
+    "crash-course/exercises-2.md",
+    "crash-course/lesson-3.md",
+    "crash-course/exercises-3.md"
   ] },
   { "From languages" = [
     "from/index.md",

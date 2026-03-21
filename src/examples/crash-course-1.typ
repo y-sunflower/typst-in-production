@@ -2,4 +2,4 @@
 
 == Here goes the title...
 
-Hey folks, how that crash course going so far?
+Hey folks, how's that crash course going so far?

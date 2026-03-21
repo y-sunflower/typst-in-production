@@ -28,8 +28,8 @@ uv sync
 just preview
 ```
 
-If you want to add examples, add your Typst files in `src/examples/` and then compile them to png (important!) with:
+If you want to add examples, add your Typst files in `src/examples/` and then compile with:
 
-```
-typst compile src/examples/file.typ: --format png
+```bash
+just typst
 ```

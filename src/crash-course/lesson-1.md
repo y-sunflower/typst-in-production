@@ -1,5 +1,5 @@
 ---
-title: Lesson - Foundations
+title: Lesson 1 - Foundations
 ---
 
 ## Typst = text + a compiler
@@ -22,7 +22,7 @@ Hey folks, how's that crash course going so far?
 
 Then we run `typst compile file.typ`, and we get:
 
-![A red page with a level 2 title "Here goes the title..." and the text "Hey folks, how's that crash course going so far?"](../examples/crash-course-1.png)
+![A red page with a level 2 title "Here goes the title..." and the text "Hey folks, how's that crash course going so far?"](../../images/crash-course-1.png)
 
 [footnote-1]: https://typst.app/docs/reference/html/ "Note that you can also generate other files such as HTML"
 
@@ -42,7 +42,7 @@ If you've ever used Markdown before, getting started with Typst will be easy. Fo
 This is a paragraph, where text can be *bold*, _italic_, or `code-like`.
 ```
 
-![](../examples/crash-course-2.png)
+![](../../images/crash-course-2.png)
 
 ## Functions
 
@@ -52,7 +52,7 @@ Typst offers tons of functions that we can use to customize the output of our PD
 #circle(fill: blue, width: 3cm)
 ```
 
-![](../examples/crash-course-15.png)
+![](../../images/crash-course-15.png)
 
 We can, for example, add some text **inside** the circle:
 
@@ -60,7 +60,7 @@ We can, for example, add some text **inside** the circle:
 #circle(fill: blue, width: 3cm, "Hello world")
 ```
 
-![](../examples/crash-course-16.png)
+![](../../images/crash-course-16.png)
 
 Or another circle:
 
@@ -68,7 +68,7 @@ Or another circle:
 #circle(fill: blue, width: 3cm, circle(fill: red, width: 1cm))
 ```
 
-![](../examples/crash-course-17.png)
+![](../../images/crash-course-17.png)
 
 The `circle()` function is useful for creating **visual elements**, but many functions are here to control the **layout of our document**. For example, I want to put a blue circle next to a green rectangle, next to red text. How can I do that?
 
@@ -84,9 +84,9 @@ The simplest way to do it is to use the `stack()` function: it will stack elemen
 )
 ```
 
-![](../examples/crash-course-3.png)
+![](../../images/crash-course-3.png)
 
-What if I want them to be vertically aligned? We wrap everything around the `align()` function and specify that we align to the the `horizon` (could also be `top` or `bottom`):
+What if I want them to be vertically aligned? We wrap everything around the `align()` function and specify that we align to the `horizon` (could also be `top` or `bottom`):
 
 ```typst
 #align(horizon, stack(
@@ -98,7 +98,7 @@ What if I want them to be vertically aligned? We wrap everything around the `ali
 ))
 ```
 
-![](../examples/crash-course-4.png)
+![](../../images/crash-course-4.png)
 
 ## Set rules
 
@@ -112,7 +112,7 @@ A set rule is a way to tell Typst how a given function should behave. For exampl
 Content of the document
 ```
 
-![](../examples/crash-course-18.png)
+![](../../images/crash-course-18.png)
 
 ## Variables
 
@@ -132,7 +132,7 @@ We can define variables, like in any programming language, in order to reuse the
 ))
 ```
 
-![](../examples/crash-course-5.png)
+![](../../images/crash-course-5.png)
 
 ## When and when not to use the `#` symbol
 
@@ -144,7 +144,7 @@ A thing that might be confusing in the previous code snippets is that sometimes 
     #circle(fill: blue, width: 3cm)
     ```
 
-    ![](../examples/crash-course-7.png)
+    ![](../../images/crash-course-7.png)
 
 === "Without the `#`"
 
@@ -152,7 +152,7 @@ A thing that might be confusing in the previous code snippets is that sometimes 
     circle(fill: blue, width: 3cm)
     ```
 
-    ![](../examples/crash-course-8.png)
+    ![](../../images/crash-course-8.png)
 
 In the first case, the output is just a simple circle, while in the second case, it's the actual text instead of a circle. Why is that?
 

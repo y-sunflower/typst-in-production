@@ -27,7 +27,7 @@ quarto render file.qmd
 
 This command creates `file.html`:
 
-![Rendered HTML output](../examples/quarto-1.png)
+![Rendered HTML output](../../images/quarto-1.png)
 
 ## Core features
 
@@ -37,7 +37,7 @@ Quarto is especially useful for three main reasons:
 
     Write once in a single source format (Markdown + code), then export to multiple output formats (HTML, PDF, Word, Markdown).
 
-    ![Multiple export formats in Quarto](../examples/quarto-2.png)
+    ![Multiple export formats in Quarto](../../images/quarto-2.png)
 
 === "Parameters"
 
@@ -58,7 +58,7 @@ Quarto is especially useful for three main reasons:
     ```
     ````
 
-    ![Parameterized rendering example](../examples/quarto-3.png)
+    ![Parameterized rendering example](../../images/quarto-3.png)
 
 === "Other"
 

@@ -13,7 +13,7 @@ The web app offers an _it just works_ experience since everything happens in you
 
 - no installation
 - instant preview
-- auto completion
+- auto-completion
 - collaboration
 - And other features!
 
