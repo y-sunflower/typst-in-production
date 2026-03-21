@@ -2,19 +2,9 @@
 title: Exercises 1 - Foundations
 ---
 
-## Exercises
-
-!!! note
-
-    - Make sure to either [install Typst](https://typst.app/open-source/) or use their [web app](https://typst.app/play/)
-    - Feel free to use the [official documentation](https://typst.app/docs/).
-    - Always include `#set page(fill: rgb("#f8f9fa"), width: 12cm, height: 5cm)` at the top of the document to:
-        - ensure a fixed page size, because by default it will be A4, which is more than necessary
-        - have a distinct background (light grey)
+In the following exercises, you'll need to reproduce in Typst the image you see. You can freely use the [official Typst documentation](https://typst.app/docs/)
 
 ### 1 - Basics
-
-Reproduce the PDF below:
 
 === "Exercise"
 
@@ -28,16 +18,12 @@ Reproduce the PDF below:
 === "Solution"
 
     ```typst
-    #set page(fill: rgb("#f8f9fa"), width: 12cm, height: 5cm)
-
     == My first Typst document
 
     My name is Joseph, and I love cookies
     ```
 
 ### 2 - A first shape
-
-Reproduce the PDF below:
 
 === "Exercise"
 
@@ -51,14 +37,10 @@ Reproduce the PDF below:
 === "Solution"
 
     ```typst
-    #set page(fill: rgb("#f8f9fa"), width: 12cm, height: 5cm)
-
     #circle(fill: rgb("#3a86ff"), width: 2.5cm)
     ```
 
 ### 3 - Layout with `stack`
-
-Reproduce the PDF below:
 
 === "Exercise"
 
@@ -74,8 +56,6 @@ Reproduce the PDF below:
 === "Solution"
 
     ```typst
-    #set page(fill: rgb("#f8f9fa"), width: 12cm, height: 5cm)
-
     #stack(
       dir: ltr,
       spacing: 0.5cm,
@@ -86,8 +66,6 @@ Reproduce the PDF below:
     ```
 
 ### 4 - Variables and set rules
-
-Reproduce the PDF below:
 
 === "Exercise"
 
@@ -102,8 +80,6 @@ Reproduce the PDF below:
 
     ```typst
     #let main-color = rgb("#e76f51")
-
-    #set page(fill: rgb("#f8f9fa"), width: 12cm, height: 5cm)
     #set text(fill: main-color)
 
     == Weekly report
