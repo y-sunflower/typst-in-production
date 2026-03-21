@@ -29,7 +29,7 @@
     
     
       
-        <title>Lesson - Foundations - Typst in Production</title>
+        <title>Lesson 1 - Foundations - Typst in Production</title>
       
     
     
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lesson - Foundations
+              Lesson 1 - Foundations
             
           </span>
         </div>
@@ -383,6 +383,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -491,7 +495,7 @@
   <span class="md-ellipsis">
     
   
-    Lesson - Foundations
+    Lesson 1 - Foundations
   
 
     
@@ -509,7 +513,7 @@
   <span class="md-ellipsis">
     
   
-    Lesson - Foundations
+    Lesson 1 - Foundations
   
 
     
@@ -622,7 +626,7 @@
   <span class="md-ellipsis">
     
   
-    Exercises - Foundations
+    Exercises 1 - Foundations
   
 
     
@@ -650,7 +654,7 @@
   <span class="md-ellipsis">
     
   
-    Lesson - Scripting
+    Lesson 2 - Scripting
   
 
     
@@ -678,7 +682,63 @@
   <span class="md-ellipsis">
     
   
-    Exercises - Scripting
+    Exercises 2 - Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lesson-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lesson 3 - Templating
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exercises-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercises 3 - Templating
   
 
     
@@ -1039,7 +1099,7 @@
                 
                   
 
-  <h1 id="__skip">Lesson - Foundations</h1>
+  <h1 id="__skip">Lesson 1 - Foundations</h1>
 
 <h2 id="typst-text-a-compiler">Typst = text + a compiler<a class="headerlink" href="#typst-text-a-compiler" title="Permanent link">&para;</a></h2>
 <p>What we call "Typst" is usually one of the following:</p>
@@ -1056,7 +1116,7 @@
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Hey<span class="w"> </span>folks,<span class="w"> </span>how&#39;s<span class="w"> </span>that<span class="w"> </span>crash<span class="w"> </span>course<span class="w"> </span>going<span class="w"> </span>so<span class="w"> </span>far?
 </span></code></pre></div>
 <p>Then we run <code>typst compile file.typ</code>, and we get:</p>
-<p><img alt="A red page with a level 2 title &quot;Here goes the title...&quot; and the text &quot;Hey folks, how's that crash course going so far?&quot;" src="../../examples/crash-course-1.png" /></p>
+<p><img alt="A red page with a level 2 title &quot;Here goes the title...&quot; and the text &quot;Hey folks, how's that crash course going so far?&quot;" src="../../../images/crash-course-1.png" /></p>
 <h2 id="basic-syntax">Basic syntax<a class="headerlink" href="#basic-syntax" title="Permanent link">&para;</a></h2>
 <p>If you've ever used Markdown before, getting started with Typst will be easy. For example, the following Typst file:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#f2e9e4&quot;</span><span class="p">),</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">cm</span><span class="p">)</span>
@@ -1069,20 +1129,20 @@
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>This<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>paragraph,<span class="w"> </span>where<span class="w"> </span>text<span class="w"> </span>can<span class="w"> </span>be<span class="w"> </span><span class="gs">*bold*</span>,<span class="w"> </span><span class="ge">_italic_</span>,<span class="w"> </span>or<span class="w"> </span><span class="sb">`code-like`</span>.
 </span></code></pre></div>
-<p><img alt="" src="../../examples/crash-course-2.png" /></p>
+<p><img alt="" src="../../../images/crash-course-2.png" /></p>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
 <p>Typst offers tons of functions that we can use to customize the output of our PDF. For example, there is a <code>circle()</code> function:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">#circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">)</span>
 </span></code></pre></div>
-<p><img alt="" src="../../examples/crash-course-15.png" /></p>
+<p><img alt="" src="../../../images/crash-course-15.png" /></p>
 <p>We can, for example, add some text <strong>inside</strong> the circle:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">#circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<p><img alt="" src="../../examples/crash-course-16.png" /></p>
+<p><img alt="" src="../../../images/crash-course-16.png" /></p>
 <p>Or another circle:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nf">#circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nf">circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">red</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="kr">cm</span><span class="p">))</span>
 </span></code></pre></div>
-<p><img alt="" src="../../examples/crash-course-17.png" /></p>
+<p><img alt="" src="../../../images/crash-course-17.png" /></p>
 <p>The <code>circle()</code> function is useful for creating <strong>visual elements</strong>, but many functions are here to control the <strong>layout of our document</strong>. For example, I want to put a blue circle next to a green rectangle, next to red text. How can I do that?</p>
 <p>The simplest way to do it is to use the <code>stack()</code> function: it will stack elements (as many as we want) on a given direction.</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nf">#stack</span><span class="p">(</span>
@@ -1093,8 +1153,8 @@
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="nf">text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">red</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
 </span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">)</span>
 </span></code></pre></div>
-<p><img alt="" src="../../examples/crash-course-3.png" /></p>
-<p>What if I want them to be vertically aligned? We wrap everything around the <code>align()</code> function and specify that we align to the the <code>horizon</code> (could also be <code>top</code> or <code>bottom</code>):</p>
+<p><img alt="" src="../../../images/crash-course-3.png" /></p>
+<p>What if I want them to be vertically aligned? We wrap everything around the <code>align()</code> function and specify that we align to the <code>horizon</code> (could also be <code>top</code> or <code>bottom</code>):</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nf">#align</span><span class="p">(</span><span class="nv">horizon</span><span class="p">,</span><span class="w"> </span><span class="nf">stack</span><span class="p">(</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nv">dir</span><span class="p">:</span><span class="w"> </span><span class="nv">ltr</span><span class="p">,</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="nv">spacing</span><span class="p">:</span><span class="w"> </span><span class="m">0.5</span><span class="kr">cm</span><span class="p">,</span>
@@ -1103,7 +1163,7 @@
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span><span class="nf">text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">red</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Hello&quot;</span><span class="p">),</span>
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="p">))</span>
 </span></code></pre></div>
-<p><img alt="" src="../../examples/crash-course-4.png" /></p>
+<p><img alt="" src="../../../images/crash-course-4.png" /></p>
 <h2 id="set-rules">Set rules<a class="headerlink" href="#set-rules" title="Permanent link">&para;</a></h2>
 <p>A set rule is a way to tell Typst how a given function should behave. For example, by default the <code>text()</code> function uses <code>fill: black</code> for its color, but if we do:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">)</span>
@@ -1112,7 +1172,7 @@
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
 </span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>Content<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>document
 </span></code></pre></div>
-<p><img alt="" src="../../examples/crash-course-18.png" /></p>
+<p><img alt="" src="../../../images/crash-course-18.png" /></p>
 <h2 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h2>
 <p>We can define variables, like in any programming language, in order to reuse them thanks to the <code>let</code> keyword. A common use case is to define branding colors:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nv">yellow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#FFC300&quot;</span><span class="p">)</span>
@@ -1127,7 +1187,7 @@
 </span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">  </span><span class="nf">rect</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">purple</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nf">circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">yellow</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="kr">cm</span><span class="p">)),</span>
 </span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="p">))</span>
 </span></code></pre></div>
-<p><img alt="" src="../../examples/crash-course-5.png" /></p>
+<p><img alt="" src="../../../images/crash-course-5.png" /></p>
 <h2 id="when-and-when-not-to-use-the-symbol">When and when not to use the <code>#</code> symbol<a class="headerlink" href="#when-and-when-not-to-use-the-symbol" title="Permanent link">&para;</a></h2>
 <p>A thing that might be confusing in the previous code snippets is that sometimes we use the <code>#</code> symbol, and sometimes we don't.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">With the <code>#</code></label><label for="__tabbed_1_2">Without the <code>#</code></label></div>
@@ -1135,12 +1195,12 @@
 <div class="tabbed-block">
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nf">#circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">)</span>
 </span></code></pre></div>
-<p><img alt="" src="../../examples/crash-course-7.png" /></p>
+<p><img alt="" src="../../../images/crash-course-7.png" /></p>
 </div>
 <div class="tabbed-block">
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>circle(fill:<span class="w"> </span>blue,<span class="w"> </span>width:<span class="w"> </span>3cm)
 </span></code></pre></div>
-<p><img alt="" src="../../examples/crash-course-8.png" /></p>
+<p><img alt="" src="../../../images/crash-course-8.png" /></p>
 </div>
 </div>
 </div>
@@ -1227,13 +1287,13 @@
         
         
           
-          <a href="../exercises-1/" class="md-footer__link md-footer__link--next" aria-label="Next: Exercises - Foundations">
+          <a href="../exercises-1/" class="md-footer__link md-footer__link--next" aria-label="Next: Exercises 1 - Foundations">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Exercises - Foundations
+                Exercises 1 - Foundations
               </div>
             </div>
             <div class="md-footer__button md-icon">

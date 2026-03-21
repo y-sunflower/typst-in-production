@@ -4,6 +4,6 @@
 
 == Smaller heading
 
-=== But still an heading
+=== But still a heading
 
 This is a paragraph, where text can be *bold*, _italic_ or `code-like`
