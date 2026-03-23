@@ -70,7 +70,7 @@ Or another circle:
 
 The `circle()` function is useful for creating **visual elements**, but many functions are here to control the **layout of our document**. For example, I want to put a blue circle next to a green rectangle, next to red text. How can I do that?
 
-The simplest way to do it is to use the `stack()` function: it will stack elements (as many as we want) on a given direction.
+The simplest way to do it is to use the `stack()` function: it will stack elements (as many as we want) in a given direction.
 
 ```typst
 #stack(
@@ -84,7 +84,7 @@ The simplest way to do it is to use the `stack()` function: it will stack elemen
 
 ![](../../images/crash-course-3.png)
 
-What if I want them to be vertically aligned? We wrap everything around the `align()` function and specify that we align to the `horizon` (could also be `top` or `bottom`):
+What if I want them to be vertically aligned? We wrap everything in the `align()` function and specify that we align to the `horizon` (could also be `top` or `bottom`):
 
 ```typst
 #align(horizon, stack(
@@ -134,7 +134,7 @@ We can define variables, like in any programming language, in order to reuse the
 
 ## When and when not to use the `#` symbol
 
-A thing that might be confusing in the previous code snippets is that sometimes we use the `#` symbol, and sometimes we don't.
+One thing that might be confusing in the previous code snippets is that sometimes we use the `#` symbol, and sometimes we don't.
 
 === "With the `#`"
 

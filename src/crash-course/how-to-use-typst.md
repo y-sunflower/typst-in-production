@@ -5,7 +5,7 @@ title: How to use Typst
 To work with Typst, you have 2 options:
 
 - use the [official web app](https://typst.app/play/)
-- use your own text editor (VS Code, Vim, etc)
+- use your own text editor (VS Code, Vim, etc.)
 
 ## Web app
 

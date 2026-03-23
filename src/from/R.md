@@ -6,7 +6,7 @@ title: Typst from R
 
       Make sure to check the overview of [how and why Typst can be used from R](./index.md) to fully understand it.
 
-In R, the recommended binding to use is [tynding](https://github.com/y-sunflower/tynding), maintained by the same maintainer as Typst in Production (e.g., the website you're currently on). Another project that we'll show here is [r2typ](https://github.com/y-sunflower/r2typ), which lets you generate Typst with R.
+In R, the recommended binding to use is [tynding](https://github.com/y-sunflower/tynding), maintained by the same maintainer as Typst in Production (that is, the website you're currently on). Another project that we'll show here is [r2typ](https://github.com/y-sunflower/r2typ), which lets you generate Typst with R.
 
 Please also note that R integrates well with [Quarto](https://quarto.org/), which offers a convenient and highly customizable way to create reports with Typst. You can find a dedicated tutorial [here](/../quarto/index.md).
 

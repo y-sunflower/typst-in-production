@@ -124,7 +124,7 @@ By passing Rust data directly to Typst, your application logic and report render
 
 ## Example with Axum
 
-Here is a minimalist `GET /report?color=%23f9f6f4` endpoint that compiles and returns a PDF. The `color` query parameter is injected into Typst input.
+Here is a minimalist `GET /report?color=%23f9f6f4` endpoint that compiles and returns a PDF. The `color` query parameter is injected into the Typst input.
 
 First, the Typst template:
 

@@ -69,7 +69,7 @@ In the context of Typst, this is very useful because it lets us use our current 
 
 Since Typst is built using Rust, we can easily find bindings for many programming languages. In particular, since Typst can be used as a Rust library, people can use that library and build on top of it. Right now, the simplest way to use Typst in Rust is via the [`typst-as-lib`](https://crates.io/crates/typst-as-lib) library, which is a community-made tool.
 
-This means that **all** bindings rely on the Typst library (e.g., Rust) to use Typst, no matter the programming language.
+This means that **all** bindings rely on the Typst library written in Rust to use Typst, no matter the programming language.
 
 ```mermaid
 graph LR

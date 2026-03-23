@@ -62,7 +62,7 @@ On the Typst side, we can read those inputs with:
 ]
 ```
 
-By being able to pass variables from Python to Typst, it enables us to connect our Python logic directly to the PDF output that will be rendered to the user.
+Being able to pass variables from Python to Typst lets us connect our Python logic directly to the PDF output rendered for the user.
 
 ## Example with FastAPI
 

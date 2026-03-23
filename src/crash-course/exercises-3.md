@@ -6,7 +6,7 @@ In the following exercises, you'll need to reproduce in Typst the image you see.
 
 !!! info
 
-    In the following exercises, **there isn't just one way of doing things**! The best way if often the simplest, that minimizes code dupplication, makes code reusable and easy to maintain.
+    In the following exercises, **there isn't just one way of doing things**! The best way is often the simplest: it minimizes code duplication and makes code reusable and easy to maintain.
 
 ### 1 - Build a small release board
 

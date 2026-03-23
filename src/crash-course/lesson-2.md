@@ -28,7 +28,7 @@ Once again we use the `let` keyword, and then we wrap the output of the function
 
 ## Functions with default arguments
 
-Functions can have as many arguments as we want and let some of them have default values:
+Functions can have as many arguments as we want, and some of them can have default values:
 
 ```typst
 #let custom-box(label, fill: red) = {
@@ -60,7 +60,7 @@ You can make your function accept any number of arguments by using variadic argu
 
 ![](../../images/crash-course-20.png)
 
-We still can apply changes to each argument passed. For example, let's add black border around each of them:
+We can still apply changes to each argument passed. For example, let's add a black border around each of them:
 
 ```typst hl_lines="5"
 #let custom-stack(..args) = {
@@ -81,7 +81,7 @@ The `pos()` method converts it to an array, and `map()` applies a function to ea
 
 ## `if`/`else`
 
-You can use the `if`/`else` statements, which, for example, can be useful to create flexible functions:
+You can use `if`/`else` statements, which, for example, can be useful for creating flexible functions:
 
 ```typst
 #let greet(name, vip: false) = {
