@@ -2,7 +2,7 @@
 title: Exercises 2 - Scripting
 ---
 
-In the following exercises, you'll need to reproduce in Typst the image you see. You can freely use the [official Typst documentation](https://typst.app/docs/)
+In the following exercises, you'll need to reproduce in Typst the image you see. You can freely use the [official Typst documentation](https://typst.app/docs/).
 
 ### 1 - Combining `align` and `stack`
 
