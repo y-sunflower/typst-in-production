@@ -2,7 +2,7 @@
 title: Exercises 1 - Foundations
 ---
 
-In the following exercises, you'll need to reproduce in Typst the image you see. You can freely use the [official Typst documentation](https://typst.app/docs/)
+In the following exercises, you'll need to **reproduce** in Typst the image you see. You can freely use the [official Typst documentation](https://typst.app/docs/).
 
 ### 1 - Basics
 
@@ -51,7 +51,7 @@ In the following exercises, you'll need to reproduce in Typst the image you see.
     - Use `stack()` with `dir: ltr`
     - Add `spacing` between elements
     - Put a `circle()`, a `rect()`, and a `text()` inside
-    - Look at the `radius` argument in `stack()` and the `size` argument in `text()`
+    - Look at the `radius` argument in `rect()` and the `size` argument in `text()`
 
 === "Solution"
 

@@ -9,10 +9,8 @@ Even though Typst is a markup language (!= a programming language), it embeds a 
 Let's look at an example:
 
 ```typst
-#set page(fill: aqua)
-
 #let say-hello(s) = {
-  [Hello, my friend #s, how are you?]
+  [Hello, my friend '#s', how are you?]
 }
 
 #say-hello("Joseph")
@@ -23,6 +21,10 @@ Let's look at an example:
 ![](../../images/crash-course-6.png)
 
 Once again we use the `let` keyword, and then we wrap the output of the function inside curly braces.
+
+!!! note
+
+    There is no `return` keyword in Typst: everything in your function will be rendered.
 
 ## Functions with default arguments
 
@@ -57,6 +59,25 @@ You can make your function accept any number of arguments by using variadic argu
 ```
 
 ![](../../images/crash-course-20.png)
+
+We still can apply changes to each argument passed. For example, let's add black border around each of them:
+
+```typst hl_lines="5"
+#let custom-stack(..args) = {
+  box(fill: red, inset: 5pt, stack(
+    dir: ttb,
+    spacing: 10pt,
+    ..args.pos().map(val => box(stroke: 0.5pt + black, val)),
+  ))
+}
+
+#custom-stack("hey", "you")
+#custom-stack("we can add a", circle(fill: blue), "circle")
+```
+
+![](../../images/crash-course-33.png)
+
+The `pos()` method converts it to an array, and `map()` applies a function to each element (`val` becomes `box(stroke: 0.5pt + black, val)`).
 
 ## `if`/`else`
 

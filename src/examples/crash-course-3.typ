@@ -1,4 +1,4 @@
-#set page(fill: rgb("#f2e9e4"), width: 12cm, height: 5cm)
+#set page(fill: rgb("#f2e9e4"), width: 15cm, height: 5cm)
 
 #stack(
   dir: ltr, // direction --> left to right

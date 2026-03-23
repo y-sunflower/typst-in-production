@@ -1,4 +1,4 @@
-#set page(fill: red, width: 10cm, height: 3cm)
+#set page(fill: red, width: 15cm, height: 3cm)
 
 == Here goes the title...
 

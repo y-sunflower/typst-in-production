@@ -1,7 +1,7 @@
 #let yellow = rgb("#FFC300")
 #let purple = rgb("#421173")
 
-#set page(fill: yellow, width: 12cm, height: 5cm)
+#set page(fill: yellow, width: 15cm, height: 5cm)
 
 #align(horizon, stack(
   dir: ltr,

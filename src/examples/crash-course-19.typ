@@ -1,4 +1,4 @@
-#set page(fill: rgb("#f8f9fa"), width: 12cm, height: 4cm)
+#set page(fill: rgb("#f8f9fa"), width: 15cm, height: 4cm)
 #let custom-box(label, fill: red) = {
   box(fill: fill, width: 4cm, inset: 5pt, text(weight: "bold", label))
 }

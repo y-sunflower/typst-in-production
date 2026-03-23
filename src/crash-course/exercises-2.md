@@ -50,9 +50,9 @@ In the following exercises, you'll need to reproduce in Typst the image you see.
 === "Hint"
 
     - Define `badge(...)` with `#let`
-    - Give it at least 2 parameters (`label`, `color`)
-    - Add one optional parameter with a default value
-    - Call the function multiple times with different arguments
+    - Give it 2 required parameters (`label`, `color`)
+    - Add one optional parameter with a default value for the symbol before the label
+    - Call the function multiple times inside a `stack()`
 
 === "Solution"
 
@@ -84,35 +84,26 @@ In the following exercises, you'll need to reproduce in Typst the image you see.
 === "Hint"
 
     - Define a function with a variadic parameter like `..parts`
-    - Put these parts inside a `stack(dir: ltr, ...)`
-    - Mix regular text with styled text when calling the function
+    - Put these parts inside a `stack(dir: ltr, ...)
 
 === "Solution"
 
     ```typst
-    #set page(fill: rgb("#f8f9fa"), width: 12cm, height: 5.5cm)
-
     #let notice(..parts) = {
-      rect(
-        fill: rgb("#264653"),
-        radius: 6pt,
-        inset: (x: 12pt, y: 8pt),
-        width: 8.8cm,
-        text(
-          fill: white,
-          stack(
-            dir: ltr,
-            spacing: 0.2cm,
-            ..parts,
-          ),
-        ),
-      )
+      rect(fill: rgb("#264653"), radius: 6pt, inset: (x: 12pt, y: 8pt), stack(
+        dir: ttb,
+        spacing: 0.2cm,
+        text(weight: "bold", size: 11pt)[Important info:],
+        ..parts,
+      ))
     }
 
     #align(horizon, stack(
+      dir: ltr,
       spacing: 0.35cm,
-      notice([Next workshop:], text(weight: "bold", "Thursday"), [10:00]),
-      notice([Bring your], text(weight: "bold", "laptop"), [and charger]),
+      notice("$10 to enter", "Children welcomed"),
+      notice("Free drinks", "Starts at 8:00", "Children allowed"),
+      notice(rect(fill: red, radius: 30%, "Event canceled")),
     ))
     ```
 
@@ -131,24 +122,15 @@ In the following exercises, you'll need to reproduce in Typst the image you see.
 === "Solution"
 
     ```typst
-    #set page(fill: rgb("#f8f9fa"), width: 12cm, height: 5.5cm)
-
     #let desk-status(label, free: true) = {
-      if free {
-        rect(
-          fill: rgb("#2a9d8f"),
-          radius: 5pt,
-          inset: (x: 10pt, y: 6pt),
-          text(fill: white, [#label - available]),
-        )
-      } else {
-        rect(
-          fill: rgb("#e76f51"),
-          radius: 5pt,
-          inset: (x: 10pt, y: 6pt),
-          text(fill: white, [#label - taken]),
-        )
-      }
+      let s = if free { [#label - available] } else { [#label - taken] }
+      let c = if free { rgb("#2a9d8f") } else { rgb("#e76f51") }
+      rect(
+        fill: c,
+        radius: 5pt,
+        inset: (x: 10pt, y: 6pt),
+        text(fill: white, s)
+      )
     }
 
     #align(horizon, stack(
@@ -167,37 +149,32 @@ In the following exercises, you'll need to reproduce in Typst the image you see.
 
 === "Hint"
 
-    - Create a function that accepts a list of task names
+    - Create a function that accepts a task name
     - Use a `for` loop to repeat the same card layout for each item
     - Add a small `v(...)` spacer after each generated card
 
 === "Solution"
 
     ```typst
-    #set page(fill: rgb("#f8f9fa"), width: 12cm, height: 6.5cm)
-
-    #let checklist(items) = {
-      for item in items {
-        rect(
-          fill: white,
-          stroke: rgb("#adb5bd"),
-          radius: 6pt,
-          inset: (x: 10pt, y: 8pt),
-          width: 8.6cm,
-          stack(
-            dir: ltr,
-            spacing: 0.25cm,
-            circle(fill: rgb("#4361ee"), width: 0.45cm),
-            text(weight: "bold", item),
-          ),
-        )
-        v(0.2cm)
-      }
+    #let todo(s) = {
+      rect(
+        fill: white,
+        stroke: rgb("#adb5bd"),
+        radius: 6pt,
+        inset: (x: 10pt, y: 8pt),
+        width: 8.6cm,
+        stack(
+          dir: ltr,
+          spacing: 0.25cm,
+          circle(fill: rgb("#4361ee"), width: 0.45cm),
+          text(weight: "bold", s),
+        ),
+      )
+      v(0.2cm)
     }
 
-    #align(horizon, checklist((
-      "Write the outline",
-      "Collect screenshots",
-      "Export the final PDF",
-    )))
+    #let items = ("Write the outline", "Collect screenshots", "Export the final PDF")
+    #for item in items {
+      todo(item)
+    }
     ```

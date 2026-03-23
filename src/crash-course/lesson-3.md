@@ -52,8 +52,8 @@ The code is highly duplicated! Only the label and the color are changing in each
 
 This makes our code:
 
-- highly reusable: we can call the `custom-component` function many other times
-- easier to maintain: change the function definition to update all of its uses
+- **highly reusable**: we can call the `custom-component` function many other times
+- **easier to maintain**: change the function definition to update all of its uses
 
 Typst is really well-designed for this component mindset, and it's a good idea to use it from the beginning.
 
@@ -87,6 +87,8 @@ Then by default all circle will have a width of 1cm. If we take our example from
 ))
 ```
 
+![](../../images/crash-course-24.png)
+
 Typst also has a more advanced version of set rules that is called **show rules**. Basically show rules let us define what happens when a function is called. Let's see an example:
 
 ```typst
@@ -118,7 +120,7 @@ But we can even fo much further with show rules! For example:
 
 ```typst
 #show heading: it => align(right)[
-  #text(weight: "bold", [_The heading is_: "#it.body"])
+  #text(weight: "bold", [_The heading is_: "#it.body" (level: #it.level)])
 ]
 
 = Hey you
@@ -128,4 +130,14 @@ And the rest of the document
 
 ![](../../images/crash-course-31.png)
 
-In short: we can whatever we want! Show rules differ from set rules by the fact that they don't just control default arguments of a function, but how that function will behave when called, which is an extremely powerful mechanism.
+In short: we can do whatever we want! Here `it` represents our heading:
+
+- `it.body`: the content
+- `it.level`: the heading level
+- `it.*`: this works for [all other arguments](https://typst.app/docs/reference/model/heading/) in the heading function (and for all functions too)!
+
+Show rules differ from set rules by the fact that they don't just control default arguments of a function, but **how that function will behave** when called, which is an extremely powerful mechanism.
+
+## Header and footer
+
+One thing where Typst shines is by minimizing code dupplication: it's very rare that you **need** to write twice the same code and it's often a symptom that your code should be refactored.

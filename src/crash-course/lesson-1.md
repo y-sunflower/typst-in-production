@@ -31,8 +31,6 @@ Then we run `typst compile file.typ`, and we get:
 If you've ever used Markdown before, getting started with Typst will be easy. For example, the following Typst file:
 
 ```typst
-#set page(fill: rgb("#f2e9e4"), width: 12cm, height: 5cm)
-
 = My first Typst document
 
 == Smaller heading
@@ -154,6 +152,22 @@ A thing that might be confusing in the previous code snippets is that sometimes 
 
     ![](../../images/crash-course-8.png)
 
+=== "Without the `#`"
+
+    ```typst
+    #align(right, circle(fill: blue, width: 3cm))
+    ```
+
+    ![](../../images/crash-course-32.png)
+
+=== "With the `#`"
+
+    ```typst
+    #align(right)[#circle(fill: blue, width: 3cm)]
+    ```
+
+    ![](../../images/crash-course-32.png)
+
 In the first case, the output is just a simple circle, while in the second case, it's the actual text instead of a circle. Why is that?
 
 It's because Typst has [2 modes][footnote-2]:
@@ -174,7 +188,7 @@ By default we're in Markup mode, and we need to add the `#` before a function na
     }
     ```
 
-=== "Inside function calls (e.g., arguments)"
+=== "Inside function calls"
 
     ```typst
     #circle(
@@ -183,4 +197,4 @@ By default we're in Markup mode, and we need to add the `#` before a function na
     )
     ```
 
-Those are just common examples, but in practice you'll quickly find this intuitive as you start using Typst. A great way to make this simpler for you is to enable ^^syntax highlighting^^ in your editor. If you have a second look [here](#when-or-when-not-to-use-the--symbol), you'll see that in the second case the text is all black, meaning that it will be rendered as is.
+Those are just common examples, but in practice **you'll quickly find this intuitive** as you start using Typst. A great way to make this simpler for you is to enable ^^syntax highlighting^^ in your editor. If you have a second look [here](#when-or-when-not-to-use-the--symbol), you'll see that in the second case the text is all black, meaning that it will be rendered as is.

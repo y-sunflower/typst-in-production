@@ -1,4 +1,4 @@
-#set page(fill: rgb("#f8f9fa"), width: 12cm, height: 5cm)
+#set page(fill: rgb("#f8f9fa"), width: 15cm, height: 5cm)
 
 #let badge(label, color, icon: "*") = {
   rect(
