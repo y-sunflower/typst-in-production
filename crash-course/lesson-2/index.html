@@ -387,6 +387,8 @@
       
         
       
+        
+      
     
     
     
@@ -741,6 +743,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tips-and-tricks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tips & Tricks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1082,18 +1112,20 @@
 <h2 id="create-your-own-functions">Create your own functions<a class="headerlink" href="#create-your-own-functions" title="Permanent link">&para;</a></h2>
 <p>Even though Typst is a markup language (!= a programming language), it embeds a scripting language that lets us add <strong>logic</strong> (<code>if</code>/<code>else</code> statements, <code>for</code> loops, etc.) and create reusable components/functions.</p>
 <p>Let's look at an example:</p>
-<div class="language-typst highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">aqua</span><span class="p">)</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kd">#let</span><span class="w"> </span><span class="nf">say-hello</span><span class="p">(</span><span class="nv">s</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="p">[</span>Hello,<span class="w"> </span>my<span class="w"> </span>friend<span class="w"> </span><span class="nv">#s</span>,<span class="w"> </span>how<span class="w"> </span>are<span class="w"> </span>you?<span class="p">]</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nf">say-hello</span><span class="p">(</span><span class="nv">s</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p">[</span>Hello,<span class="w"> </span>my<span class="w"> </span>friend<span class="w"> </span>&#39;<span class="nv">#s</span>&#39;,<span class="w"> </span>how<span class="w"> </span>are<span class="w"> </span>you?<span class="p">]</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nf">#say-hello</span><span class="p">(</span><span class="s2">&quot;Joseph&quot;</span><span class="p">)</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nf">#say-hello</span><span class="p">(</span><span class="s2">&quot;Joseph&quot;</span><span class="p">)</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nf">#say-hello</span><span class="p">(</span><span class="s2">&quot;Justine&quot;</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nf">#say-hello</span><span class="p">(</span><span class="s2">&quot;Justine&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p><img alt="" src="../../../images/crash-course-6.png" /></p>
 <p>Once again we use the <code>let</code> keyword, and then we wrap the output of the function inside curly braces.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is no <code>return</code> keyword in Typst: everything in your function will be rendered.</p>
+</div>
 <h2 id="functions-with-default-arguments">Functions with default arguments<a class="headerlink" href="#functions-with-default-arguments" title="Permanent link">&para;</a></h2>
 <p>Functions can have as many arguments as we want and let some of them have default values:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nf">custom-box</span><span class="p">(</span><span class="nv">label</span><span class="p">,</span><span class="w"> </span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">red</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -1118,30 +1150,44 @@
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="nf">#custom-stack</span><span class="p">(</span><span class="s2">&quot;we can add a&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;circle&quot;</span><span class="p">)</span>
 </span></code></pre></div>
 <p><img alt="" src="../../../images/crash-course-20.png" /></p>
-<h2 id="ifelse"><code>if</code>/<code>else</code><a class="headerlink" href="#ifelse" title="Permanent link">&para;</a></h2>
-<p>You can use the <code>if</code>/<code>else</code> statements, which, for example, can be useful to create flexible functions:</p>
-<div class="language-typst highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nf">greet</span><span class="p">(</span><span class="nv">name</span><span class="p">,</span><span class="w"> </span><span class="nv">vip</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="kr">if</span><span class="w"> </span><span class="nv">vip</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="p">[</span>Welcome<span class="w"> </span>back,<span class="w"> </span>esteemed<span class="w"> </span><span class="nv">#name</span>!<span class="p">]</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="p">[</span>Hello<span class="w"> </span><span class="nv">#name</span>!<span class="p">]</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="p">}</span>
+<p>We still can apply changes to each argument passed. For example, let's add black border around each of them:</p>
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nf">custom-stack</span><span class="p">(..</span><span class="nv">args</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nf">box</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">red</span><span class="p">,</span><span class="w"> </span><span class="nv">inset</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">pt</span><span class="p">,</span><span class="w"> </span><span class="nf">stack</span><span class="p">(</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nv">dir</span><span class="p">:</span><span class="w"> </span><span class="nv">ttb</span><span class="p">,</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nv">spacing</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="kr">pt</span><span class="p">,</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="hll"><span class="w">    </span><span class="p">..</span><span class="nv">args</span><span class="p">.</span><span class="nf">pos</span><span class="p">().</span><span class="nf">map</span><span class="p">(</span><span class="nv">val</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nf">box</span><span class="p">(</span><span class="nv">stroke</span><span class="p">:</span><span class="w"> </span><span class="m">0.5</span><span class="kr">pt</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">black</span><span class="p">,</span><span class="w"> </span><span class="nv">val</span><span class="p">)),</span>
+</span></span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="p">))</span>
 </span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="p">}</span>
 </span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="nf">#greet</span><span class="p">(</span><span class="s2">&quot;Joseph&quot;</span><span class="p">)</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="nf">#greet</span><span class="p">(</span><span class="s2">&quot;Justine&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">vip</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="nf">#custom-stack</span><span class="p">(</span><span class="s2">&quot;hey&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;you&quot;</span><span class="p">)</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="nf">#custom-stack</span><span class="p">(</span><span class="s2">&quot;we can add a&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;circle&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<p><img alt="" src="../../../images/crash-course-33.png" /></p>
+<p>The <code>pos()</code> method converts it to an array, and <code>map()</code> applies a function to each element (<code>val</code> becomes <code>box(stroke: 0.5pt + black, val)</code>).</p>
+<h2 id="ifelse"><code>if</code>/<code>else</code><a class="headerlink" href="#ifelse" title="Permanent link">&para;</a></h2>
+<p>You can use the <code>if</code>/<code>else</code> statements, which, for example, can be useful to create flexible functions:</p>
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nf">greet</span><span class="p">(</span><span class="nv">name</span><span class="p">,</span><span class="w"> </span><span class="nv">vip</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="kr">if</span><span class="w"> </span><span class="nv">vip</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="p">[</span>Welcome<span class="w"> </span>back,<span class="w"> </span>esteemed<span class="w"> </span><span class="nv">#name</span>!<span class="p">]</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="p">[</span>Hello<span class="w"> </span><span class="nv">#name</span>!<span class="p">]</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">}</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="nf">#greet</span><span class="p">(</span><span class="s2">&quot;Joseph&quot;</span><span class="p">)</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="nf">#greet</span><span class="p">(</span><span class="s2">&quot;Justine&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">vip</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
 </span></code></pre></div>
 <p><img alt="" src="../../../images/crash-course-21.png" /></p>
 <h2 id="for-loops"><code>for</code> loops<a class="headerlink" href="#for-loops" title="Permanent link">&para;</a></h2>
 <p>You can use <code>for</code> loops to repeat content or iterate over a list:</p>
-<div class="language-typst highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nf">name-list</span><span class="p">(</span><span class="nv">names</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="kr">for</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nv">names</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="p">[</span>•<span class="w"> </span>Hello<span class="w"> </span><span class="nv">#name</span><span class="w"> </span><span class="p">\</span><span class="w"> </span><span class="p">]</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">}</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="nf">#name-list</span><span class="p">((</span><span class="s2">&quot;Joseph&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Justine&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Alex&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Victoria&quot;</span><span class="p">))</span>
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nf">name-list</span><span class="p">(</span><span class="nv">names</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="kr">for</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nv">names</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="p">[</span>•<span class="w"> </span>Hello<span class="w"> </span><span class="nv">#name</span><span class="w"> </span><span class="p">\</span><span class="w"> </span><span class="p">]</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">}</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="nf">#name-list</span><span class="p">((</span><span class="s2">&quot;Joseph&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Justine&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Alex&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Victoria&quot;</span><span class="p">))</span>
 </span></code></pre></div>
 <p><img alt="" src="../../../images/crash-course-22.png" /></p>
 

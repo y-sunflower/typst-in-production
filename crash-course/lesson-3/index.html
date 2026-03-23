@@ -387,6 +387,8 @@
       
         
       
+        
+      
     
     
     
@@ -671,6 +673,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#header-and-footer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Header and footer
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -695,6 +708,34 @@
     
   
     Exercises 3 - Templating
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tips-and-tricks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tips & Tricks
   
 
     
@@ -948,6 +989,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#header-and-footer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Header and footer
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1054,8 +1106,8 @@
 <p><img alt="" src="../../../images/crash-course-24.png" /></p>
 <p>This makes our code:</p>
 <ul>
-<li>highly reusable: we can call the <code>custom-component</code> function many other times</li>
-<li>easier to maintain: change the function definition to update all of its uses</li>
+<li><strong>highly reusable</strong>: we can call the <code>custom-component</code> function many other times</li>
+<li><strong>easier to maintain</strong>: change the function definition to update all of its uses</li>
 </ul>
 <p>Typst is really well-designed for this component mindset, and it's a good idea to use it from the beginning.</p>
 <h2 id="set-and-show-rules">set and show rules<a class="headerlink" href="#set-and-show-rules" title="Permanent link">&para;</a></h2>
@@ -1081,6 +1133,7 @@
 </span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">  </span><span class="nf">text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#e76f51&quot;</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;Blocked&quot;</span><span class="p">),</span>
 </span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="p">))</span>
 </span></code></pre></div>
+<p><img alt="" src="../../../images/crash-course-24.png" /></p>
 <p>Typst also has a more advanced version of set rules that is called <strong>show rules</strong>. Basically show rules let us define what happens when a function is called. Let's see an example:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">#show</span><span class="w"> </span><span class="nv">heading</span><span class="p">:</span><span class="w"> </span><span class="kd">set</span><span class="w"> </span><span class="nf">text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">)</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
@@ -1102,7 +1155,7 @@
 <p><img alt="" src="../../../images/crash-course-30.png" /></p>
 <p>But we can even fo much further with show rules! For example:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">#show</span><span class="w"> </span><span class="nv">heading</span><span class="p">:</span><span class="w"> </span><span class="nv">it</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nf">align</span><span class="p">(</span><span class="nv">right</span><span class="p">)[</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nf">#text</span><span class="p">(</span><span class="nv">weight</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bold&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="ge">_The heading is_</span>:<span class="w"> </span>&quot;<span class="nv">#it</span>.body&quot;<span class="p">])</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nf">#text</span><span class="p">(</span><span class="nv">weight</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bold&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="ge">_The heading is_</span>:<span class="w"> </span>&quot;<span class="nv">#it</span>.body&quot;<span class="w"> </span>(level:<span class="w"> </span><span class="nv">#it</span>.level)<span class="p">])</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">]</span>
 </span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
 </span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="gh">= Hey you</span>
@@ -1110,7 +1163,15 @@
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>And<span class="w"> </span>the<span class="w"> </span>rest<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>document
 </span></code></pre></div>
 <p><img alt="" src="../../../images/crash-course-31.png" /></p>
-<p>In short: we can whatever we want! Show rules differ from set rules by the fact that they don't just control default arguments of a function, but how that function will behave when called, which is an extremely powerful mechanism.</p>
+<p>In short: we can do whatever we want! Here <code>it</code> represents our heading:</p>
+<ul>
+<li><code>it.body</code>: the content</li>
+<li><code>it.level</code>: the heading level</li>
+<li><code>it.*</code>: this works for <a href="https://typst.app/docs/reference/model/heading/">all other arguments</a> in the heading function (and for all functions too)!</li>
+</ul>
+<p>Show rules differ from set rules by the fact that they don't just control default arguments of a function, but <strong>how that function will behave</strong> when called, which is an extremely powerful mechanism.</p>
+<h2 id="header-and-footer">Header and footer<a class="headerlink" href="#header-and-footer" title="Permanent link">&para;</a></h2>
+<p>One thing where Typst shines is by minimizing code dupplication: it's very rare that you <strong>need</strong> to write twice the same code and it's often a symptom that your code should be refactored.</p>
 
 
 

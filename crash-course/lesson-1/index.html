@@ -387,6 +387,8 @@
       
         
       
+        
+      
     
     
     
@@ -739,6 +741,34 @@
     
   
     Exercises 3 - Templating
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tips-and-tricks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tips & Tricks
   
 
     
@@ -1119,15 +1149,13 @@
 <p><img alt="A red page with a level 2 title &quot;Here goes the title...&quot; and the text &quot;Hey folks, how's that crash course going so far?&quot;" src="../../../images/crash-course-1.png" /></p>
 <h2 id="basic-syntax">Basic syntax<a class="headerlink" href="#basic-syntax" title="Permanent link">&para;</a></h2>
 <p>If you've ever used Markdown before, getting started with Typst will be easy. For example, the following Typst file:</p>
-<div class="language-typst highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#f2e9e4&quot;</span><span class="p">),</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">cm</span><span class="p">)</span>
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="gh">= My first Typst document</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="gh">= My first Typst document</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="gh">== Smaller heading</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="gh">== Smaller heading</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="gh">=== But still a heading</span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="gh">=== But still a heading</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>This<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>paragraph,<span class="w"> </span>where<span class="w"> </span>text<span class="w"> </span>can<span class="w"> </span>be<span class="w"> </span><span class="gs">*bold*</span>,<span class="w"> </span><span class="ge">_italic_</span>,<span class="w"> </span>or<span class="w"> </span><span class="sb">`code-like`</span>.
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>This<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>paragraph,<span class="w"> </span>where<span class="w"> </span>text<span class="w"> </span>can<span class="w"> </span>be<span class="w"> </span><span class="gs">*bold*</span>,<span class="w"> </span><span class="ge">_italic_</span>,<span class="w"> </span>or<span class="w"> </span><span class="sb">`code-like`</span>.
 </span></code></pre></div>
 <p><img alt="" src="../../../images/crash-course-2.png" /></p>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
@@ -1190,7 +1218,7 @@
 <p><img alt="" src="../../../images/crash-course-5.png" /></p>
 <h2 id="when-and-when-not-to-use-the-symbol">When and when not to use the <code>#</code> symbol<a class="headerlink" href="#when-and-when-not-to-use-the-symbol" title="Permanent link">&para;</a></h2>
 <p>A thing that might be confusing in the previous code snippets is that sometimes we use the <code>#</code> symbol, and sometimes we don't.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">With the <code>#</code></label><label for="__tabbed_1_2">Without the <code>#</code></label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">With the <code>#</code></label><label for="__tabbed_1_2">Without the <code>#</code></label><label for="__tabbed_1_3">Without the <code>#</code></label><label for="__tabbed_1_4">With the <code>#</code></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nf">#circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">)</span>
@@ -1202,6 +1230,16 @@
 </span></code></pre></div>
 <p><img alt="" src="../../../images/crash-course-8.png" /></p>
 </div>
+<div class="tabbed-block">
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nf">#align</span><span class="p">(</span><span class="nv">right</span><span class="p">,</span><span class="w"> </span><span class="nf">circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">))</span>
+</span></code></pre></div>
+<p><img alt="" src="../../../images/crash-course-32.png" /></p>
+</div>
+<div class="tabbed-block">
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nf">#align</span><span class="p">(</span><span class="nv">right</span><span class="p">)[</span><span class="nf">#circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">)]</span>
+</span></code></pre></div>
+<p><img alt="" src="../../../images/crash-course-32.png" /></p>
+</div>
 </div>
 </div>
 <p>In the first case, the output is just a simple circle, while in the second case, it's the actual text instead of a circle. Why is that?</p>
@@ -1211,25 +1249,25 @@
 <li>Code mode</li>
 </ul>
 <p>By default we're in Markup mode, and we need to add the <code>#</code> before a function name, a set rule or when defining a new variable. But we switch to code mode in many cases:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Inside function definition</label><label for="__tabbed_2_2">Inside function calls (e.g., arguments)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Inside function definition</label><label for="__tabbed_2_2">Inside function calls</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-typst highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nf">yellow-circle</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nv">yellow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#FFC300&quot;</span><span class="p">)</span><span class="w">      </span><span class="c1">// no `#` here</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="nf">circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">yellow</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">)</span><span class="w"> </span><span class="c1">// no `#` here</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="p">}</span>
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nf">yellow-circle</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nv">yellow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#FFC300&quot;</span><span class="p">)</span><span class="w">      </span><span class="c1">// no `#` here</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">  </span><span class="nf">circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">yellow</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">)</span><span class="w"> </span><span class="c1">// no `#` here</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="p">}</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-typst highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nf">#circle</span><span class="p">(</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">,</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="nf">circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="kr">cm</span><span class="p">)</span><span class="w"> </span><span class="c1">// no `#` here</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">)</span>
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nf">#circle</span><span class="p">(</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">,</span>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">  </span><span class="nf">circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="kr">cm</span><span class="p">)</span><span class="w"> </span><span class="c1">// no `#` here</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="p">)</span>
 </span></code></pre></div>
 </div>
 </div>
 </div>
-<p>Those are just common examples, but in practice you'll quickly find this intuitive as you start using Typst. A great way to make this simpler for you is to enable <ins>syntax highlighting</ins> in your editor. If you have a second look <a href="#when-or-when-not-to-use-the--symbol">here</a>, you'll see that in the second case the text is all black, meaning that it will be rendered as is.</p>
+<p>Those are just common examples, but in practice <strong>you'll quickly find this intuitive</strong> as you start using Typst. A great way to make this simpler for you is to enable <ins>syntax highlighting</ins> in your editor. If you have a second look <a href="#when-or-when-not-to-use-the--symbol">here</a>, you'll see that in the second case the text is all black, meaning that it will be rendered as is.</p>
 
 
 
