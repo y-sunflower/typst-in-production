@@ -1132,12 +1132,7 @@
   <h1 id="__skip">Lesson 1 - Foundations</h1>
 
 <h2 id="typst-text-a-compiler">Typst = text + a compiler<a class="headerlink" href="#typst-text-a-compiler" title="Permanent link">&para;</a></h2>
-<p>What we call "Typst" is usually one of the following:</p>
-<ul>
-<li>the Typst <strong>company</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> the legal organization and people developing Typst</li>
-<li>the Typst <strong>typesetting system</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> the language itself</li>
-<li>the Typst <strong>compiler</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> the (CLI) program that actually creates the PDF</li>
-</ul>
+<p>Typst is a <strong>compiler</strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"/></svg></span> a (CLI) program that creates PDFs.</p>
 <p>The compiler will take a <code>.typ</code> file and create a <a href="https://typst.app/docs/reference/html/" title="Note that you can also generate other files such as HTML">PDF file</a> with it. For example, a Typst file might look like this:</p>
 <div class="language-typst highlight"><span class="filename">file.typ</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">red</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">)</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
@@ -1157,20 +1152,20 @@
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>This<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>paragraph,<span class="w"> </span>where<span class="w"> </span>text<span class="w"> </span>can<span class="w"> </span>be<span class="w"> </span><span class="gs">*bold*</span>,<span class="w"> </span><span class="ge">_italic_</span>,<span class="w"> </span>or<span class="w"> </span><span class="sb">`code-like`</span>.
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-2.png" /></p>
+<p><img alt="Document with three heading levels and a paragraph showing bold, italic, and code-styled text" src="../../../images/crash-course-2.png" /></p>
 <h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
 <p>Typst offers tons of functions that we can use to customize the output of our PDF. For example, there is a <code>circle()</code> function:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">#circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">)</span>
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-15.png" /></p>
+<p><img alt="Solid blue circle" src="../../../images/crash-course-15.png" /></p>
 <p>We can, for example, add some text <strong>inside</strong> the circle:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">#circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Hello world&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-16.png" /></p>
+<p><img alt="Blue circle containing the text &quot;Hello world&quot;" src="../../../images/crash-course-16.png" /></p>
 <p>Or another circle:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nf">#circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nf">circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">red</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="kr">cm</span><span class="p">))</span>
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-17.png" /></p>
+<p><img alt="Large blue circle containing a smaller red circle" src="../../../images/crash-course-17.png" /></p>
 <p>The <code>circle()</code> function is useful for creating <strong>visual elements</strong>, but many functions are here to control the <strong>layout of our document</strong>. For example, I want to put a blue circle next to a green rectangle, next to red text. How can I do that?</p>
 <p>The simplest way to do it is to use the <code>stack()</code> function: it will stack elements (as many as we want) in a given direction.</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nf">#stack</span><span class="p">(</span>
@@ -1181,7 +1176,7 @@
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="nf">text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">red</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
 </span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">)</span>
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-3.png" /></p>
+<p><img alt="Horizontal layout with a blue circle, a green rectangle, and red &quot;Hello&quot; text" src="../../../images/crash-course-3.png" /></p>
 <p>What if I want them to be vertically aligned? We wrap everything in the <code>align()</code> function and specify that we align to the <code>horizon</code> (could also be <code>top</code> or <code>bottom</code>):</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nf">#align</span><span class="p">(</span><span class="nv">horizon</span><span class="p">,</span><span class="w"> </span><span class="nf">stack</span><span class="p">(</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nv">dir</span><span class="p">:</span><span class="w"> </span><span class="nv">ltr</span><span class="p">,</span>
@@ -1191,7 +1186,7 @@
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span><span class="nf">text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">red</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Hello&quot;</span><span class="p">),</span>
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="p">))</span>
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-4.png" /></p>
+<p><img alt="Blue circle, green rectangle, and red &quot;Hello&quot; text aligned on their vertical centers" src="../../../images/crash-course-4.png" /></p>
 <h2 id="set-rules">Set rules<a class="headerlink" href="#set-rules" title="Permanent link">&para;</a></h2>
 <p>A set rule is a way to tell Typst how a given function should behave. For example, by default the <code>text()</code> function uses <code>fill: black</code> for its color, but if we do:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">)</span>
@@ -1200,7 +1195,7 @@
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
 </span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>Content<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>document
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-18.png" /></p>
+<p><img alt="Document with a blue title and blue body text" src="../../../images/crash-course-18.png" /></p>
 <h2 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h2>
 <p>We can define variables, like in any programming language, in order to reuse them thanks to the <code>let</code> keyword. A common use case is to define branding colors:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nv">yellow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#FFC300&quot;</span><span class="p">)</span>
@@ -1215,7 +1210,7 @@
 </span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">  </span><span class="nf">rect</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">purple</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nf">circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">yellow</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="kr">cm</span><span class="p">)),</span>
 </span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="p">))</span>
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-5.png" /></p>
+<p><img alt="Yellow page with a purple circle and a purple rectangle containing a small yellow circle" src="../../../images/crash-course-5.png" /></p>
 <h2 id="when-and-when-not-to-use-the-symbol">When and when not to use the <code>#</code> symbol<a class="headerlink" href="#when-and-when-not-to-use-the-symbol" title="Permanent link">&para;</a></h2>
 <p>One thing that might be confusing in the previous code snippets is that sometimes we use the <code>#</code> symbol, and sometimes we don't.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">With the <code>#</code></label><label for="__tabbed_1_2">Without the <code>#</code></label><label for="__tabbed_1_3">Without the <code>#</code></label><label for="__tabbed_1_4">With the <code>#</code></label></div>
@@ -1223,22 +1218,22 @@
 <div class="tabbed-block">
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nf">#circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">)</span>
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-7.png" /></p>
+<p><img alt="Solid blue circle" src="../../../images/crash-course-7.png" /></p>
 </div>
 <div class="tabbed-block">
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>circle(fill:<span class="w"> </span>blue,<span class="w"> </span>width:<span class="w"> </span>3cm)
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-8.png" /></p>
+<p><img alt="Literal text &quot;circle(fill: blue, width: 3cm)&quot; rendered instead of a shape" src="../../../images/crash-course-8.png" /></p>
 </div>
 <div class="tabbed-block">
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nf">#align</span><span class="p">(</span><span class="nv">right</span><span class="p">,</span><span class="w"> </span><span class="nf">circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">))</span>
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-32.png" /></p>
+<p><img alt="Right-aligned blue circle" src="../../../images/crash-course-32.png" /></p>
 </div>
 <div class="tabbed-block">
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nf">#align</span><span class="p">(</span><span class="nv">right</span><span class="p">)[</span><span class="nf">#circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="kr">cm</span><span class="p">)]</span>
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-32.png" /></p>
+<p><img alt="Right-aligned blue circle" src="../../../images/crash-course-32.png" /></p>
 </div>
 </div>
 </div>

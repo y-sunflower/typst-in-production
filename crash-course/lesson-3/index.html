@@ -1110,7 +1110,7 @@
 </span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="nf">text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#e76f51&quot;</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;Blocked&quot;</span><span class="p">),</span>
 </span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="p">))</span>
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-23.png" /></p>
+<p><img alt="Three status rows showing Ready, Pending, and Blocked with matching colored circles" src="../../../images/crash-course-23.png" /></p>
 <p>The code is highly duplicated! Only the label and the color are changing in each element. Instead, what we want to do is:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nf">custom-component</span><span class="p">(</span><span class="nv">lab</span><span class="p">,</span><span class="w"> </span><span class="nv">col</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nf">align</span><span class="p">(</span><span class="nv">horizon</span><span class="p">,</span><span class="w"> </span><span class="nf">stack</span><span class="p">(</span>
@@ -1125,7 +1125,7 @@
 </span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="nf">#custom-component</span><span class="p">(</span><span class="s2">&quot;Pending&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#e9c46a&quot;</span><span class="p">))</span>
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="nf">#custom-component</span><span class="p">(</span><span class="s2">&quot;Blocked&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#e76f51&quot;</span><span class="p">))</span>
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-24.png" /></p>
+<p><img alt="Three status rows showing Ready, Pending, and Blocked with matching colored circles" src="../../../images/crash-course-24.png" /></p>
 <p>This makes our code:</p>
 <ul>
 <li><strong>highly reusable</strong>: we can call the <code>custom-component</code> function many other times</li>
@@ -1155,7 +1155,7 @@
 </span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">  </span><span class="nf">text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#e76f51&quot;</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;Blocked&quot;</span><span class="p">),</span>
 </span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="p">))</span>
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-24.png" /></p>
+<p><img alt="Three status rows showing Ready, Pending, and Blocked with matching colored circles" src="../../../images/crash-course-24.png" /></p>
 <p>Typst also has a more advanced version of set rules called <strong>show rules</strong>. Basically, show rules let us define what happens when a function is called. Let's see an example:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">#show</span><span class="w"> </span><span class="nv">heading</span><span class="p">:</span><span class="w"> </span><span class="kd">set</span><span class="w"> </span><span class="nf">text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">)</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
@@ -1165,7 +1165,7 @@
 </span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="gh">== Another section</span>
 </span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>And<span class="w"> </span>the<span class="w"> </span>rest<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>document
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-29.png" /></p>
+<p><img alt="Document with two blue section headings and black body text" src="../../../images/crash-course-29.png" /></p>
 <p>Here, our show rules say: when adding a heading, set the text to blue by default. Very practical! But what if we want to apply a different color depending on the heading level?</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">#show</span><span class="w"> </span><span class="nv">heading</span><span class="p">.</span><span class="nf">where</span><span class="p">(</span><span class="nv">level</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">):</span><span class="w"> </span><span class="kd">set</span><span class="w"> </span><span class="nf">text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">green</span><span class="p">)</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kd">#show</span><span class="w"> </span><span class="nv">heading</span><span class="p">.</span><span class="nf">where</span><span class="p">(</span><span class="nv">level</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">):</span><span class="w"> </span><span class="kd">set</span><span class="w"> </span><span class="nf">text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">)</span>
@@ -1174,7 +1174,7 @@
 </span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="gh">== Section</span>
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>And<span class="w"> </span>the<span class="w"> </span>rest<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>document
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-30.png" /></p>
+<p><img alt="Document with a green level-1 heading, a blue level-2 heading, and black body text" src="../../../images/crash-course-30.png" /></p>
 <p>But we can even go much further with show rules! For example:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">#show</span><span class="w"> </span><span class="nv">heading</span><span class="p">:</span><span class="w"> </span><span class="nv">it</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nf">align</span><span class="p">(</span><span class="nv">right</span><span class="p">)[</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nf">#text</span><span class="p">(</span><span class="nv">weight</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bold&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="ge">_The heading is_</span>:<span class="w"> </span>&quot;<span class="nv">#it</span>.body&quot;<span class="w"> </span>(level:<span class="w"> </span><span class="nv">#it</span>.level)<span class="p">])</span>
@@ -1184,7 +1184,7 @@
 </span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="gh">== Section</span>
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>And<span class="w"> </span>the<span class="w"> </span>rest<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>document
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-31.png" /></p>
+<p><img alt="Right-aligned text describing each heading and its level" src="../../../images/crash-course-31.png" /></p>
 <p>In short: we can do whatever we want! Here, <code>it</code> represents our heading:</p>
 <ul>
 <li><code>it.body</code>: the content</li>
@@ -1210,7 +1210,7 @@
 </span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
 </span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="gh">= Another title</span>
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-34.png" /></p>
+<p><img alt="Two-page document with a lime header bar reading &quot;This is the header&quot; on each page" src="../../../images/crash-course-34.png" /></p>
 <p>Thanks to set rules, we can easily set the default header for all pages.</p>
 <h2 id="context">Context<a class="headerlink" href="#context" title="Permanent link">&para;</a></h2>
 <p>An important thing in Typst is the <a href="https://typst.app/docs/reference/context/"><code>context</code></a>. It is a keyword that can give us information about the <em>current</em> context. For example:</p>
@@ -1242,7 +1242,7 @@
 </span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>
 </span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="gh">= Yet another title</span>
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-35.png" /></p>
+<p><img alt="Three-page document with a lime header bar showing the current page number out of 3" src="../../../images/crash-course-35.png" /></p>
 <p>Let's summarize the key parts here:</p>
 <ul>
 <li>Everything is wrapped in <code>#context []</code>. This is required; otherwise, the next function calls won't work.</li>

@@ -1120,7 +1120,7 @@
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nf">#say-hello</span><span class="p">(</span><span class="s2">&quot;Justine&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-6.png" /></p>
+<p><img alt="Two greeting lines addressed to Joseph and Justine" src="../../../images/crash-course-6.png" /></p>
 <p>Once again we use the <code>let</code> keyword, and then we wrap the output of the function inside curly braces.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1135,7 +1135,7 @@
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nf">#custom-box</span><span class="p">(</span><span class="s2">&quot;Life is good&quot;</span><span class="p">)</span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nf">#custom-box</span><span class="p">(</span><span class="s2">&quot;Life is good&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">green</span><span class="p">)</span>
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-19.png" /></p>
+<p><img alt="Two bold &quot;Life is good&quot; boxes, one red and one green" src="../../../images/crash-course-19.png" /></p>
 <h2 id="variadic-arguments">Variadic arguments<a class="headerlink" href="#variadic-arguments" title="Permanent link">&para;</a></h2>
 <p>You can make your function accept any number of arguments by using variadic arguments:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nf">custom-stack</span><span class="p">(..</span><span class="nv">args</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -1149,7 +1149,7 @@
 </span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="nf">#custom-stack</span><span class="p">(</span><span class="s2">&quot;hey&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;you&quot;</span><span class="p">)</span>
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="nf">#custom-stack</span><span class="p">(</span><span class="s2">&quot;we can add a&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;circle&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-20.png" /></p>
+<p><img alt="Two red boxes stacking text, with the second one including a blue circle between words" src="../../../images/crash-course-20.png" /></p>
 <p>We can still apply changes to each argument passed. For example, let's add a black border around each of them:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nf">custom-stack</span><span class="p">(..</span><span class="nv">args</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nf">box</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">red</span><span class="p">,</span><span class="w"> </span><span class="nv">inset</span><span class="p">:</span><span class="w"> </span><span class="m">5</span><span class="kr">pt</span><span class="p">,</span><span class="w"> </span><span class="nf">stack</span><span class="p">(</span>
@@ -1162,7 +1162,7 @@
 </span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="nf">#custom-stack</span><span class="p">(</span><span class="s2">&quot;hey&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;you&quot;</span><span class="p">)</span>
 </span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="nf">#custom-stack</span><span class="p">(</span><span class="s2">&quot;we can add a&quot;</span><span class="p">,</span><span class="w"> </span><span class="nf">circle</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">),</span><span class="w"> </span><span class="s2">&quot;circle&quot;</span><span class="p">)</span>
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-33.png" /></p>
+<p><img alt="Two red boxes stacking text, with each item outlined by a black border and the second box including a blue circle between words" src="../../../images/crash-course-33.png" /></p>
 <p>The <code>pos()</code> method converts it to an array, and <code>map()</code> applies a function to each element (<code>val</code> becomes <code>box(stroke: 0.5pt + black, val)</code>).</p>
 <h2 id="ifelse"><code>if</code>/<code>else</code><a class="headerlink" href="#ifelse" title="Permanent link">&para;</a></h2>
 <p>You can use <code>if</code>/<code>else</code> statements, which, for example, can be useful for creating flexible functions:</p>
@@ -1178,7 +1178,7 @@
 </span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
 </span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="nf">#greet</span><span class="p">(</span><span class="s2">&quot;Justine&quot;</span><span class="p">,</span><span class="w"> </span><span class="nv">vip</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-21.png" /></p>
+<p><img alt="Greeting lines for Joseph and VIP guest Justine" src="../../../images/crash-course-21.png" /></p>
 <h2 id="for-loops"><code>for</code> loops<a class="headerlink" href="#for-loops" title="Permanent link">&para;</a></h2>
 <p>You can use <code>for</code> loops to repeat content or iterate over a list:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nf">name-list</span><span class="p">(</span><span class="nv">names</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -1189,7 +1189,7 @@
 </span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
 </span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="nf">#name-list</span><span class="p">((</span><span class="s2">&quot;Joseph&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Justine&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Alex&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Victoria&quot;</span><span class="p">))</span>
 </span></code></pre></div>
-<p><img alt="" src="../../../images/crash-course-22.png" /></p>
+<p><img alt="Bulleted list greeting Joseph, Justine, Alex, and Victoria" src="../../../images/crash-course-22.png" /></p>
 
 
 
