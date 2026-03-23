@@ -12,7 +12,7 @@ In the following exercises, you'll need to reproduce in Typst the image you see.
 
 === "Exercise"
 
-    ![](../../images/crash-course-28.png)
+    ![Small release board with a dark title pill, two outlined task cards, and a red review banner](../../images/crash-course-28.png)
 
 === "Hint"
 

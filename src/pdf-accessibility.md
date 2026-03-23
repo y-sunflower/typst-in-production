@@ -137,7 +137,7 @@ Also note that many other things will not be directly flagged as accessibility i
 #rect(fill: rgb("#48233C"), text(fill: black, "hey"))
 ```
 
-![](./images/accessibility-1.png)
+![Red page with a title and a dark rectangle containing low-contrast black text](./images/accessibility-1.png)
 
 But there is a color issue: the contrast between the text color and the background color is not high enough. This means that the PDF is flagged as fully accessible even though it is not. The main thing to keep in mind is that you still need to do some manual checks to ensure true accessibility.
 

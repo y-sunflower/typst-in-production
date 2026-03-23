@@ -8,7 +8,7 @@ In the following exercises, you'll need to reproduce in Typst the image you see.
 
 === "Exercise"
 
-    ![](../../images/crash-course-13.png)
+    ![Centered vertical list of Ready, Pending, and Blocked labels with matching colored circles](../../images/crash-course-13.png)
 
 === "Hint"
 
@@ -45,7 +45,7 @@ In the following exercises, you'll need to reproduce in Typst the image you see.
 
 === "Exercise"
 
-    ![](../../images/crash-course-14.png)
+    ![Row of rounded badges labeled Draft, Review, and Done with different colors and symbols](../../images/crash-course-14.png)
 
 === "Hint"
 
@@ -79,7 +79,7 @@ In the following exercises, you'll need to reproduce in Typst the image you see.
 
 === "Exercise"
 
-    ![](../../images/crash-course-25.png)
+    ![Three dark announcement cards with short messages, including an Event canceled badge](../../images/crash-course-25.png)
 
 === "Hint"
 
@@ -111,7 +111,7 @@ In the following exercises, you'll need to reproduce in Typst the image you see.
 
 === "Exercise"
 
-    ![](../../images/crash-course-26.png)
+    ![Vertical stack of desk status cards showing Desk A available, Desk B taken, and Desk C available](../../images/crash-course-26.png)
 
 === "Hint"
 
@@ -145,7 +145,7 @@ In the following exercises, you'll need to reproduce in Typst the image you see.
 
 === "Exercise"
 
-    ![](../../images/crash-course-27.png)
+    ![Checklist of three task cards with blue dots for writing the outline, collecting screenshots, and exporting the final PDF](../../images/crash-course-27.png)
 
 === "Hint"
 

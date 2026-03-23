@@ -8,7 +8,7 @@ In the following exercises, you'll need to **reproduce** in Typst the image you 
 
 === "Exercise"
 
-    ![](../../images/crash-course-9.png)
+    ![Example document with the heading "My first Typst document" and a sentence about loving cookies](../../images/crash-course-9.png)
 
 === "Hint"
 
@@ -27,7 +27,7 @@ In the following exercises, you'll need to **reproduce** in Typst the image you 
 
 === "Exercise"
 
-    ![](../../images/crash-course-10.png)
+    ![Solid blue circle](../../images/crash-course-10.png)
 
 === "Hint"
 
@@ -44,7 +44,7 @@ In the following exercises, you'll need to **reproduce** in Typst the image you 
 
 === "Exercise"
 
-    ![](../../images/crash-course-11.png)
+    ![Row with a blue circle, a rounded cyan rectangle, and purple "Typst" text](../../images/crash-course-11.png)
 
 === "Hint"
 
@@ -69,7 +69,7 @@ In the following exercises, you'll need to **reproduce** in Typst the image you 
 
 === "Exercise"
 
-    ![](../../images/crash-course-12.png)
+    ![Weekly report heading and sentence in orange above a matching orange rounded bar](../../images/crash-course-12.png)
 
 === "Hint"
 

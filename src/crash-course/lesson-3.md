@@ -29,7 +29,7 @@ Components **aren't** a Typst concept, but they're probably a good way to think 
 ))
 ```
 
-![](../../images/crash-course-23.png)
+![Three status rows showing Ready, Pending, and Blocked with matching colored circles](../../images/crash-course-23.png)
 
 The code is highly duplicated! Only the label and the color are changing in each element. Instead, what we want to do is:
 
@@ -48,7 +48,7 @@ The code is highly duplicated! Only the label and the color are changing in each
 #custom-component("Blocked", rgb("#e76f51"))
 ```
 
-![](../../images/crash-course-24.png)
+![Three status rows showing Ready, Pending, and Blocked with matching colored circles](../../images/crash-course-24.png)
 
 This makes our code:
 
@@ -87,7 +87,7 @@ Then, by default, all circles will have a width of 1cm. If we take our example f
 ))
 ```
 
-![](../../images/crash-course-24.png)
+![Three status rows showing Ready, Pending, and Blocked with matching colored circles](../../images/crash-course-24.png)
 
 Typst also has a more advanced version of set rules called **show rules**. Basically, show rules let us define what happens when a function is called. Let's see an example:
 
@@ -101,7 +101,7 @@ Content of the document
 And the rest of the document
 ```
 
-![](../../images/crash-course-29.png)
+![Document with two blue section headings and black body text](../../images/crash-course-29.png)
 
 Here, our show rules say: when adding a heading, set the text to blue by default. Very practical! But what if we want to apply a different color depending on the heading level?
 
@@ -114,7 +114,7 @@ Here, our show rules say: when adding a heading, set the text to blue by default
 And the rest of the document
 ```
 
-![](../../images/crash-course-30.png)
+![Document with a green level-1 heading, a blue level-2 heading, and black body text](../../images/crash-course-30.png)
 
 But we can even go much further with show rules! For example:
 
@@ -128,7 +128,7 @@ But we can even go much further with show rules! For example:
 And the rest of the document
 ```
 
-![](../../images/crash-course-31.png)
+![Right-aligned text describing each heading and its level](../../images/crash-course-31.png)
 
 In short: we can do whatever we want! Here, `it` represents our heading:
 
@@ -161,7 +161,7 @@ Some text goes here...
 = Another title
 ```
 
-![](../../images/crash-course-34.png)
+![Two-page document with a lime header bar reading "This is the header" on each page](../../images/crash-course-34.png)
 
 Thanks to set rules, we can easily set the default header for all pages.
 
@@ -199,7 +199,7 @@ Some text goes here...
 = Yet another title
 ```
 
-![](../../images/crash-course-35.png)
+![Three-page document with a lime header bar showing the current page number out of 3](../../images/crash-course-35.png)
 
 Let's summarize the key parts here:
 

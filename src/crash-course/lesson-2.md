@@ -18,7 +18,7 @@ Let's look at an example:
 #say-hello("Justine")
 ```
 
-![](../../images/crash-course-6.png)
+![Two greeting lines addressed to Joseph and Justine](../../images/crash-course-6.png)
 
 Once again we use the `let` keyword, and then we wrap the output of the function inside curly braces.
 
@@ -39,7 +39,7 @@ Functions can have as many arguments as we want, and some of them can have defau
 #custom-box("Life is good", fill: green)
 ```
 
-![](../../images/crash-course-19.png)
+![Two bold "Life is good" boxes, one red and one green](../../images/crash-course-19.png)
 
 ## Variadic arguments
 
@@ -58,7 +58,7 @@ You can make your function accept any number of arguments by using variadic argu
 #custom-stack("we can add a", circle(fill: blue), "circle")
 ```
 
-![](../../images/crash-course-20.png)
+![Two red boxes stacking text, with the second one including a blue circle between words](../../images/crash-course-20.png)
 
 We can still apply changes to each argument passed. For example, let's add a black border around each of them:
 
@@ -75,7 +75,7 @@ We can still apply changes to each argument passed. For example, let's add a bla
 #custom-stack("we can add a", circle(fill: blue), "circle")
 ```
 
-![](../../images/crash-course-33.png)
+![Two red boxes stacking text, with each item outlined by a black border and the second box including a blue circle between words](../../images/crash-course-33.png)
 
 The `pos()` method converts it to an array, and `map()` applies a function to each element (`val` becomes `box(stroke: 0.5pt + black, val)`).
 
@@ -97,7 +97,7 @@ You can use `if`/`else` statements, which, for example, can be useful for creati
 #greet("Justine", vip: true)
 ```
 
-![](../../images/crash-course-21.png)
+![Greeting lines for Joseph and VIP guest Justine](../../images/crash-course-21.png)
 
 ## `for` loops
 
@@ -113,4 +113,4 @@ You can use `for` loops to repeat content or iterate over a list:
 #name-list(("Joseph", "Justine", "Alex", "Victoria"))
 ```
 
-![](../../images/crash-course-22.png)
+![Bulleted list greeting Joseph, Justine, Alex, and Victoria](../../images/crash-course-22.png)

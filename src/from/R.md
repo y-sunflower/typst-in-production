@@ -92,7 +92,7 @@ c(
   typst_compile(output = "example.pdf")
 ```
 
-![](../../images/from-R-1.png)
+![Short document with a large aqua circle outlined in red and purple text reading "My favorite food is cookies!"](../../images/from-R-1.png)
 
 ## Other resources
 

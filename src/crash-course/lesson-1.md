@@ -4,11 +4,7 @@ title: Lesson 1 - Foundations
 
 ## Typst = text + a compiler
 
-What we call "Typst" is usually one of the following:
-
-- the Typst **company** :octicons-arrow-right-24: the legal organization and people developing Typst
-- the Typst **typesetting system** :octicons-arrow-right-24: the language itself
-- the Typst **compiler** :octicons-arrow-right-24: the (CLI) program that actually creates the PDF
+Typst is a **compiler** :octicons-arrow-right-24: a (CLI) program that creates PDFs.
 
 The compiler will take a `.typ` file and create a [PDF file][footnote-1] with it. For example, a Typst file might look like this:
 
@@ -40,7 +36,7 @@ If you've ever used Markdown before, getting started with Typst will be easy. Fo
 This is a paragraph, where text can be *bold*, _italic_, or `code-like`.
 ```
 
-![](../../images/crash-course-2.png)
+![Document with three heading levels and a paragraph showing bold, italic, and code-styled text](../../images/crash-course-2.png)
 
 ## Functions
 
@@ -50,7 +46,7 @@ Typst offers tons of functions that we can use to customize the output of our PD
 #circle(fill: blue, width: 3cm)
 ```
 
-![](../../images/crash-course-15.png)
+![Solid blue circle](../../images/crash-course-15.png)
 
 We can, for example, add some text **inside** the circle:
 
@@ -58,7 +54,7 @@ We can, for example, add some text **inside** the circle:
 #circle(fill: blue, width: 3cm, "Hello world")
 ```
 
-![](../../images/crash-course-16.png)
+![Blue circle containing the text "Hello world"](../../images/crash-course-16.png)
 
 Or another circle:
 
@@ -66,7 +62,7 @@ Or another circle:
 #circle(fill: blue, width: 3cm, circle(fill: red, width: 1cm))
 ```
 
-![](../../images/crash-course-17.png)
+![Large blue circle containing a smaller red circle](../../images/crash-course-17.png)
 
 The `circle()` function is useful for creating **visual elements**, but many functions are here to control the **layout of our document**. For example, I want to put a blue circle next to a green rectangle, next to red text. How can I do that?
 
@@ -82,7 +78,7 @@ The simplest way to do it is to use the `stack()` function: it will stack elemen
 )
 ```
 
-![](../../images/crash-course-3.png)
+![Horizontal layout with a blue circle, a green rectangle, and red "Hello" text](../../images/crash-course-3.png)
 
 What if I want them to be vertically aligned? We wrap everything in the `align()` function and specify that we align to the `horizon` (could also be `top` or `bottom`):
 
@@ -96,7 +92,7 @@ What if I want them to be vertically aligned? We wrap everything in the `align()
 ))
 ```
 
-![](../../images/crash-course-4.png)
+![Blue circle, green rectangle, and red "Hello" text aligned on their vertical centers](../../images/crash-course-4.png)
 
 ## Set rules
 
@@ -110,7 +106,7 @@ A set rule is a way to tell Typst how a given function should behave. For exampl
 Content of the document
 ```
 
-![](../../images/crash-course-18.png)
+![Document with a blue title and blue body text](../../images/crash-course-18.png)
 
 ## Variables
 
@@ -130,7 +126,7 @@ We can define variables, like in any programming language, in order to reuse the
 ))
 ```
 
-![](../../images/crash-course-5.png)
+![Yellow page with a purple circle and a purple rectangle containing a small yellow circle](../../images/crash-course-5.png)
 
 ## When and when not to use the `#` symbol
 
@@ -142,7 +138,7 @@ One thing that might be confusing in the previous code snippets is that sometime
     #circle(fill: blue, width: 3cm)
     ```
 
-    ![](../../images/crash-course-7.png)
+    ![Solid blue circle](../../images/crash-course-7.png)
 
 === "Without the `#`"
 
@@ -150,7 +146,7 @@ One thing that might be confusing in the previous code snippets is that sometime
     circle(fill: blue, width: 3cm)
     ```
 
-    ![](../../images/crash-course-8.png)
+    ![Literal text "circle(fill: blue, width: 3cm)" rendered instead of a shape](../../images/crash-course-8.png)
 
 === "Without the `#`"
 
@@ -158,7 +154,7 @@ One thing that might be confusing in the previous code snippets is that sometime
     #align(right, circle(fill: blue, width: 3cm))
     ```
 
-    ![](../../images/crash-course-32.png)
+    ![Right-aligned blue circle](../../images/crash-course-32.png)
 
 === "With the `#`"
 
@@ -166,7 +162,7 @@ One thing that might be confusing in the previous code snippets is that sometime
     #align(right)[#circle(fill: blue, width: 3cm)]
     ```
 
-    ![](../../images/crash-course-32.png)
+    ![Right-aligned blue circle](../../images/crash-course-32.png)
 
 In the first case, the output is just a simple circle, while in the second case, it's the actual text instead of a circle. Why is that?
 
