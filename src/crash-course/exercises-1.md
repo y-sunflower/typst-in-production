@@ -88,3 +88,10 @@ In the following exercises, you'll need to **reproduce** in Typst the image you 
 
     #rect(fill: main-color, width: 4.5cm, height: 0.5cm, radius: 3pt)
     ```
+
+<br>
+<br>
+
+!!! Question
+
+    Having questions? Feedback? [Feel free to ask](https://github.com/y-sunflower/typst-in-production/issues)!

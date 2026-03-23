@@ -210,3 +210,10 @@ Let's summarize the key parts here:
 !!! info
 
     `context` can do even more complex things (such as [counting the number of headings before its call](https://typst.app/docs/reference/introspection/here/)), but this will not be detailed here as this concerns relatively few users.
+
+<br>
+<br>
+
+!!! Question
+
+    Having questions? Feedback? [Feel free to ask](https://github.com/y-sunflower/typst-in-production/issues)!

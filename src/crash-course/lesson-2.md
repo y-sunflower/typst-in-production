@@ -114,3 +114,10 @@ You can use `for` loops to repeat content or iterate over a list:
 ```
 
 ![Bulleted list greeting Joseph, Justine, Alex, and Victoria](../../images/crash-course-22.png)
+
+<br>
+<br>
+
+!!! Question
+
+    Having questions? Feedback? [Feel free to ask](https://github.com/y-sunflower/typst-in-production/issues)!

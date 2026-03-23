@@ -58,3 +58,10 @@ In the following exercises, you'll need to reproduce in Typst the image you see.
     #task-card("Slides", rgb("#e9c46a"), "Add one chart", "Shorten intro")
     #banner("1 item needs review", rgb("#e76f51"))
     ```
+
+<br>
+<br>
+
+!!! Question
+
+    Having questions? Feedback? [Feel free to ask](https://github.com/y-sunflower/typst-in-production/issues)!

@@ -1,6 +1,6 @@
 [project]
 site_name = "Typst in Production"
-# repo_url = "https://github.com/y-sunflower/typst-in-production"
+repo_url = "https://github.com/y-sunflower/typst-in-production"
 site_url = "https://typst-in-production.com/"
 site_description = "Typst in Production is a practical guide to building, automating, and deploying PDFs with Typst."
 site_author = "Joseph Barbier"
@@ -10,7 +10,7 @@ Copyright &copy; 2026 Yellow Sunflower
 docs_dir = "src"
 extra_css = ["stylesheets/extra.css"]
 nav = [
-  { "Intro" = "index.md" },
+  { "Home" = "index.md" },
   { "Crash course" = [
     "crash-course/index.md",
     "crash-course/how-to-use-typst.md",
@@ -35,6 +35,7 @@ nav = [
     "quarto/python.md",
     "quarto/julia.md"
   ] },
+  { "Example Projects" = ["projects/index.md"] },
   { "PDF accessibility" = "pdf-accessibility.md" },
   { "About" = "about.md" }
 ]

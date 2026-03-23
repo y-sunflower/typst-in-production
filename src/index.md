@@ -1,7 +1,3 @@
----
-icon: simple/markdown
----
-
 <div class="hero">
    <h1 class="hero-title">Typst in Production</h1>
    <p class="hero-description">A practical guide to building, automating, and deploying PDFs with Typst</p>
@@ -21,10 +17,8 @@ Putting Typst in production means building deterministic PDF pipelines where the
 
 ## Next step
 
-This website focuses on practical automation, deployment, and long-term maintainability, so you can move from ad-hoc document generation to robust, repeatable delivery. You will leave with patterns, templates, and workflows you can apply immediately in your own projects.
-
 Depending on where you are on your Typst journey, the next step is one of the following:
 
-- Learn Typst basics with our [crash course](/crash-course/index.md)
+- Learn Typst with the [crash course](/crash-course/index.md)
 - Discover how to use Typst [from another programming language](/from/index.md) (Python, R, JavaScript or Rust)
 - Understand why and how to create [fully accessible PDFs](/pdf-accessibility.md)

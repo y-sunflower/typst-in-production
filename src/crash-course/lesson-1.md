@@ -194,3 +194,10 @@ By default we're in Markup mode, and we need to add the `#` before a function na
     ```
 
 Those are just common examples, but in practice **you'll quickly find this intuitive** as you start using Typst. A great way to make this simpler for you is to enable ^^syntax highlighting^^ in your editor. If you have a second look [here](#when-or-when-not-to-use-the--symbol), you'll see that in the second case the text is all black, meaning that it will be rendered as is.
+
+<br>
+<br>
+
+!!! Question
+
+    Having questions? Feedback? [Feel free to ask](https://github.com/y-sunflower/typst-in-production/issues)!

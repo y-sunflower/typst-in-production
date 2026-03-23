@@ -1,16 +1,21 @@
 ## Typst in Production: the complete guide
 
-_Typst in Production_ is a practical guide to building, automating, and deploying PDFs with Typst.
+[_Typst in Production_](https://typst-in-production.com/) is a practical guide to building, automating, and deploying PDFs with Typst. It will teach you everything you need to know, such as:
 
-It will teach you everything you need to know, such as:
-
-- Typst in other programming languages
-- Create parametrized templates
-- and much more!
+- Learn how to use Typst, from basic examples to complex templates
+- Using Typst in other programming languages such as Python, R, Rust and JavaScript
+- How to make fully accessible PDFs
+- _and much more!_
 
 <br><br>
 
 ## Contribution
+
+### Get started
+
+All kind of contributions are more than welcomed! The website is built using [zensical](https://zensical.org/). All the content lives in the `src/` directory in markdown files.
+
+### Setup
 
 - Fork and clone the repo
 
