@@ -1172,7 +1172,7 @@
 </span></code></pre></div>
 <p><img alt="" src="../../../images/crash-course-17.png" /></p>
 <p>The <code>circle()</code> function is useful for creating <strong>visual elements</strong>, but many functions are here to control the <strong>layout of our document</strong>. For example, I want to put a blue circle next to a green rectangle, next to red text. How can I do that?</p>
-<p>The simplest way to do it is to use the <code>stack()</code> function: it will stack elements (as many as we want) on a given direction.</p>
+<p>The simplest way to do it is to use the <code>stack()</code> function: it will stack elements (as many as we want) in a given direction.</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nf">#stack</span><span class="p">(</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nv">dir</span><span class="p">:</span><span class="w"> </span><span class="nv">ltr</span><span class="p">,</span><span class="w"> </span><span class="c1">// direction --&gt; left to right</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nv">spacing</span><span class="p">:</span><span class="w"> </span><span class="m">0.5</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="c1">// space between elements</span>
@@ -1182,7 +1182,7 @@
 </span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">)</span>
 </span></code></pre></div>
 <p><img alt="" src="../../../images/crash-course-3.png" /></p>
-<p>What if I want them to be vertically aligned? We wrap everything around the <code>align()</code> function and specify that we align to the <code>horizon</code> (could also be <code>top</code> or <code>bottom</code>):</p>
+<p>What if I want them to be vertically aligned? We wrap everything in the <code>align()</code> function and specify that we align to the <code>horizon</code> (could also be <code>top</code> or <code>bottom</code>):</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nf">#align</span><span class="p">(</span><span class="nv">horizon</span><span class="p">,</span><span class="w"> </span><span class="nf">stack</span><span class="p">(</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nv">dir</span><span class="p">:</span><span class="w"> </span><span class="nv">ltr</span><span class="p">,</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="nv">spacing</span><span class="p">:</span><span class="w"> </span><span class="m">0.5</span><span class="kr">cm</span><span class="p">,</span>
@@ -1217,7 +1217,7 @@
 </span></code></pre></div>
 <p><img alt="" src="../../../images/crash-course-5.png" /></p>
 <h2 id="when-and-when-not-to-use-the-symbol">When and when not to use the <code>#</code> symbol<a class="headerlink" href="#when-and-when-not-to-use-the-symbol" title="Permanent link">&para;</a></h2>
-<p>A thing that might be confusing in the previous code snippets is that sometimes we use the <code>#</code> symbol, and sometimes we don't.</p>
+<p>One thing that might be confusing in the previous code snippets is that sometimes we use the <code>#</code> symbol, and sometimes we don't.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">With the <code>#</code></label><label for="__tabbed_1_2">Without the <code>#</code></label><label for="__tabbed_1_3">Without the <code>#</code></label><label for="__tabbed_1_4">With the <code>#</code></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">

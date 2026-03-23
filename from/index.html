@@ -955,7 +955,7 @@
 <h3 id="typst-bindings">Typst bindings<a class="headerlink" href="#typst-bindings" title="Permanent link">&para;</a></h3>
 <p>In the context of Typst, this is very useful because it lets us use our current logic to define the output report.</p>
 <p>Since Typst is built using Rust, we can easily find bindings for many programming languages. In particular, since Typst can be used as a Rust library, people can use that library and build on top of it. Right now, the simplest way to use Typst in Rust is via the <a href="https://crates.io/crates/typst-as-lib"><code>typst-as-lib</code></a> library, which is a community-made tool.</p>
-<p>This means that <strong>all</strong> bindings rely on the Typst library (e.g., Rust) to use Typst, no matter the programming language.</p>
+<p>This means that <strong>all</strong> bindings rely on the Typst library written in Rust to use Typst, no matter the programming language.</p>
 <pre class="mermaid"><code>graph LR
   A[Typst compiler] --&gt; B{Typst Rust library};
   B --&gt;|Python| C[Python to Rust bindings];

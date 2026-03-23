@@ -1104,7 +1104,7 @@
 </span></code></pre></div>
 <p>By passing Rust data directly to Typst, your application logic and report rendering stay tightly connected.</p>
 <h2 id="example-with-axum">Example with Axum<a class="headerlink" href="#example-with-axum" title="Permanent link">&para;</a></h2>
-<p>Here is a minimalist <code>GET /report?color=%23f9f6f4</code> endpoint that compiles and returns a PDF. The <code>color</code> query parameter is injected into Typst input.</p>
+<p>Here is a minimalist <code>GET /report?color=%23f9f6f4</code> endpoint that compiles and returns a PDF. The <code>color</code> query parameter is injected into the Typst input.</p>
 <p>First, the Typst template:</p>
 <div class="language-typst highlight"><span class="filename">file.typ</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nv">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">json</span><span class="p">(</span><span class="nf">bytes</span><span class="p">(</span><span class="nv">sys</span><span class="p">.</span><span class="nv">inputs</span><span class="p">.</span><span class="nv">color</span><span class="p">))</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
