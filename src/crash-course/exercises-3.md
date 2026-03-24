@@ -134,61 +134,6 @@ In the following exercises, you'll need to reproduce in Typst the image you see.
     The PDF draft should be checked today.
     ```
 
-### 4 - Design a report header and footer
-
-=== "Exercise"
-
-    ![Single-page report with a dark rounded header labeled Project Atlas, a green page-number badge, short body text, and a small footer note](../../images/crash-course-39.png)
-
-=== "Hint"
-
-    - Use `#set page(header: ..., footer: ...)`
-    - Put the page-number badge inside `#context[...]`
-    - Use `here().page()` for the current page and `counter(page).final().at(0)` for the total
-    - Build the badge with a rounded `rect(...)`
-
-=== "Solution"
-
-    ```typst
-    #set page(
-      fill: rgb("#f8f9fa"),
-      width: 15cm,
-      height: 6cm,
-      margin: (top: 1.4cm, bottom: 1cm, x: 0.7cm),
-      header: {
-        rect(
-          fill: rgb("#264653"),
-          radius: 8pt,
-          inset: (x: 12pt, y: 8pt),
-          width: 100%,
-          [
-            #text(fill: white, weight: "bold")[Project Atlas]
-            #align(right)[
-              #context [
-                #rect(
-                  fill: rgb("#2a9d8f"),
-                  radius: 999pt,
-                  inset: (x: 10pt, y: 4pt),
-                  text(fill: white)[Page #here().page() / #counter(page).final().at(0)],
-                )
-              ]
-            ]
-          ],
-        )
-      },
-      footer: {
-        align(right)[
-          #text(fill: rgb("#6c757d"), size: 9pt)[Internal draft]
-        ]
-      },
-    )
-
-    = Sprint update
-    The launch checklist is almost complete.
-
-    One last review remains before export.
-    ```
-
 <br>
 <br>
 

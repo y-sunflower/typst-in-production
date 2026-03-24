@@ -89,7 +89,7 @@ Then, by default, all circles will have a width of 1cm. If we take our example f
 
 ![Three status rows showing Ready, Pending, and Blocked with matching colored circles](../../images/crash-course-24.png)
 
-Typst also has a more advanced version of set rules called **show rules**. Basically, show rules let us define what happens when a function is called. Let's see an example:
+Typst also has a more advanced version of set rules called **show rules**. Basically, show rules let us define **what happens** when a function is called. Let's see an example:
 
 ```typst
 #show heading: set text(fill: blue)
@@ -148,6 +148,8 @@ A good example is adding a header or footer to a Typst document.
 
     Since headers and footers behave exactly the same in Typst, we'll only showcase how to create a **header** here.
 
+In order to have a header, we need to call a set rule on the `page()` function and specify the `header` argument:
+
 ```typst
 #set page(margin: 1cm, header: {
   rect(fill: lime, height: 1cm, width: 100%, "This is the header")
@@ -162,8 +164,6 @@ Some text goes here...
 ```
 
 ![Two-page document with a lime header bar reading "This is the header" on each page](../../images/crash-course-34.png)
-
-Thanks to set rules, we can easily set the default header for all pages.
 
 ## Context
 
