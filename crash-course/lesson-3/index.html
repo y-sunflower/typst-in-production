@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="zensical-0.0.28">
+      <meta name="generator" content="zensical-0.0.29">
     
     
       
@@ -1257,7 +1257,7 @@
 </span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="p">))</span>
 </span></code></pre></div>
 <p><img alt="Three status rows showing Ready, Pending, and Blocked with matching colored circles" src="../../../images/crash-course-24.png" /></p>
-<p>Typst also has a more advanced version of set rules called <strong>show rules</strong>. Basically, show rules let us define what happens when a function is called. Let's see an example:</p>
+<p>Typst also has a more advanced version of set rules called <strong>show rules</strong>. Basically, show rules let us define <strong>what happens</strong> when a function is called. Let's see an example:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">#show</span><span class="w"> </span><span class="nv">heading</span><span class="p">:</span><span class="w"> </span><span class="kd">set</span><span class="w"> </span><span class="nf">text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">blue</span><span class="p">)</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="gh">== Hey you</span>
@@ -1300,6 +1300,7 @@
 <p class="admonition-title">Note</p>
 <p>Since headers and footers behave exactly the same in Typst, we'll only showcase how to create a <strong>header</strong> here.</p>
 </div>
+<p>In order to have a header, we need to call a set rule on the <code>page()</code> function and specify the <code>header</code> argument:</p>
 <div class="language-typst highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span><span class="nv">margin</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">header</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nf">rect</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">lime</span><span class="p">,</span><span class="w"> </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">100</span><span class="kr">%</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;This is the header&quot;</span><span class="p">)</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="p">})</span>
@@ -1312,7 +1313,6 @@
 </span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="gh">= Another title</span>
 </span></code></pre></div>
 <p><img alt="Two-page document with a lime header bar reading &quot;This is the header&quot; on each page" src="../../../images/crash-course-34.png" /></p>
-<p>Thanks to set rules, we can easily set the default header for all pages.</p>
 <h2 id="context">Context<a class="headerlink" href="#context" title="Permanent link">&para;</a></h2>
 <p>An important thing in Typst is the <a href="https://typst.app/docs/reference/context/"><code>context</code></a>. It is a keyword that can give us information about the <em>current</em> context. For example:</p>
 <ul>

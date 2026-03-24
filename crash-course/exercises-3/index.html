@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="zensical-0.0.28">
+      <meta name="generator" content="zensical-0.0.29">
     
     
       
@@ -751,17 +751,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#4-design-a-report-header-and-footer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4 - Design a report header and footer
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1109,17 +1098,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#4-design-a-report-header-and-footer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4 - Design a report header and footer
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1318,62 +1296,6 @@
 </span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>
 </span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="gh">== Review export</span>
 </span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>The<span class="w"> </span>PDF<span class="w"> </span>draft<span class="w"> </span>should<span class="w"> </span>be<span class="w"> </span>checked<span class="w"> </span>today.
-</span></code></pre></div>
-</div>
-</div>
-</div>
-<h3 id="4-design-a-report-header-and-footer">4 - Design a report header and footer<a class="headerlink" href="#4-design-a-report-header-and-footer" title="Permanent link">&para;</a></h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Exercise</label><label for="__tabbed_4_2">Hint</label><label for="__tabbed_4_3">Solution</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><img alt="Single-page report with a dark rounded header labeled Project Atlas, a green page-number badge, short body text, and a small footer note" src="../../../images/crash-course-39.png" /></p>
-</div>
-<div class="tabbed-block">
-<ul>
-<li>Use <code>#set page(header: ..., footer: ...)</code></li>
-<li>Put the page-number badge inside <code>#context[...]</code></li>
-<li>Use <code>here().page()</code> for the current page and <code>counter(page).final().at(0)</code> for the total</li>
-<li>Build the badge with a rounded <code>rect(...)</code></li>
-</ul>
-</div>
-<div class="tabbed-block">
-<div class="language-typst highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">page</span><span class="p">(</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#f8f9fa&quot;</span><span class="p">),</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">15</span><span class="kr">cm</span><span class="p">,</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nv">height</span><span class="p">:</span><span class="w"> </span><span class="m">6</span><span class="kr">cm</span><span class="p">,</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nv">margin</span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="nv">top</span><span class="p">:</span><span class="w"> </span><span class="m">1.4</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">bottom</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="kr">cm</span><span class="p">,</span><span class="w"> </span><span class="nv">x</span><span class="p">:</span><span class="w"> </span><span class="m">0.7</span><span class="kr">cm</span><span class="p">),</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="nv">header</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="nf">rect</span><span class="p">(</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">      </span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#264653&quot;</span><span class="p">),</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">      </span><span class="nv">radius</span><span class="p">:</span><span class="w"> </span><span class="m">8</span><span class="kr">pt</span><span class="p">,</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">      </span><span class="nv">inset</span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="nv">x</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="kr">pt</span><span class="p">,</span><span class="w"> </span><span class="nv">y</span><span class="p">:</span><span class="w"> </span><span class="m">8</span><span class="kr">pt</span><span class="p">),</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">      </span><span class="nv">width</span><span class="p">:</span><span class="w"> </span><span class="m">100</span><span class="kr">%</span><span class="p">,</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">      </span><span class="p">[</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">        </span><span class="nf">#text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">white</span><span class="p">,</span><span class="w"> </span><span class="nv">weight</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bold&quot;</span><span class="p">)[</span>Project<span class="w"> </span>Atlas<span class="p">]</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">        </span><span class="nf">#align</span><span class="p">(</span><span class="nv">right</span><span class="p">)[</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">          </span><span class="nv">#context</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">            </span><span class="nf">#rect</span><span class="p">(</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">              </span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#2a9d8f&quot;</span><span class="p">),</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">              </span><span class="nv">radius</span><span class="p">:</span><span class="w"> </span><span class="m">999</span><span class="kr">pt</span><span class="p">,</span>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">              </span><span class="nv">inset</span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="nv">x</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="kr">pt</span><span class="p">,</span><span class="w"> </span><span class="nv">y</span><span class="p">:</span><span class="w"> </span><span class="m">4</span><span class="kr">pt</span><span class="p">),</span>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">              </span><span class="nf">text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nv">white</span><span class="p">)[</span>Page<span class="w"> </span><span class="nf">#here</span><span class="p">()</span>.page()<span class="w"> </span>/<span class="w"> </span><span class="nf">#counter</span><span class="p">(</span><span class="nv">page</span><span class="p">)</span>.final().at(0)<span class="p">],</span>
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">            </span><span class="p">)</span>
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">          </span><span class="p">]</span>
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">        </span><span class="p">]</span>
-</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">      </span><span class="p">],</span>
-</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">    </span><span class="p">)</span>
-</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">  </span><span class="p">},</span>
-</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">  </span><span class="nv">footer</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">    </span><span class="nf">align</span><span class="p">(</span><span class="nv">right</span><span class="p">)[</span>
-</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">      </span><span class="nf">#text</span><span class="p">(</span><span class="nv">fill</span><span class="p">:</span><span class="w"> </span><span class="nf">rgb</span><span class="p">(</span><span class="s2">&quot;#6c757d&quot;</span><span class="p">),</span><span class="w"> </span><span class="nv">size</span><span class="p">:</span><span class="w"> </span><span class="m">9</span><span class="kr">pt</span><span class="p">)[</span>Internal<span class="w"> </span>draft<span class="p">]</span>
-</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">    </span><span class="p">]</span>
-</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="w">  </span><span class="p">},</span>
-</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="p">)</span>
-</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>
-</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="gh">= Sprint update</span>
-</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>The<span class="w"> </span>launch<span class="w"> </span>checklist<span class="w"> </span>is<span class="w"> </span>almost<span class="w"> </span>complete.
-</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>
-</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>One<span class="w"> </span>last<span class="w"> </span>review<span class="w"> </span>remains<span class="w"> </span>before<span class="w"> </span>export.
 </span></code></pre></div>
 </div>
 </div>
