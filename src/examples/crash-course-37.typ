@@ -1,4 +1,4 @@
-//#set page(fill: rgb("#f8f9fa"), width: 15cm, height: 4cm)
+#set page(fill: rgb("#f8f9fa"), width: 15cm, height: 5cm)
 
 #show heading.where(level: 1): set text(fill: rgb("#2a9d8f"))
 #show heading.where(level: 2): set text(fill: rgb("#4361ee"))
