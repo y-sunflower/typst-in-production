@@ -27,7 +27,7 @@ First, we create a basic Typst file that will serve as a template:
 
 ## FastAPI endpoint
 
-Then a we create a minimalist FastAPI app with a single `/report` endpoint:
+Then we create a minimalist FastAPI app with a single `/report` endpoint:
 
 ```python title="main.py"
 from pathlib import Path
@@ -74,6 +74,8 @@ curl "http://127.0.0.1:8000/report?color=FFC300" --output report.pdf
 This will save a `report.pdf` file that looks like this (yellow background because of the `#FFC300` color):
 
 ![](../images/fast-api-example.png)
+
+<br>
 
 !!! tip
 
