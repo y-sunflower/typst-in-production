@@ -86,7 +86,8 @@
     <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
-        <a href="#__skip" class="md-skip">
+        
+        <a href="#fonts" class="md-skip">
           Skip to content
         </a>
       
@@ -991,6 +992,36 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fonts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remote-image-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remote image path
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1057,6 +1088,45 @@
 
   <h1 id="__skip">Tips & Tricks</h1>
 
+<p>On this page you'll find various info and techniques about Typst that are mostly too small to be inside their own lessons.</p>
+<h2 id="fonts">Fonts<a class="headerlink" href="#fonts" title="Permanent link">&para;</a></h2>
+<p>Typst works exclusively with fonts that are available locally. By default, it will just look for fonts <strong>installed</strong> on your system, but you can specify additional font paths with either:</p>
+<ul>
+<li><code>--font-path</code> argument in the CLI. For example, you would do: <code>typst compile file.typ --font-path path/to/fonts/</code></li>
+<li><code>TYPST_FONT_PATHS</code> environment variable. It should specify a path to look for fonts.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Typst will not work outside of your root directory (e.g. where your `.typ` file is), so make sure to include additional fonts in a place where Typst has access.
+</span></code></pre></div>
+<p>Also, you can see which fonts Typst has access to by running:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>typst fonts
+</span></code></pre></div>
+<p>In my case, the head of the output is:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Academy Engraved LET
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Adobe Caslon Pro
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>ADT Slab Numeric
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>ADT Slab Soft Numeric
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Al Bayan
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>Al Bayan PUA
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>Al Nile
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>Al Nile PUA
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>Al Tarikh
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>...
+</span></code></pre></div>
+<p>You can ensure Typst <strong>never</strong> looks for fonts installed on your machine using the <code>--ignore-system-fonts</code> parameter. The main usage of this is when you specify fonts in a local directory and want a clear warning message if Typst is unable to use the right font.</p>
+<h2 id="remote-image-path">Remote image path<a class="headerlink" href="#remote-image-path" title="Permanent link">&para;</a></h2>
+<p>If you come from web development, you might have the habit of specifying image paths as remote URLs (e.g., <code>https://example.com/image.png</code>). But, for security reasons, Typst will <strong>not</strong> let you do so and requires the image to be available locally.</p>
+<p>Similarly to fonts, the image path must be relative to your Typst file and not in a parent directory. A good architecture would be:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>├── images/
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>│ ├── logo.png
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>│ └── design.png
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>├── fonts/
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>│ ├── MyFont.ttf
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>│ └── MyFont-Bold.ttf
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>└── file.typ
+</span></code></pre></div>
 <p><br>
 <br></p>
 <div class="admonition question">
