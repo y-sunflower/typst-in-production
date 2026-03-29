@@ -5,7 +5,7 @@ site_url = "https://typst-in-production.com/"
 site_description = "Typst in Production is a practical guide to building, automating, and deploying PDFs with Typst."
 site_author = "Joseph Barbier"
 copyright = """
-Copyright &copy; 2026 Yellow Sunflower
+Copyright &copy; 2026 <a href="https://ysunflower.com">Yellow Sunflower</a>
 """
 docs_dir = "src"
 extra_css = ["stylesheets/extra.css"]
@@ -35,7 +35,7 @@ nav = [
     "quarto/python.md",
     "quarto/julia.md"
   ] },
-  { "Example Projects" = ["projects/index.md"] },
+  { "Example Projects" = ["projects/index.md", "projects/python-fastapi.md"] },
   { "PDF accessibility" = "pdf-accessibility.md" },
   { "About" = "about.md" }
 ]

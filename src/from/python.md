@@ -64,46 +64,6 @@ On the Typst side, we can read those inputs with:
 
 Being able to pass variables from Python to Typst lets us connect our Python logic directly to the PDF output rendered for the user.
 
-## Example with FastAPI
-
-Here is an example that creates a FastAPI `/report` endpoint with a `color` argument that returns a PDF report made with Typst, relying on that parameter for styling.
-
-First, we create a basic Typst file:
-
-```typst title="file.typ"
-#let col = json(bytes(sys.inputs.color))
-#set page(fill: rgb(col), width: 10cm, height: 5cm)
-
-= Dynamic Typst report made with Python
-```
-
-Then a minimalist FastAPI app:
-
-```python title="main.py"
-from pathlib import Path
-from fastapi import FastAPI
-from fastapi.responses import FileResponse
-import typst
-
-
-app = FastAPI()
-
-@app.get("/report")
-def report(color: str):
-      path_typst = "file.typ"
-      path_pdf = "file.pdf"
-
-      sys_inputs = {"color": json.dumps(color)}
-
-      typst.compile(
-            path_typst,
-            output=path_pdf,
-            sys_inputs=sys_inputs,
-      )
-
-      return FileResponse(Path(report_path))
-```
-
 ## Other resources
 
 `typst-py` is probably the most useful tool to combine Typst and Python, but other projects are worth mentioning as they can solve different use cases:
@@ -147,6 +107,12 @@ circle("[Hello, world!]", width="100%", radius="10pt")
 ```
 
 Output is: `#circle([Hello, world!], width: 100%, radius: 10pt)`.
+
+<br>
+
+!!! tip
+
+      If you want to learn more about Python and Typst, check out [the FastAPI and Typst tutorial](../projects/python-fastapi.md).
 
 <br>
 
