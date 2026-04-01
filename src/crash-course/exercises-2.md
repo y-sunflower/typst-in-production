@@ -84,7 +84,7 @@ In the following exercises, you'll need to reproduce in Typst the image you see.
 === "Hint"
 
     - Define a function with a variadic parameter like `..parts`
-    - Put these parts inside a `stack(dir: ltr, ...)
+    - Put these parts inside a `stack(dir: ltr, ...)`
 
 === "Solution"
 
