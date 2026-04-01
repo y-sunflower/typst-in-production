@@ -132,4 +132,4 @@ In the following exercises, you'll need to reproduce in Typst the image you see.
 
 !!! Question
 
-Having questions? Feedback? [Feel free to ask](https://github.com/y-sunflower/typst-in-production/issues)!
+    Having questions? Feedback? [Feel free to ask](https://github.com/y-sunflower/typst-in-production/issues)!
