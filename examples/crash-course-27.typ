@@ -7,12 +7,12 @@
     radius: 6pt,
     inset: (x: 10pt, y: 8pt),
     width: 8.6cm,
-    stack(
+    align(horizon, stack(
       dir: ltr,
       spacing: 0.25cm,
       circle(fill: rgb("#4361ee"), width: 0.45cm),
       text(weight: "bold", s),
-    ),
+    )),
   )
   v(0.2cm)
 }
