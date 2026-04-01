@@ -13,7 +13,7 @@ Typst works exclusively with fonts that are available locally. By default, it wi
 
 !!! note
 
-        Typst will not work outside of your root directory (e.g. where your `.typ` file is), so make sure to include additional fonts in a place where Typst has access.
+     Typst will not work outside of your root directory (e.g. where your `.typ` file is), so make sure to include additional fonts in a place where Typst has access.
 
 Also, you can see which fonts Typst has access to by running:
 
