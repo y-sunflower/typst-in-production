@@ -56,6 +56,16 @@ Similarly to fonts, the image path must be relative to your Typst file and not i
 └── file.typ
 ```
 
+And then in `file.typ`:
+
+```typst
+#set text(font: "MyFont")
+
+#image("images/logo.png")
+
+#image("images/design.png")
+```
+
 <br>
 <br>
 

@@ -89,6 +89,8 @@ In the following exercises, you'll need to reproduce in Typst the image you see.
 === "Solution"
 
     ```typst
+    #set text(fill: white)
+
     #let notice(..parts) = {
       rect(fill: rgb("#264653"), radius: 6pt, inset: (x: 12pt, y: 8pt), stack(
         dir: ttb,
