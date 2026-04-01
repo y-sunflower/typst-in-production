@@ -13,9 +13,7 @@ Typst works exclusively with fonts that are available locally. By default, it wi
 
 !!! note
 
-```
-Typst will not work outside of your root directory (e.g. where your `.typ` file is), so make sure to include additional fonts in a place where Typst has access.
-```
+        Typst will not work outside of your root directory (e.g. where your `.typ` file is), so make sure to include additional fonts in a place where Typst has access.
 
 Also, you can see which fonts Typst has access to by running:
 
@@ -39,6 +37,8 @@ Al Tarikh
 ```
 
 You can ensure Typst **never** looks for fonts installed on your machine using the `--ignore-system-fonts` parameter. The main usage of this is when you specify fonts in a local directory and want a clear warning message if Typst is unable to use the right font.
+
+In practice, it is recommended that you manage the font files you need using [Git LFS (Large File Storage)](https://git-lfs.com/), a Git extension for managing large or binary files.
 
 ## Remote image path
 
