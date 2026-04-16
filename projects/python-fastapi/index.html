@@ -29,7 +29,7 @@
     
     
       
-        <title>Python & FastAPI: running Typst on the server - Typst in Production</title>
+        <title>Python & FastAPI: running Typst on the server - Typst in Production</title>
       
     
     
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python & FastAPI: running Typst on the server
+              Python & FastAPI: running Typst on the server
             
           </span>
         </div>
@@ -703,7 +703,7 @@
   <span class="md-ellipsis">
     
   
-    Python & FastAPI: running Typst on the server
+    Python & FastAPI: running Typst on the server
   
 
     
@@ -721,7 +721,7 @@
   <span class="md-ellipsis">
     
   
-    Python & FastAPI: running Typst on the server
+    Python & FastAPI: running Typst on the server
   
 
     
@@ -1005,7 +1005,7 @@
   
 
 
-  <h1 id="__skip">Python & FastAPI: running Typst on the server</h1>
+  <h1 id="__skip">Python & FastAPI: running Typst on the server</h1>
 
 <p>Typst can easily be used from any environment, such as a Python web server. Here we'll see an example that creates a FastAPI <code>/report</code> endpoint with a <code>color</code> argument that returns a PDF report made with Typst, relying on that parameter for styling.</p>
 <h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h2>
@@ -1016,6 +1016,7 @@
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>uv add &quot;fastapi[standard]&quot;
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>uv add typst
 </span></code></pre></div>
+<p>This initializes a new Python project and installs FastAPI along with <a href="../../from/python/">Typst bindings</a>.</p>
 <h2 id="typst-template">Typst template<a class="headerlink" href="#typst-template" title="Permanent link">&para;</a></h2>
 <p>First, we create a basic Typst file that will serve as a template:</p>
 <div class="language-typst highlight"><span class="filename">template.typ</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nv">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">json</span><span class="p">(</span><span class="nf">bytes</span><span class="p">(</span><span class="nv">sys</span><span class="p">.</span><span class="nv">inputs</span><span class="p">.</span><span class="nv">color</span><span class="p">))</span>
@@ -1023,6 +1024,7 @@
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="gh">= Dynamic Typst report made with Python</span>
 </span></code></pre></div>
+<p>The <code>color</code> value is injected via <code>sys.inputs</code>, decoded from JSON, and used to set the page background color dynamically.</p>
 <h2 id="fastapi-endpoint">FastAPI endpoint<a class="headerlink" href="#fastapi-endpoint" title="Permanent link">&para;</a></h2>
 <p>Then we create a minimalist FastAPI app with a single <code>/report</code> endpoint:</p>
 <div class="language-python highlight"><span class="filename">main.py</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
@@ -1049,14 +1051,16 @@
 </span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>
 </span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>    <span class="k">return</span> <span class="n">FileResponse</span><span class="p">(</span><span class="n">Path</span><span class="p">(</span><span class="n">path_pdf</span><span class="p">))</span>
 </span></code></pre></div>
-<p>This endpoint has a <code>color</code> parameter that will be passed to the Typst template.</p>
+<p>The endpoint takes a <code>color</code> query parameter, passes it to Typst via <code>sys_inputs</code>, compiles the template into a PDF, and returns the file as a response.</p>
 <h2 id="run-the-server">Run the server<a class="headerlink" href="#run-the-server" title="Permanent link">&para;</a></h2>
 <p>Then we can try it with:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>uv run uvicorn main:app --reload
 </span></code></pre></div>
+<p>Starts the FastAPI development server with auto-reload enabled.</p>
 <p>And in another process:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>curl &quot;http://127.0.0.1:8000/report?color=FFC300&quot; --output report.pdf
 </span></code></pre></div>
+<p>This calls the endpoint and saves the generated PDF locally.</p>
 <p>This will save a <code>report.pdf</code> file that looks like this (yellow background because of the <code>#FFC300</code> color):</p>
 <p><img alt="" src="../../images/fast-api-example.png" /></p>
 <p><br></p>
