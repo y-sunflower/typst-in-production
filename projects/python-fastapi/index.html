@@ -25,11 +25,11 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="zensical-0.0.31">
+      <meta name="generator" content="zensical-0.0.33">
     
     
       
-        <title>Python & FastAPI example - Typst in Production</title>
+        <title>Python & FastAPI: running Typst on the server - Typst in Production</title>
       
     
     
@@ -55,7 +55,7 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python & FastAPI example
+              Python & FastAPI: running Typst on the server
             
           </span>
         </div>
@@ -703,7 +703,7 @@
   <span class="md-ellipsis">
     
   
-    Python & FastAPI example
+    Python & FastAPI: running Typst on the server
   
 
     
@@ -721,7 +721,7 @@
   <span class="md-ellipsis">
     
   
-    Python & FastAPI example
+    Python & FastAPI: running Typst on the server
   
 
     
@@ -1005,14 +1005,16 @@
   
 
 
-  <h1 id="__skip">Python & FastAPI example</h1>
+  <h1 id="__skip">Python & FastAPI: running Typst on the server</h1>
 
-<p>Here is an example that creates a FastAPI <code>/report</code> endpoint with a <code>color</code> argument that returns a PDF report made with Typst, relying on that parameter for styling.</p>
+<p>Typst can easily be used from any environment, such as a Python web server. Here we'll see an example that creates a FastAPI <code>/report</code> endpoint with a <code>color</code> argument that returns a PDF report made with Typst, relying on that parameter for styling.</p>
 <h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h2>
 <p>Let's start by setting up our environment with <a href="https://docs.astral.sh/uv/">uv</a>:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>uv init
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>uv add &quot;fastapi[standard]&quot;
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>uv add typst
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir newproject &amp;&amp; cd newproject
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>uv init
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>uv add &quot;fastapi[standard]&quot;
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>uv add typst
 </span></code></pre></div>
 <h2 id="typst-template">Typst template<a class="headerlink" href="#typst-template" title="Permanent link">&para;</a></h2>
 <p>First, we create a basic Typst file that will serve as a template:</p>
@@ -1181,7 +1183,7 @@
       <script id="__config" type="application/json">{"annotate":null,"base":"../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.tabs","navigation.sections","navigation.top","navigation.tracking","search.highlight","navigation.prune"],"search":"../../assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.91a19a9e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.63456bd9.min.js"></script>
       
     
   </body>
