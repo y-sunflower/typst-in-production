@@ -1,0 +1,27 @@
+---
+title: My first Typst report
+author: Ada Reporter
+date: 2026-04-19
+format:
+  typst:
+    keep-typ: true
+brand:
+  color:
+    background: "#f8f9fa"
+---
+
+## Introduction
+
+This report was written in Quarto and compiled with Typst.
+It shows how a single Markdown source becomes a polished PDF, with proper typography, margins, and page numbering out of the box.
+
+## How the pipeline fits together
+
+Quarto hands your Markdown to Pandoc, which emits a Typst source file.
+Typst then compiles that source into the final PDF.
+The three stages share enough intermediate state that you can inspect, override, or replace any of them without rewriting your document.
+
+## Summary
+
+Start with a `.qmd` file, set `format: typst`, and run `quarto render`.
+Everything on this page came from roughly a dozen lines of Markdown.

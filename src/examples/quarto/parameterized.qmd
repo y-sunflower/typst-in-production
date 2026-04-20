@@ -1,0 +1,31 @@
+---
+title: Regional sales report
+subtitle: "North region, 2026"
+author: Reporting automation
+date: 2026-04-19
+format:
+  typst:
+    keep-typ: true
+brand:
+  color:
+    background: "#f8f9fa"
+---
+
+## Overview
+
+This report covers the **North** region for the year **2026**.
+Values below are quarterly totals in thousands.
+
+## Quarterly totals
+
+| Quarter | Sales (k) |
+|---------|-----------|
+| Q1      | 120       |
+| Q2      | 135       |
+| Q3      | 158       |
+| Q4      | 172       |
+
+## About this report
+
+The same source renders a different PDF for every region.
+Change the region or the year in the YAML front matter, or override them at the command line with `-P region:South -P year:2025`, and re-render.

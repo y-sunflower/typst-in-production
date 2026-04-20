@@ -1,0 +1,53 @@
+---
+title: Regional sales report
+author: Reporting automation
+date: 2026-04-19
+format:
+  typst:
+    keep-typ: true
+brand:
+  color:
+    background: "#f8f9fa"
+execute:
+  echo: false
+params:
+  region: North
+  year: 2026
+---
+
+```{r setup}
+#| include: false
+library(ggplot2)
+library(dplyr)
+
+region <- params$region
+year <- params$year
+```
+
+## Overview
+
+This report covers the **`{r} params$region`** region for the year **`{r} params$year`**.
+Values below are quarterly totals in thousands.
+
+## Sales by quarter
+
+::: {#fig-sales fig-alt="Bar chart of quarterly sales, one bar per quarter."}
+
+```{r}
+sales <- data.frame(
+  quarter = c("Q1", "Q2", "Q3", "Q4"),
+  total = c(120, 135, 158, 172)
+)
+
+ggplot(sales) +
+  aes(x = .data$quarter, y = .data$total) +
+  geom_col(fill = "#2a9d8f") +
+  labs(x = NULL, y = "Sales (k)") +
+  theme_minimal(base_size = 11)
+```
+
+Quarterly sales for `{r} region` in `{r} year`.
+
+:::
+
+@fig-sales shows steady growth across the year.

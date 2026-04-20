@@ -1,0 +1,4 @@
+*.pdf
+*.typ
+*_files/
+.quarto/

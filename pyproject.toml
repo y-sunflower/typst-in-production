@@ -7,3 +7,13 @@ requires-python = ">=3.13"
 dependencies = [
   "zensical>=0.0.23",
 ]
+
+[dependency-groups]
+screenshots = [
+  "jupyter",
+  "papermill",
+  "plotnine",
+  "polars",
+  "pyarrow",
+  "great-tables",
+]

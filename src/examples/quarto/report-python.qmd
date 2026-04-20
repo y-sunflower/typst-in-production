@@ -1,0 +1,59 @@
+---
+title: Regional sales report
+author: Reporting automation
+date: 2026-04-19
+format:
+  typst:
+    keep-typ: true
+brand:
+  color:
+    background: "#f8f9fa"
+execute:
+  echo: false
+---
+
+```{python}
+#| tags: [parameters]
+
+region: str = "North"
+year: int = 2026
+```
+
+```{python}
+#| include: false
+
+import polars as pl
+from plotnine import ggplot, aes, geom_col, labs, theme_minimal
+```
+
+## Overview
+
+This report covers the **`{python} region`** region for the year **`{python} year`**.
+Values below are quarterly totals in thousands.
+
+## Sales by quarter
+
+::: {#fig-sales fig-alt="Bar chart of quarterly sales, one bar per quarter."}
+
+```{python}
+sales = pl.DataFrame(
+    {
+        "quarter": ["Q1", "Q2", "Q3", "Q4"],
+        "total": [120, 135, 158, 172],
+    }
+)
+
+(
+    ggplot(sales)
+    + aes(x="quarter", y="total")
+    + geom_col(fill="#2a9d8f")
+    + labs(x="", y="Sales (k)")
+    + theme_minimal(base_size=11)
+)
+```
+
+Quarterly sales for `{python} region` in `{python} year`.
+
+:::
+
+@fig-sales shows steady growth across the year.

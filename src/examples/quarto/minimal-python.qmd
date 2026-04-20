@@ -1,0 +1,18 @@
+---
+title: My first Typst report
+author: Ada Reporter
+date: 2026-04-19
+format:
+  typst:
+    keep-typ: true
+brand:
+  color:
+    background: "#f8f9fa"
+---
+
+This report was written in Quarto and compiled with Typst.
+
+```{python}
+xs = [1, 2, 3, 4, 5]
+sum(xs) / len(xs)
+```
