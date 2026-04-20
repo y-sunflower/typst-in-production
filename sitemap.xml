@@ -34,6 +34,18 @@
         <loc>https://typst-in-production.com/crash-course/project/</loc>
       </url>
       <url>
+        <loc>https://typst-in-production.com/guides/</loc>
+      </url>
+      <url>
+        <loc>https://typst-in-production.com/guides/how-to-customize-outline-in-typst/</loc>
+      </url>
+      <url>
+        <loc>https://typst-in-production.com/guides/how-to-reuse-functions-and-components-in-typst/</loc>
+      </url>
+      <url>
+        <loc>https://typst-in-production.com/guides/how-to-run-typst-in-ci-cd/</loc>
+      </url>
+      <url>
         <loc>https://typst-in-production.com/from/</loc>
       </url>
       <url>
