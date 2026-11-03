@@ -4,7 +4,19 @@
         <loc>https://typst-in-production.com/</loc>
       </url>
       <url>
+        <loc>https://typst-in-production.com/about/</loc>
+      </url>
+      <url>
         <loc>https://typst-in-production.com/crash-course/</loc>
+      </url>
+      <url>
+        <loc>https://typst-in-production.com/crash-course/exercises-1/</loc>
+      </url>
+      <url>
+        <loc>https://typst-in-production.com/crash-course/exercises-2/</loc>
+      </url>
+      <url>
+        <loc>https://typst-in-production.com/crash-course/exercises-3/</loc>
       </url>
       <url>
         <loc>https://typst-in-production.com/crash-course/how-to-use-typst/</loc>
@@ -13,25 +25,31 @@
         <loc>https://typst-in-production.com/crash-course/lesson-1/</loc>
       </url>
       <url>
-        <loc>https://typst-in-production.com/crash-course/exercises-1/</loc>
-      </url>
-      <url>
         <loc>https://typst-in-production.com/crash-course/lesson-2/</loc>
-      </url>
-      <url>
-        <loc>https://typst-in-production.com/crash-course/exercises-2/</loc>
       </url>
       <url>
         <loc>https://typst-in-production.com/crash-course/lesson-3/</loc>
       </url>
       <url>
-        <loc>https://typst-in-production.com/crash-course/exercises-3/</loc>
+        <loc>https://typst-in-production.com/crash-course/project/</loc>
       </url>
       <url>
         <loc>https://typst-in-production.com/crash-course/tips-and-tricks/</loc>
       </url>
       <url>
-        <loc>https://typst-in-production.com/crash-course/project/</loc>
+        <loc>https://typst-in-production.com/from/</loc>
+      </url>
+      <url>
+        <loc>https://typst-in-production.com/from/R/</loc>
+      </url>
+      <url>
+        <loc>https://typst-in-production.com/from/javascript/</loc>
+      </url>
+      <url>
+        <loc>https://typst-in-production.com/from/python/</loc>
+      </url>
+      <url>
+        <loc>https://typst-in-production.com/from/rust/</loc>
       </url>
       <url>
         <loc>https://typst-in-production.com/guides/</loc>
@@ -46,31 +64,7 @@
         <loc>https://typst-in-production.com/guides/how-to-run-typst-in-ci-cd/</loc>
       </url>
       <url>
-        <loc>https://typst-in-production.com/from/</loc>
-      </url>
-      <url>
-        <loc>https://typst-in-production.com/from/python/</loc>
-      </url>
-      <url>
-        <loc>https://typst-in-production.com/from/R/</loc>
-      </url>
-      <url>
-        <loc>https://typst-in-production.com/from/javascript/</loc>
-      </url>
-      <url>
-        <loc>https://typst-in-production.com/from/rust/</loc>
-      </url>
-      <url>
-        <loc>https://typst-in-production.com/quarto/</loc>
-      </url>
-      <url>
-        <loc>https://typst-in-production.com/quarto/R/</loc>
-      </url>
-      <url>
-        <loc>https://typst-in-production.com/quarto/python/</loc>
-      </url>
-      <url>
-        <loc>https://typst-in-production.com/quarto/julia/</loc>
+        <loc>https://typst-in-production.com/pdf-accessibility/</loc>
       </url>
       <url>
         <loc>https://typst-in-production.com/projects/</loc>
@@ -79,9 +73,21 @@
         <loc>https://typst-in-production.com/projects/python-fastapi/</loc>
       </url>
       <url>
-        <loc>https://typst-in-production.com/pdf-accessibility/</loc>
+        <loc>https://typst-in-production.com/quarto/</loc>
       </url>
       <url>
-        <loc>https://typst-in-production.com/about/</loc>
+        <loc>https://typst-in-production.com/quarto/R/</loc>
+      </url>
+      <url>
+        <loc>https://typst-in-production.com/quarto/custom-format/</loc>
+      </url>
+      <url>
+        <loc>https://typst-in-production.com/quarto/julia/</loc>
+      </url>
+      <url>
+        <loc>https://typst-in-production.com/quarto/python/</loc>
+      </url>
+      <url>
+        <loc>https://typst-in-production.com/utils/</loc>
       </url>
 </urlset>
