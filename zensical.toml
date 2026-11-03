@@ -40,7 +40,8 @@ nav = [
     "quarto/index.md",
     "quarto/R.md",
     "quarto/python.md",
-    "quarto/julia.md"
+    "quarto/julia.md",
+    "quarto/custom-format.md"
   ] },
   { "Example Projects" = ["projects/index.md", "projects/python-fastapi.md"] },
   { "PDF accessibility" = "pdf-accessibility.md" },
