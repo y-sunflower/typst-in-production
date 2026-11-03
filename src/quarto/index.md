@@ -8,7 +8,7 @@ In practice, you create a `.qmd` (or `.ipynb`) file that combines Markdown and c
 ````markdown
 ---
 title: Quarto document
-format: typst
+format: html
 ---
 
 ## This is a heading
@@ -26,9 +26,9 @@ You can then use the Quarto CLI to render this file to an HTML document:
 quarto render file.qmd
 ```
 
-This command creates `file.pdf`:
+This command creates `file.html`:
 
-![Rendered PDF output](../../images/quarto-minimal.png)
+![Rendered HTML output](../../images/quarto-1.png)
 
 ## Core features
 
@@ -61,7 +61,7 @@ Quarto is especially useful for three main reasons:
     ```
     ````
 
-    ![Parameterized rendering example](../../images/quarto-parameterized.png)
+    ![Parameterized rendering example](../../images/quarto-3.png)
 
 === "Other"
 

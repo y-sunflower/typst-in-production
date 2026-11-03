@@ -183,6 +183,8 @@ The inline prose updates to match. You can add conditional logic (different filt
 
 ![Rendered PDF from the parameterised Python report.](../../images/quarto-report-python.png)
 
+![Second page of the parameterised Python report.](../../images/quarto-report-python-page-2.png)
+
 ## Gotcha: fuzzy figures in the PDF
 
 Jupyter's default image format for inline figures is a PNG at the kernel's default DPI, which looks fine in a notebook and fuzzy in a Typst PDF. Two fixes, usually applied together:

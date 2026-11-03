@@ -189,6 +189,8 @@ The title, the inline prose, the figure caption, and the table caption all updat
 
 ![Rendered PDF from the parameterised R report.](../../images/quarto-report-R.png)
 
+![Second page of the parameterised R report.](../../images/quarto-report-R-page-2.png)
+
 ## Gotcha: fonts inside `ggplot2` plots
 
 Setting `mainfont: Inter` in the YAML tells Typst to render the document body in Inter.
