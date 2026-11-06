@@ -6,9 +6,9 @@ title: Typst from Python
 
       Make sure to check the overview of [how and why Typst can be used from Python](./index.md) to fully understand it.
 
-In Python, the recommended binding to use is [typst-py](https://github.com/messense/typst-py), maintained by [messense](https://github.com/messense), a [Maturin](https://www.maturin.rs/) developer (the software that allows Python and Rust to communicate), which is a very good thing.
+In Python, we can use [typst-py](https://github.com/messense/typst-py), maintained by [messense](https://github.com/messense). It provides bindings to the Typst compiler, so we can compile documents without installing the Typst CLI separately.
 
-Please also note that Python integrates well with [Quarto](https://quarto.org/), which offers a convenient and highly customizable way to create reports with Typst. You can find a dedicated tutorial [here](/../quarto/index.md).
+Please also note that Python integrates well with [Quarto](https://quarto.org/), which offers a convenient and highly customizable way to create reports with Typst. You can find a dedicated tutorial [here](../quarto/index.md).
 
 ## Installation
 
@@ -27,12 +27,22 @@ Please also note that Python integrates well with [Quarto](https://quarto.org/),
 === "pixi"
 
       ```bash
-      pixi add typst
+      pixi add typst-py
       ```
+
+The package is called `typst` on PyPI and [`typst-py` on conda-forge](https://anaconda.org/conda-forge/typst-py), which Pixi uses by default.
 
 ## Usage
 
-It mainly offers a `compile()` function that we can use like this:
+Create a file named `file.typ`:
+
+```typst title="file.typ"
+= Hello from Python
+
+This document was compiled from Python.
+```
+
+Then use the [`compile()` function](https://typst-py.readthedocs.io/en/latest/#typst.compile) to create a PDF:
 
 ```python title="main.py"
 import typst
@@ -40,7 +50,11 @@ import typst
 typst.compile("file.typ", output="file.pdf")
 ```
 
-We can pass info from Python to Typst using the `sys_inputs` argument in a JSON-like manner:
+If we omit `output`, `compile()` returns the PDF as Python `bytes` instead of writing a file.
+
+## Passing data from Python to Typst
+
+We can pass info from Python to Typst using the `sys_inputs` argument. Its keys and values must be strings, so we serialize lists and dictionaries with `json.dumps()`:
 
 ```python title="main.py"
 import json
@@ -63,6 +77,28 @@ On the Typst side, we can read those inputs with:
 ```
 
 Being able to pass variables from Python to Typst lets us connect our Python logic directly to the PDF output rendered for the user.
+
+## Specifying font paths
+
+Pass a list of font directories through [`font_paths`](https://typst-py.readthedocs.io/en/latest/#typst.compile). For example, put the Roboto `.ttf` or `.otf` files in a `fonts` directory and compile with:
+
+```python title="main.py"
+import typst
+
+typst.compile("file.typ", output="file.pdf", font_paths=["fonts"])
+```
+
+Select the font by its family name in the document:
+
+```typst title="file.typ"
+#set text(font: "Roboto")
+
+= Hello with a custom font
+```
+
+`font_paths` takes directories containing font files. Relative paths such as `"fonts"` resolve from Python's current working directory; absolute paths work too. Adding a directory makes its fonts available, and `text(font: ...)` selects the family to use.
+
+System and bundled fonts are available by default. Pass `ignore_system_fonts=True` to skip system fonts while keeping bundled fonts and those in `font_paths`. If you reuse a `typst.Compiler`, set `font_paths` on its constructor: `typst.Compiler(font_paths=["fonts"])`.
 
 ## Other resources
 
@@ -89,7 +125,7 @@ def sum_all(*array):
 #py.call(compiled, "sum_all", 1, 2, 3)
 ````
 
-- [`pyst`](https://krokotsch.eu/pypst/): a Python package designed to generate Typst code in Python.
+- [`pypst`](https://krokotsch.eu/pypst/): a Python package designed to generate Typst code in Python.
 
 ```python
 import pypst
@@ -98,15 +134,15 @@ heading = pypst.Heading("My Heading", level=2)
 print(heading.render()) # prints: "== My Heading"
 ```
 
-- [`typstpy`](https://github.com/beibingyangliuying/python-typst): a Python package to generate Typst code, similar to `pyst`.
+- [`typstpy`](https://github.com/beibingyangliuying/python-typst): a Python package to generate Typst code, similar to `pypst`.
 
 ```python
 from typstpy.std.visualize import circle
 
-circle("[Hello, world!]", width="100%", radius="10pt")
+circle("[Hello, world!]", radius="10pt")
 ```
 
-Output is: `#circle([Hello, world!], width: 100%, radius: 10pt)`.
+Output is: `#circle([Hello, world!], radius: 10pt)`.
 
 <br>
 
