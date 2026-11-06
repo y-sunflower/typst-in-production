@@ -9,44 +9,29 @@ Copyright &copy; 2026 <a href="https://ysunflower.com">Yellow Sunflower</a>
 """
 docs_dir = "src"
 extra_css = ["stylesheets/extra.css"]
-nav = [
-  { "Home" = "index.md" },
-  { "Crash course" = [
-    "crash-course/index.md",
-    "crash-course/how-to-use-typst.md",
-    "crash-course/lesson-1.md",
-    "crash-course/exercises-1.md",
-    "crash-course/lesson-2.md",
-    "crash-course/exercises-2.md",
-    "crash-course/lesson-3.md",
-    "crash-course/exercises-3.md",
-    "crash-course/tips-and-tricks.md",
-    "crash-course/project.md",
-  ] },
-  { "Guides" = [
-    "guides/index.md",
-    "guides/how-to-customize-outline-in-typst.md",
-    "guides/how-to-reuse-functions-and-components-in-typst.md",
-    "guides/how-to-run-typst-in-ci-cd.md",
-  ] },
-  { "From languages" = [
-    "from/index.md",
-    "from/python.md",
-    "from/R.md",
-    "from/javascript.md",
-    "from/rust.md",
-  ] },
-  { "Quarto" = [
-    "quarto/index.md",
-    "quarto/R.md",
-    "quarto/python.md",
-    "quarto/julia.md",
-    "quarto/custom-format.md"
-  ] },
-  { "Example Projects" = ["projects/index.md", "projects/python-fastapi.md"] },
-  { "PDF accessibility" = "pdf-accessibility.md" },
-  { "About" = "about.md" }
-]
+nav = [{ "Home" = "index.md" }, { "Crash course" = [
+  "crash-course/index.md",
+  "crash-course/how-to-use-typst.md",
+  "crash-course/lesson-1.md",
+  "crash-course/exercises-1.md",
+  "crash-course/lesson-2.md",
+  "crash-course/exercises-2.md",
+  "crash-course/lesson-3.md",
+  "crash-course/exercises-3.md",
+  "crash-course/tips-and-tricks.md",
+  "crash-course/project.md",
+] }, { "Guides" = [
+  "guides/index.md",
+  "guides/how-to-customize-outline-in-typst.md",
+  "guides/how-to-reuse-functions-and-components-in-typst.md",
+  "guides/how-to-run-typst-in-ci-cd.md",
+] }, { "From languages" = [
+  "from/index.md",
+  "from/python.md",
+  "from/R.md",
+  "from/javascript.md",
+  "from/rust.md",
+] }, { "Quarto" = ["quarto/index.md", "quarto/R.md", "quarto/python.md", "quarto/julia.md", "quarto/custom-format.md"] }, { "Example Projects" = ["projects/index.md", "projects/python-fastapi.md"] }, { "PDF accessibility" = "pdf-accessibility.md" }, { "About" = "about.md" }]
 
 [project.theme]
 language = "en"
@@ -69,7 +54,6 @@ features = [
   "search.highlight",
   "navigation.prune",
 ]
-logo = "images/logo-tip.png"
 favicon = "images/favicon.png"
 
 [[project.theme.palette]]
