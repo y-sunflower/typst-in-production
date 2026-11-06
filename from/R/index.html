@@ -26,7 +26,7 @@
       
       
       <link rel="icon" href="../../images/favicon.png">
-      <meta name="generator" content="zensical-0.0.74">
+      <meta name="generator" content="zensical-0.1.0">
     
     
       
@@ -101,7 +101,8 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Typst in Production" class="md-header__button md-logo" aria-label="Typst in Production" data-md-component="logo">
       
-  <img src="../../images/logo-tip.png" alt="Typst in Production">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -454,7 +455,8 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Typst in Production" class="md-nav__button md-logo" aria-label="Typst in Production" data-md-component="logo">
       
-  <img src="../../images/logo-tip.png" alt="Typst in Production">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
     Typst in Production
@@ -823,10 +825,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage-r2typ" class="md-nav__link">
+  <a href="#usage" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Usage: <code>r2typ</code>
+        Usage
       </span>
     </span>
   </a>
@@ -834,32 +836,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage-tynding" class="md-nav__link">
+  <a href="#specifying-font-paths" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Usage: <code>tynding</code>
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#combining-r2typ-and-tynding" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Combining <code>r2typ</code> and <code>tynding</code>
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#other-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Other resources
+        Specifying font paths
       </span>
     </span>
   </a>
@@ -1165,10 +1145,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage-r2typ" class="md-nav__link">
+  <a href="#usage" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Usage: <code>r2typ</code>
+        Usage
       </span>
     </span>
   </a>
@@ -1176,32 +1156,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage-tynding" class="md-nav__link">
+  <a href="#specifying-font-paths" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Usage: <code>tynding</code>
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#combining-r2typ-and-tynding" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Combining <code>r2typ</code> and <code>tynding</code>
-      </span>
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#other-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      <span class="md-typeset">
-        Other resources
+        Specifying font paths
       </span>
     </span>
   </a>
@@ -1301,91 +1259,49 @@
 <p class="admonition-title">Tip</p>
 <p>Make sure to check the overview of <a href=".././">how and why Typst can be used from R</a> to fully understand it.</p>
 </div>
-<p>In R, the recommended binding to use is <a href="https://github.com/y-sunflower/tynding">tynding</a>, maintained by the same maintainer as Typst in Production (that is, the website you're currently on). Another project that we'll show here is <a href="https://github.com/y-sunflower/r2typ">r2typ</a>, which lets you generate Typst with R.</p>
-<p>Please also note that R integrates well with <a href="https://quarto.org/">Quarto</a>, which offers a convenient and highly customizable way to create reports with Typst. You can find a dedicated tutorial <a href="/../quarto/index.md">here</a>.</p>
+<p>In R, we can use <a href="https://github.com/y-sunflower/tynding">tynding</a>. It provides bindings to the Typst compiler, so we can compile documents directly from R without installing the Typst CLI separately.</p>
+<p>Please also note that R integrates well with <a href="https://quarto.org/">Quarto</a>, which offers a convenient and highly customizable way to create reports with Typst. You can find a dedicated tutorial <a href="../../quarto/">here</a>.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<div class="language-R highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># install.packages("pak")</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">pak</span><span class="o">::</span><span class="nf">pak</span><span class="p">(</span><span class="s">"y-sunflower/tynding"</span><span class="p">)</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">pak</span><span class="o">::</span><span class="nf">pak</span><span class="p">(</span><span class="s">"y-sunflower/r2typ"</span><span class="p">)</span>
+<p>Install <code>tynding</code> from <a href="https://y-sunflower.r-universe.dev/tynding">R-universe</a>:</p>
+<div class="language-R highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">install.packages</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="s">"tynding"</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="n">repos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"https://y-sunflower.r-universe.dev"</span><span class="p">,</span><span class="w"> </span><span class="s">"https://cloud.r-project.org"</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">)</span>
 </span></code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>The installation of <code>tynding</code> might take a few minutes because it needs to be built from source, including the Rust backend, which requires compilation.</p>
-</div>
-<h2 id="usage-r2typ">Usage: <code>r2typ</code><a class="headerlink" href="#usage-r2typ" title="Permanent link">&para;</a></h2>
-<div class="language-R highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">r2typ</span><span class="p">)</span>
+<p>R-universe provides binaries for supported platforms. If R installs from source, building the Rust backend requires a Rust toolchain and can take a few minutes.</p>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<div class="language-R highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">tynding</span><span class="p">)</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nf">heading</span><span class="p">(</span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">numbering</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"1.1"</span><span class="p">,</span><span class="w"> </span><span class="s">"Hello world"</span><span class="p">)</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">#&gt; #heading(level: 2, numbering: "1.1")[Hello world]</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nf">text_</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">pt_</span><span class="p">(</span><span class="m">12</span><span class="p">),</span><span class="w"> </span><span class="n">baseline</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">em</span><span class="p">(</span><span class="m">1.2</span><span class="p">),</span><span class="w"> </span><span class="n">overhang</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="s">"hey there"</span><span class="p">)</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1">#&gt; #text(size: 12pt, baseline: 1.2em, overhang: false)[hey there]</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="nf">image_</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">percent</span><span class="p">(</span><span class="m">80</span><span class="p">),</span><span class="w"> </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">auto</span><span class="p">,</span><span class="w"> </span><span class="s">"link.svg"</span><span class="p">)</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1">#&gt; #image(width: 80%, height: auto, "link.svg")</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="nf">circle</span><span class="p">(</span><span class="n">radius</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">pt_</span><span class="p">(</span><span class="m">100</span><span class="p">),</span><span class="w"> </span><span class="s">"hey"</span><span class="p">,</span><span class="w"> </span><span class="nf">linebreak</span><span class="p">(),</span><span class="w"> </span><span class="s">"there"</span><span class="p">)</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="c1">#&gt; #circle(radius: 100pt)[hey #linebreak() there]</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="nf">place</span><span class="p">(</span><span class="n">top</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">left</span><span class="p">,</span><span class="w"> </span><span class="n">dy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">pt_</span><span class="p">(</span><span class="m">15</span><span class="p">),</span><span class="w"> </span><span class="nf">square</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">pt_</span><span class="p">(</span><span class="m">35</span><span class="p">),</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">red</span><span class="p">))</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="c1">#&gt; #place(top + left, dy: 15pt)[#square(size: 35pt, fill: red)]</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">pdf_file</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nf">c</span><span class="p">(</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="s">'#set document(title: "hello from tynding")'</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="s">"= hello world"</span><span class="p">,</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="s">"this document was compiled from R."</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="nf">typst_write</span><span class="p">()</span><span class="w"> </span><span class="o">|&gt;</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="nf">typst_compile</span><span class="p">(</span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"report.pdf"</span><span class="p">)</span>
 </span></code></pre></div>
-<p>Pretty much all Typst functions, colors, directions, etc., are supported here.</p>
-<h2 id="usage-tynding">Usage: <code>tynding</code><a class="headerlink" href="#usage-tynding" title="Permanent link">&para;</a></h2>
-<div class="language-R highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">tynding</span><span class="p">)</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">markup</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="s">'#set document(title: "hello from tynding")'</span><span class="p">,</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="s">"= hello world"</span><span class="p">,</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="s">"this document was compiled from R."</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">)</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">typ_file</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">typst_write</span><span class="p">(</span><span class="n">markup</span><span class="p">)</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">pdf_file</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">typst_compile</span><span class="p">(</span><span class="n">typ_file</span><span class="p">)</span>
+<p><code>typst_write()</code> writes the markup to a <code>.typ</code> file and returns its path. <code>typst_compile()</code> compiles that file and returns the output path invisibly. If you already have a Typst file, compile it directly:</p>
+<div class="language-R highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">typst_compile</span><span class="p">(</span><span class="s">"file.typ"</span><span class="p">,</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"file.pdf"</span><span class="p">)</span>
 </span></code></pre></div>
-<h2 id="combining-r2typ-and-tynding">Combining <code>r2typ</code> and <code>tynding</code><a class="headerlink" href="#combining-r2typ-and-tynding" title="Permanent link">&para;</a></h2>
-<p>When used in combination, <code>r2typ</code> and <code>tynding</code> let you create a PDF with just R!</p>
-<div class="language-R highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">r2typ</span><span class="p">)</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nf">library</span><span class="p">(</span><span class="n">tynding</span><span class="p">)</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nf">c</span><span class="p">(</span>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="nf">set_page</span><span class="p">(</span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">pt_</span><span class="p">(</span><span class="m">400</span><span class="p">)),</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="nf">set_text</span><span class="p">(</span><span class="n">purple</span><span class="p">),</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="nf">set_circle</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">percent</span><span class="p">(</span><span class="m">50</span><span class="p">)),</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="nf">align</span><span class="p">(</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="n">center</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">horizon</span><span class="p">,</span>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="nf">circle</span><span class="p">(</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">      </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aqua</span><span class="p">,</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">      </span><span class="n">stroke</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">pt_</span><span class="p">(</span><span class="m">5</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">red</span><span class="p">,</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">      </span><span class="nf">align</span><span class="p">(</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">        </span><span class="n">right</span><span class="p">,</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span><span class="nf">text_</span><span class="p">(</span>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">          </span><span class="n">font</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Roboto"</span><span class="p">,</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">          </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">em</span><span class="p">(</span><span class="m">1.2</span><span class="p">),</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">          </span><span class="s">"My favorite food is cookies!"</span>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">        </span><span class="p">)</span>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">      </span><span class="p">)</span>
-</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">    </span><span class="p">)</span>
-</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">  </span><span class="p">)</span>
-</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
-</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">  </span><span class="nf">typst_write</span><span class="p">()</span><span class="w"> </span><span class="o">|&gt;</span>
-</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">  </span><span class="nf">typst_compile</span><span class="p">(</span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"example.pdf"</span><span class="p">)</span>
+<h2 id="specifying-font-paths">Specifying font paths<a class="headerlink" href="#specifying-font-paths" title="Permanent link">&para;</a></h2>
+<p>Pass a font directory through <a href="https://github.com/y-sunflower/tynding#features-overview"><code>font_path</code></a>. For example, put the Roboto <code>.ttf</code> or <code>.otf</code> files in a <code>fonts</code> directory, then select the family in your Typst markup:</p>
+<div class="language-R highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">tynding</span><span class="p">)</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">markup</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="s">'#set text(font: "Roboto")'</span><span class="p">,</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="s">"= Hello with a custom font"</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">)</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="n">typ_file</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">typst_write</span><span class="p">(</span><span class="n">markup</span><span class="p">)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">pdf_file</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">typst_compile</span><span class="p">(</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">  </span><span class="n">typ_file</span><span class="p">,</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">  </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"report.pdf"</span><span class="p">,</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">  </span><span class="n">font_path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"fonts"</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="p">)</span>
 </span></code></pre></div>
-<p><img alt="Short document with a large aqua circle outlined in red and purple text reading &quot;My favorite food is cookies!&quot;" src="../../../images/from-R-1.png" /></p>
-<h2 id="other-resources">Other resources<a class="headerlink" href="#other-resources" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://github.com/christopherkenny/typr/"><code>typr</code></a>: R package to render Typst documents from R. The same feature is present in <code>tynding</code>, but it does <strong>not</strong> use bindings to the Typst library and requires you to install either the Typst CLI or Quarto (which bundles Typst).</li>
-</ul>
-<div class="language-R highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nf">library</span><span class="p">(</span><span class="n">typr</span><span class="p">)</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">doc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="s">"#set page(height: 2cm, width: 10cm)"</span><span class="p">,</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="s">"= Yet another document"</span><span class="p">,</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="s">"With some text"</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">)</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="nf">typr_compile</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span><span class="w"> </span><span class="n">output_format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"png"</span><span class="p">)</span>
-</span></code></pre></div>
+<p><code>font_path</code> takes one directory containing font files. Relative paths such as <code>"fonts"</code> resolve from R's current working directory (<code>getwd()</code>); absolute paths work too. The <code>font</code> value in <code>text(...)</code> is the font's family name, such as <code>"Roboto"</code>.</p>
+<p>System and bundled fonts are available by default. Pass <code>ignore_system_fonts = TRUE</code> to skip system fonts while keeping bundled fonts and those in <code>font_path</code>.</p>
 <p><br></p>
 <div class="admonition question">
 <p class="admonition-title">Question</p>

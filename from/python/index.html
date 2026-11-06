@@ -26,7 +26,7 @@
       
       
       <link rel="icon" href="../../images/favicon.png">
-      <meta name="generator" content="zensical-0.0.74">
+      <meta name="generator" content="zensical-0.1.0">
     
     
       
@@ -101,7 +101,8 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Typst in Production" class="md-header__button md-logo" aria-label="Typst in Production" data-md-component="logo">
       
-  <img src="../../images/logo-tip.png" alt="Typst in Production">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -454,7 +455,8 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Typst in Production" class="md-nav__button md-logo" aria-label="Typst in Production" data-md-component="logo">
       
-  <img src="../../images/logo-tip.png" alt="Typst in Production">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
     Typst in Production
@@ -800,6 +802,28 @@
     <span class="md-ellipsis">
       <span class="md-typeset">
         Usage
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passing-data-from-python-to-typst" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Passing data from Python to Typst
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specifying-font-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Specifying font paths
       </span>
     </span>
   </a>
@@ -1154,6 +1178,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#passing-data-from-python-to-typst" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Passing data from Python to Typst
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specifying-font-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Specifying font paths
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#other-resources" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
@@ -1257,8 +1303,8 @@
 <p class="admonition-title">Tip</p>
 <p>Make sure to check the overview of <a href=".././">how and why Typst can be used from Python</a> to fully understand it.</p>
 </div>
-<p>In Python, the recommended binding to use is <a href="https://github.com/messense/typst-py">typst-py</a>, maintained by <a href="https://github.com/messense">messense</a>, a <a href="https://www.maturin.rs/">Maturin</a> developer (the software that allows Python and Rust to communicate), which is a very good thing.</p>
-<p>Please also note that Python integrates well with <a href="https://quarto.org/">Quarto</a>, which offers a convenient and highly customizable way to create reports with Typst. You can find a dedicated tutorial <a href="/../quarto/index.md">here</a>.</p>
+<p>In Python, we can use <a href="https://github.com/messense/typst-py">typst-py</a>, maintained by <a href="https://github.com/messense">messense</a>. It provides bindings to the Typst compiler, so we can compile documents without installing the Typst CLI separately.</p>
+<p>Please also note that Python integrates well with <a href="https://quarto.org/">Quarto</a>, which offers a convenient and highly customizable way to create reports with Typst. You can find a dedicated tutorial <a href="../../quarto/">here</a>.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">uv</label><label for="__tabbed_1_2">pip</label><label for="__tabbed_1_3">pixi</label></div>
 <div class="tabbed-content">
@@ -1271,72 +1317,93 @@
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pixi<span class="w"> </span>add<span class="w"> </span>typst
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pixi<span class="w"> </span>add<span class="w"> </span>typst-py
 </span></code></pre></div>
 </div>
 </div>
 </div>
+<p>The package is called <code>typst</code> on PyPI and <a href="https://anaconda.org/conda-forge/typst-py"><code>typst-py</code> on conda-forge</a>, which Pixi uses by default.</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<p>It mainly offers a <code>compile()</code> function that we can use like this:</p>
-<div class="language-python highlight"><span class="filename">main.py</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">typst</span>
+<p>Create a file named <code>file.typ</code>:</p>
+<div class="language-typst highlight"><span class="filename">file.typ</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gh">= Hello from Python</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">typst</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">"file.typ"</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="s2">"file.pdf"</span><span class="p">)</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>This<span class="w"> </span>document<span class="w"> </span>was<span class="w"> </span>compiled<span class="w"> </span>from<span class="w"> </span>Python.
 </span></code></pre></div>
-<p>We can pass info from Python to Typst using the <code>sys_inputs</code> argument in a JSON-like manner:</p>
-<div class="language-python highlight"><span class="filename">main.py</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">typst</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="n">humans</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Joseph"</span><span class="p">,</span> <span class="s2">"age"</span><span class="p">:</span> <span class="mi">25</span><span class="p">},</span> <span class="p">{</span><span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Justine"</span><span class="p">,</span> <span class="s2">"age"</span><span class="p">:</span> <span class="mi">24</span><span class="p">}]</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="n">sys_inputs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"humans"</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">humans</span><span class="p">)}</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">typst</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="s2">"file.typ"</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="s2">"file.pdf"</span><span class="p">,</span> <span class="n">sys_inputs</span><span class="o">=</span><span class="n">sys_inputs</span><span class="p">)</span>
+<p>Then use the <a href="https://typst-py.readthedocs.io/en/latest/#typst.compile"><code>compile()</code> function</a> to create a PDF:</p>
+<div class="language-python highlight"><span class="filename">main.py</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">typst</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">typst</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">"file.typ"</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="s2">"file.pdf"</span><span class="p">)</span>
+</span></code></pre></div>
+<p>If we omit <code>output</code>, <code>compile()</code> returns the PDF as Python <code>bytes</code> instead of writing a file.</p>
+<h2 id="passing-data-from-python-to-typst">Passing data from Python to Typst<a class="headerlink" href="#passing-data-from-python-to-typst" title="Permanent link">&para;</a></h2>
+<p>We can pass info from Python to Typst using the <code>sys_inputs</code> argument. Its keys and values must be strings, so we serialize lists and dictionaries with <code>json.dumps()</code>:</p>
+<div class="language-python highlight"><span class="filename">main.py</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">typst</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="n">humans</span> <span class="o">=</span> <span class="p">[{</span><span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Joseph"</span><span class="p">,</span> <span class="s2">"age"</span><span class="p">:</span> <span class="mi">25</span><span class="p">},</span> <span class="p">{</span><span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Justine"</span><span class="p">,</span> <span class="s2">"age"</span><span class="p">:</span> <span class="mi">24</span><span class="p">}]</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="n">sys_inputs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"humans"</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">humans</span><span class="p">)}</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">typst</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="s2">"file.typ"</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="s2">"file.pdf"</span><span class="p">,</span> <span class="n">sys_inputs</span><span class="o">=</span><span class="n">sys_inputs</span><span class="p">)</span>
 </span></code></pre></div>
 <p>On the Typst side, we can read those inputs with:</p>
-<div class="language-typst highlight"><span class="filename">file.typ</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nv">humans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">json</span><span class="p">(</span><span class="nf">bytes</span><span class="p">(</span><span class="nv">sys</span><span class="p">.</span><span class="nv">inputs</span><span class="p">.</span><span class="nv">humans</span><span class="p">))</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kr">#for</span><span class="w"> </span><span class="nv">human</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nv">humans</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">      </span><span class="nv">#human</span>.name<span class="w"> </span>is<span class="w"> </span><span class="nv">#human</span>.age<span class="w"> </span>years<span class="w"> </span>old.<span class="w"> </span><span class="p">\</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">]</span>
+<div class="language-typst highlight"><span class="filename">file.typ</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">#let</span><span class="w"> </span><span class="nv">humans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">json</span><span class="p">(</span><span class="nf">bytes</span><span class="p">(</span><span class="nv">sys</span><span class="p">.</span><span class="nv">inputs</span><span class="p">.</span><span class="nv">humans</span><span class="p">))</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kr">#for</span><span class="w"> </span><span class="nv">human</span><span class="w"> </span><span class="kr">in</span><span class="w"> </span><span class="nv">humans</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">      </span><span class="nv">#human</span>.name<span class="w"> </span>is<span class="w"> </span><span class="nv">#human</span>.age<span class="w"> </span>years<span class="w"> </span>old.<span class="w"> </span><span class="p">\</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">]</span>
 </span></code></pre></div>
 <p>Being able to pass variables from Python to Typst lets us connect our Python logic directly to the PDF output rendered for the user.</p>
+<h2 id="specifying-font-paths">Specifying font paths<a class="headerlink" href="#specifying-font-paths" title="Permanent link">&para;</a></h2>
+<p>Pass a list of font directories through <a href="https://typst-py.readthedocs.io/en/latest/#typst.compile"><code>font_paths</code></a>. For example, put the Roboto <code>.ttf</code> or <code>.otf</code> files in a <code>fonts</code> directory and compile with:</p>
+<div class="language-python highlight"><span class="filename">main.py</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">typst</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">typst</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">"file.typ"</span><span class="p">,</span> <span class="n">output</span><span class="o">=</span><span class="s2">"file.pdf"</span><span class="p">,</span> <span class="n">font_paths</span><span class="o">=</span><span class="p">[</span><span class="s2">"fonts"</span><span class="p">])</span>
+</span></code></pre></div>
+<p>Select the font by its family name in the document:</p>
+<div class="language-typst highlight"><span class="filename">file.typ</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">#set</span><span class="w"> </span><span class="nf">text</span><span class="p">(</span><span class="nv">font</span><span class="p">:</span><span class="w"> </span><span class="s2">"Roboto"</span><span class="p">)</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="gh">= Hello with a custom font</span>
+</span></code></pre></div>
+<p><code>font_paths</code> takes directories containing font files. Relative paths such as <code>"fonts"</code> resolve from Python's current working directory; absolute paths work too. Adding a directory makes its fonts available, and <code>text(font: ...)</code> selects the family to use.</p>
+<p>System and bundled fonts are available by default. Pass <code>ignore_system_fonts=True</code> to skip system fonts while keeping bundled fonts and those in <code>font_paths</code>. If you reuse a <code>typst.Compiler</code>, set <code>font_paths</code> on its constructor: <code>typst.Compiler(font_paths=["fonts"])</code>.</p>
 <h2 id="other-resources">Other resources<a class="headerlink" href="#other-resources" title="Permanent link">&para;</a></h2>
 <p><code>typst-py</code> is probably the most useful tool to combine Typst and Python, but other projects are worth mentioning as they can solve different use cases:</p>
 <ul>
 <li><a href="https://typst.app/universe/package/pyrunner/"><code>pyrunner</code></a>: a Typst package that lets you run Python code (stdlib only) inside Typst.</li>
 </ul>
-<div class="language-typst highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">#import</span><span class="w"> </span><span class="s2">"@preview/pyrunner:0.3.0"</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nv">py</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kd">#let</span><span class="w"> </span><span class="nv">compiled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">py</span><span class="p">.</span><span class="nf">compile</span><span class="p">(</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="err">```</span><span class="nv">python</span>
-</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="nv">def</span><span class="w"> </span><span class="nf">find_emails</span><span class="p">(</span><span class="nv">string</span><span class="p">):</span>
-</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="kn">import</span><span class="w"> </span><span class="nv">re</span>
-</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="nv">re</span><span class="p">.</span><span class="nf">findall</span><span class="p">(</span><span class="nv">r</span><span class="s2">"\b[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}\b"</span><span class="p">,</span><span class="w"> </span><span class="nv">string</span><span class="p">)</span>
-</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
-</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="nv">def</span><span class="w"> </span><span class="nf">sum_all</span><span class="p">(</span><span class="o">*</span><span class="nv">array</span><span class="p">):</span>
-</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="nv">array</span><span class="p">)</span>
-</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="err">```</span><span class="p">)</span>
-</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
-</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="kd">#let</span><span class="w"> </span><span class="nv">txt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"My email address is john.doe@example.com and my friend's email address is jane.doe@example.net."</span>
-</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>
-</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="nv">#py</span>.call(compiled,<span class="w"> </span>"find<span class="ge">_emails", txt)</span>
-</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="ge">#py.call(compiled, "sum_</span>all",<span class="w"> </span>1,<span class="w"> </span>2,<span class="w"> </span>3)
+<div class="language-typst highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">#import</span><span class="w"> </span><span class="s2">"@preview/pyrunner:0.3.0"</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nv">py</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="kd">#let</span><span class="w"> </span><span class="nv">compiled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">py</span><span class="p">.</span><span class="nf">compile</span><span class="p">(</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="err">```</span><span class="nv">python</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="nv">def</span><span class="w"> </span><span class="nf">find_emails</span><span class="p">(</span><span class="nv">string</span><span class="p">):</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="kn">import</span><span class="w"> </span><span class="nv">re</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="nv">re</span><span class="p">.</span><span class="nf">findall</span><span class="p">(</span><span class="nv">r</span><span class="s2">"\b[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}\b"</span><span class="p">,</span><span class="w"> </span><span class="nv">string</span><span class="p">)</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="nv">def</span><span class="w"> </span><span class="nf">sum_all</span><span class="p">(</span><span class="o">*</span><span class="nv">array</span><span class="p">):</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">    </span><span class="kr">return</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="nv">array</span><span class="p">)</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="err">```</span><span class="p">)</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="kd">#let</span><span class="w"> </span><span class="nv">txt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"My email address is john.doe@example.com and my friend's email address is jane.doe@example.net."</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="nv">#py</span>.call(compiled,<span class="w"> </span>"find<span class="ge">_emails", txt)</span>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="ge">#py.call(compiled, "sum_</span>all",<span class="w"> </span>1,<span class="w"> </span>2,<span class="w"> </span>3)
 </span></code></pre></div>
 <ul>
-<li><a href="https://krokotsch.eu/pypst/"><code>pyst</code></a>: a Python package designed to generate Typst code in Python.</li>
+<li><a href="https://krokotsch.eu/pypst/"><code>pypst</code></a>: a Python package designed to generate Typst code in Python.</li>
 </ul>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pypst</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="n">heading</span> <span class="o">=</span> <span class="n">pypst</span><span class="o">.</span><span class="n">Heading</span><span class="p">(</span><span class="s2">"My Heading"</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">heading</span><span class="o">.</span><span class="n">render</span><span class="p">())</span> <span class="c1"># prints: "== My Heading"</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pypst</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="n">heading</span> <span class="o">=</span> <span class="n">pypst</span><span class="o">.</span><span class="n">Heading</span><span class="p">(</span><span class="s2">"My Heading"</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">heading</span><span class="o">.</span><span class="n">render</span><span class="p">())</span> <span class="c1"># prints: "== My Heading"</span>
 </span></code></pre></div>
 <ul>
-<li><a href="https://github.com/beibingyangliuying/python-typst"><code>typstpy</code></a>: a Python package to generate Typst code, similar to <code>pyst</code>.</li>
+<li><a href="https://github.com/beibingyangliuying/python-typst"><code>typstpy</code></a>: a Python package to generate Typst code, similar to <code>pypst</code>.</li>
 </ul>
-<div class="language-python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">typstpy.std.visualize</span><span class="w"> </span><span class="kn">import</span> <span class="n">circle</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="n">circle</span><span class="p">(</span><span class="s2">"[Hello, world!]"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s2">"100%"</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="s2">"10pt"</span><span class="p">)</span>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">typstpy.std.visualize</span><span class="w"> </span><span class="kn">import</span> <span class="n">circle</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="n">circle</span><span class="p">(</span><span class="s2">"[Hello, world!]"</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span><span class="s2">"10pt"</span><span class="p">)</span>
 </span></code></pre></div>
-<p>Output is: <code>#circle([Hello, world!], width: 100%, radius: 10pt)</code>.</p>
+<p>Output is: <code>#circle([Hello, world!], radius: 10pt)</code>.</p>
 <p><br></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
