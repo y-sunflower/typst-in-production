@@ -6,195 +6,282 @@ title: Typst from Rust
 
       Make sure to check the overview of [how and why Typst can be used from Rust](./index.md) to fully understand it.
 
-In Rust, Typst can be used in a very "native" way because Typst itself is built in Rust.
+Typst is written in Rust, so we can use its compiler directly through the official [`typst`](https://docs.rs/typst/0.15.1/typst/) crate. There is no need to install the Typst command line tool or call an external process.
 
-The most practical entry point today is [`typst-as-lib`](https://crates.io/crates/typst-as-lib), a community crate that wraps the lower-level Typst internals and gives a simpler API for report generation.
+To do this, we implement Typst's [`World`](https://docs.rs/typst/0.15.1/typst/trait.World.html) trait. A world provides everything the compiler needs: the standard library, input values, source files, fonts, and the current date.
 
 ## Installation
 
-=== "Minimal dependencies"
+The examples below use **Typst 0.15.1**, which requires **Rust 1.92 or newer**. Keep the Typst crates on the same version, since their APIs can change between releases.
 
-      ```bash
-      cargo add typst-as-lib typst-pdf
-      ```
+Create a project and add the dependencies:
 
-=== "Typed input helpers"
-
-      ```bash
-      cargo add typst derive_typst_intoval
-      ```
-
-## Usage
-
-The usual flow in Rust is:
-
-1. Build a `TypstEngine` from a Typst template
-2. Compile to a Typst document
-3. Convert that document to PDF bytes with `typst-pdf`
-4. Write the PDF file
-
-```rust title="main.rs"
-use std::fs;
-use typst_as_lib::TypstEngine;
-
-static TEMPLATE: &str = include_str!("file.typ");
-
-fn main() {
-    let engine = TypstEngine::builder().main_file(TEMPLATE).build();
-
-    let doc = engine
-        .compile()
-        .output
-        .expect("Typst compilation failed");
-
-    let pdf = typst_pdf::pdf(&doc, &Default::default())
-        .expect("PDF generation failed");
-
-    fs::write("file.pdf", pdf).expect("Could not write file.pdf");
-}
+```bash
+cargo new typst-report
+cd typst-report
+cargo add typst@=0.15.1 typst-layout@=0.15.1 typst-pdf@=0.15.1
+cargo add typst-kit@=0.15.1 --features datetime,embedded-fonts,system-files,system-downloader
 ```
 
-## Passing data from Rust to Typst
+The `typst` crate compiles the document, `typst-layout` provides the paged document type, and `typst-pdf` exports it to PDF. The official `typst-kit` crate supplies file loading, package downloads, embedded fonts, and date handling for our world.
 
-We can pass structured data from Rust into Typst and let the template render dynamic sections.
+## Providing a world
 
-```rust title="main.rs"
-use derive_typst_intoval::{IntoDict, IntoValue};
-use typst::foundations::Dict;
-use typst_as_lib::TypstEngine;
+Create `src/compiler.rs` with the following code. We will reuse this module in all three examples.
 
-static TEMPLATE: &str = include_str!("file.typ");
+```rust title="src/compiler.rs"
+use std::path::Path;
 
-#[derive(Clone, IntoValue, IntoDict)]
-struct Human {
-    name: String,
-    age: i32,
+use typst::diag::FileResult;
+use typst::foundations::{Bytes, Datetime, Dict, Duration};
+use typst::syntax::{FileId, RootedPath, Source, VirtualPath, VirtualRoot};
+use typst::text::{Font, FontBook};
+use typst::utils::LazyHash;
+use typst::{Library, LibraryExt, World};
+use typst_kit::datetime::Time;
+use typst_kit::downloader::SystemDownloader;
+use typst_kit::files::{FileStore, FsRoot, SystemFiles};
+use typst_kit::fonts::embedded;
+use typst_kit::packages::SystemPackages;
+use typst_layout::PagedDocument;
+
+struct ReportWorld {
+    library: LazyHash<Library>,
+    book: LazyHash<FontBook>,
+    fonts: Vec<Font>,
+    files: FileStore<SystemFiles>,
+    main: FileId,
+    time: Time,
 }
 
-#[derive(Clone, IntoValue, IntoDict)]
-struct Input {
-    humans: Vec<Human>,
-}
+impl World for ReportWorld {
+    fn library(&self) -> &LazyHash<Library> {
+        &self.library
+    }
 
-impl From<Input> for Dict {
-    fn from(value: Input) -> Self {
-        value.into_dict()
+    fn book(&self) -> &LazyHash<FontBook> {
+        &self.book
+    }
+
+    fn main(&self) -> FileId {
+        self.main
+    }
+
+    fn source(&self, id: FileId) -> FileResult<Source> {
+        self.files.source(id)
+    }
+
+    fn file(&self, id: FileId) -> FileResult<Bytes> {
+        self.files.file(id)
+    }
+
+    fn font(&self, index: usize) -> Option<Font> {
+        self.fonts.get(index).cloned()
+    }
+
+    fn today(&self, offset: Option<Duration>) -> Option<Datetime> {
+        self.time.today(offset)
     }
 }
 
-fn main() {
-    let engine = TypstEngine::builder().main_file(TEMPLATE).build();
+pub fn compile_pdf(path: &str, inputs: Dict) -> Result<Vec<u8>, String> {
+    let path = Path::new(path).canonicalize().map_err(|e| e.to_string())?;
+    let root = path.parent().ok_or("template needs a parent directory")?;
+    let vpath = VirtualPath::virtualize(root, &path).map_err(|e| e.to_string())?;
 
-    let input = Input {
-        humans: vec![
-            Human {
-                name: "Joseph".to_string(),
-                age: 25,
-            },
-            Human {
-                name: "Justine".to_string(),
-                age: 24,
-            },
-        ],
+    let fonts: Vec<Font> = embedded().map(|(font, _)| font).collect();
+    let book = LazyHash::new(FontBook::from_fonts(&fonts));
+    let packages = SystemPackages::new(SystemDownloader::new("typst-report"));
+
+    let world = ReportWorld {
+        library: LazyHash::new(Library::builder().with_inputs(inputs).build()),
+        book,
+        fonts,
+        files: FileStore::new(SystemFiles::new(FsRoot::new(root.to_path_buf()), packages)),
+        main: RootedPath::new(VirtualRoot::Project, vpath).intern(),
+        time: Time::system(),
     };
 
-    let doc = engine
-        .compile_with_input(input)
+    let result = typst::compile::<PagedDocument>(&world);
+    for warning in result.warnings {
+        eprintln!("Typst warning: {}", warning.message);
+    }
+    let document = result
         .output
-        .expect("Typst compilation failed");
+        .map_err(|errors| format!("Typst compilation failed: {errors:?}"))?;
 
-    let pdf = typst_pdf::pdf(&doc, &Default::default())
-        .expect("PDF generation failed");
-
-    std::fs::write("file.pdf", pdf).expect("Could not write file.pdf");
+    typst_pdf::pdf(&document, &Default::default())
+        .map_err(|errors| format!("PDF export failed: {errors:?}"))
 }
 ```
 
-On the Typst side:
+This world uses the template's parent directory as the project root. Local imports and images resolve within that root, and `typst-kit` handles package imports and caches loaded files during compilation. Package imports may need network access on their first use.
+
+The fonts are embedded in the application, so the examples work without relying on fonts installed on your computer. To load custom or system fonts, you can extend this with [`typst-kit`'s font utilities](https://docs.rs/typst-kit/0.15.1/typst_kit/fonts/).
+
+## Usage
+
+Create `file.typ` in the project root, next to `Cargo.toml`:
+
+```typst title="file.typ"
+= Hello from Rust
+
+This PDF was compiled with the Typst Rust crate.
+```
+
+Then replace `src/main.rs` with:
+
+```rust title="src/main.rs"
+mod compiler;
+
+use typst::foundations::Dict;
+
+fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let pdf = compiler::compile_pdf("file.typ", Dict::new())?;
+    std::fs::write("file.pdf", pdf)?;
+    Ok(())
+}
+```
+
+Run this from the project root:
+
+```bash
+cargo run
+```
+
+The result is `file.pdf`. Compilation happens through `typst::compile::<PagedDocument>()`, and `typst_pdf::pdf()` turns the compiled document into PDF bytes.
+
+## Passing data from Rust to Typst
+
+The standard library builder's `.with_inputs()` method makes a Typst dictionary available through `sys.inputs`. For structured data, we can serialize our Rust values as JSON strings and decode them in the template, as the R bindings do.
+
+Add a JSON dependency:
+
+```bash
+cargo add serde_json@1
+```
+
+Keep `src/compiler.rs` and replace `src/main.rs` with:
+
+```rust title="src/main.rs"
+mod compiler;
+
+use serde_json::json;
+use typst::foundations::{Dict, IntoValue};
+
+fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let humans = json!([
+        { "name": "Joseph", "age": 25 },
+        { "name": "Justine", "age": 24 },
+    ]);
+
+    let mut inputs = Dict::new();
+    inputs.insert("humans".into(), humans.to_string().into_value());
+
+    let pdf = compiler::compile_pdf("file.typ", inputs)?;
+    std::fs::write("file.pdf", pdf)?;
+    Ok(())
+}
+```
+
+Replace `file.typ` with:
 
 ```typst title="file.typ"
 #let humans = json(bytes(sys.inputs.humans))
 
 #for human in humans [
-      #human.name is #human.age years old. \
+  #human.name is #human.age years old. \
 ]
 ```
 
-By passing Rust data directly to Typst, your application logic and report rendering stay tightly connected.
+Run `cargo run` again. The PDF will contain a line for each person. The JSON encoding here is our choice: `Dict` can also hold native Typst values such as arrays and dictionaries.
 
 ## Example with Axum
 
-Here is a minimalist `GET /report?color=%23f9f6f4` endpoint that compiles and returns a PDF. The `color` query parameter is injected into the Typst input.
+We can reuse the compiler module in a small HTTP server. This example exposes `GET /report?color=%23f9f6f4` and uses the query parameter as the page background color.
 
-First, the Typst template:
+Add the server dependencies:
+
+```bash
+cargo add axum@0.8
+cargo add tokio@1 --features macros,rt-multi-thread,net
+cargo add serde@1 --features derive
+```
+
+Replace `file.typ` with:
 
 ```typst title="file.typ"
-#let col = json(bytes(sys.inputs.color))
-
-#set page(fill: rgb(col), width: 10cm, height: 5cm)
+#set page(fill: rgb(sys.inputs.color), width: 10cm, height: 5cm)
 
 = Dynamic Typst report made with Rust
 ```
 
-Then a small Axum server:
+Here, `color` is a plain string, so the template can use it directly without JSON decoding.
 
-```rust title="main.rs"
-use axum::{extract::Query, response::IntoResponse, routing::get, Router};
-use derive_typst_intoval::{IntoDict, IntoValue};
+Keep `src/compiler.rs` and replace `src/main.rs` with:
+
+```rust title="src/main.rs"
+mod compiler;
+
+use axum::{
+    Router,
+    extract::Query,
+    http::{StatusCode, header},
+    response::IntoResponse,
+    routing::get,
+};
 use serde::Deserialize;
-use typst::foundations::Dict;
-use typst_as_lib::TypstEngine;
-
-static TEMPLATE: &str = include_str!("file.typ");
+use typst::foundations::{Dict, IntoValue};
 
 #[derive(Deserialize)]
 struct ReportParams {
     color: String,
 }
 
-#[derive(Clone, IntoValue, IntoDict)]
-struct ReportInput {
-    color: String,
-}
-
-impl From<ReportInput> for Dict {
-    fn from(value: ReportInput) -> Self {
-        value.into_dict()
-    }
-}
-
 #[tokio::main]
-async fn main() {
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let app = Router::new().route("/report", get(report));
-    let listener = tokio::net::TcpListener::bind("127.0.0.1:3000")
-        .await
-        .unwrap();
-
-    axum::serve(listener, app).await.unwrap();
+    let listener = tokio::net::TcpListener::bind("127.0.0.1:3000").await?;
+    axum::serve(listener, app).await?;
+    Ok(())
 }
 
-async fn report(Query(params): Query<ReportParams>) -> impl IntoResponse {
-    let engine = TypstEngine::builder().main_file(TEMPLATE).build();
+async fn report(
+    Query(params): Query<ReportParams>,
+) -> Result<impl IntoResponse, (StatusCode, String)> {
+    let pdf = tokio::task::spawn_blocking(move || {
+        let mut inputs = Dict::new();
+        inputs.insert("color".into(), params.color.into_value());
+        compiler::compile_pdf("file.typ", inputs)
+    })
+    .await
+    .map_err(internal_error)?
+    .map_err(internal_error)?;
 
-    let doc = engine
-        .compile_with_input(ReportInput {
-            color: params.color,
-        })
-        .output
-        .expect("Typst compilation failed");
+    Ok(([(header::CONTENT_TYPE, "application/pdf")], pdf))
+}
 
-    let pdf = typst_pdf::pdf(&doc, &Default::default())
-        .expect("PDF generation failed");
-
-    ([("content-type", "application/pdf")], pdf)
+fn internal_error(error: impl std::fmt::Display) -> (StatusCode, String) {
+    (StatusCode::INTERNAL_SERVER_ERROR, error.to_string())
 }
 ```
 
+Typst compilation is CPU work, so `spawn_blocking` keeps it off Tokio's async worker threads. Compilation and export errors become HTTP error responses.
+
+Start the server with `cargo run` from the project root. Then, in another terminal:
+
+```bash
+curl --fail --get --data-urlencode 'color=#f9f6f4' \
+  --output report.pdf 'http://127.0.0.1:3000/report'
+```
+
+The response is saved as `report.pdf` with the requested background color.
+
 ## Other resources
 
-- [`typst`](https://crates.io/crates/typst): the official Typst compiler crate (low-level, powerful, less ergonomic for quick app integration).
-- [`typst-pdf`](https://crates.io/crates/typst-pdf): PDF backend used to export compiled Typst documents to PDF bytes.
-- [`typst-as-lib` examples](https://github.com/Relacibo/typst-as-lib/tree/main/examples): good reference for fonts, images, and structured inputs.
+- [`typst`](https://docs.rs/typst/0.15.1/typst/): the official compiler crate and its `World` interface.
+- [`typst-pdf`](https://docs.rs/typst-pdf/0.15.1/typst_pdf/): PDF export and export options.
+- [`typst-kit`](https://docs.rs/typst-kit/0.15.1/typst_kit/): utilities for files, packages, fonts, and dates.
 
 <br>
 
